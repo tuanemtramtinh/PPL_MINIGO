@@ -306,3 +306,55 @@ class ParserSuite(unittest.TestCase):
         """
         expect = "successful"
         self.assertTrue(TestParser.checkParser(input,expect,240))
+        
+    def test_statement_4(self):
+        input = """
+        func foo() {
+            if (x > 10) {} 
+            if (x > 10) {
+                
+            }
+            else if (x == 10) {
+                var z str;
+            } else {
+                var z ID;
+            }
+        }
+        """
+        expect = "successful"
+        self.assertTrue(TestParser.checkParser(input,expect,241))
+    
+    def test_statement_5(self):
+        input = """
+        func foo() {
+            if (x > 10) {} 
+            if (x > 10) {} else if (x == 10) { var z str;} else { var z ID;}
+        }
+        """
+        expect = "successful"
+        self.assertTrue(TestParser.checkParser(input,expect,242))
+        
+    def test_statement_6(self):
+        input = """
+        func foo() {
+            if (x > 10) {} 
+            if (x > 10) {} else if (x == 10) { var z str;} 
+            else if (x >= 20) {} else { var z ID;}
+        }
+        """
+        expect = "successful"
+        self.assertTrue(TestParser.checkParser(input,expect,242))
+        
+    def test_021(self):
+        """break and continue, return, Call  statement"""
+        self.assertTrue(TestParser.checkParser("""    
+            func VoTien() {                           
+                for i < 10 {break;}
+                break;
+                continue;
+                return 1;
+                return
+                foo(2 + x, 4 / y); m.goo();                        
+             }
+                                        
+        ""","successful", 243))

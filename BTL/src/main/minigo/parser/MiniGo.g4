@@ -104,10 +104,10 @@ assignment_lhs_element: ID;
 // array_index: LEFT_SQUARE expression RIGHT_SQUARE; 
 
 //if
-if_statement: IF LEFT_PAREN expression RIGHT_PAREN LEFT_CURLY list_statement_prime RIGHT_CURLY list_elseif_prime else_statement_prime terminate;
+if_statement: IF LEFT_PAREN expression RIGHT_PAREN LEFT_CURLY list_statement_prime RIGHT_CURLY (terminate | ) list_elseif_prime  else_statement_prime terminate;
 
 list_elseif_prime: list_elseif | ;
-list_elseif: elseif list_elseif | elseif;
+list_elseif: elseif (terminate | ) list_elseif | elseif;
 elseif: ELSE IF LEFT_PAREN expression RIGHT_PAREN LEFT_CURLY list_statement_prime RIGHT_CURLY;
 
 else_statement_prime: else_statement | ;

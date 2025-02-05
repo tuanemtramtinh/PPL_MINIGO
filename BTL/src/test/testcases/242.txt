@@ -1,0 +1,7 @@
+
+        func foo() {
+            if (x > 10) {} 
+            if (x > 10) {} else if (x == 10) { var z str;} 
+            else if (x >= 20) {} else { var z ID;}
+        }
+        
