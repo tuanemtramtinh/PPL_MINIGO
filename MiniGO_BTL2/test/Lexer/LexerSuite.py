@@ -16,21 +16,54 @@ from TestUtils import TestLexer
 
 class LexerSuite(unittest.TestCase):
     
-    def test_lower_identifier(self):
-        """test identifiers"""
-        self.assertTrue(TestLexer.test("abc","abc,<EOF>",101))
-    
-    def test_wrong_token(self):
-        self.assertTrue(TestLexer.test("ab?sVN","ab,ErrorToken ?",102))
-        
-    def test_keyword_var(self):
-        """test keyword var"""
-        self.assertTrue(TestLexer.test("var abc int ;","var,abc,int,;,<EOF>",103))
-        
-    def test_keyword_func(self):
-        """test keyword func"""
-        self.assertTrue(TestLexer.test("""func abc ( ) ""","""func,abc,(,),<EOF>""",104))
-    
     def test_001(self):
         """Keywords"""
         self.assertTrue(TestLexer.test("if","if,<EOF>", inspect.stack()[0].function))
+
+    def test_002(self):
+        """Operators"""
+        self.assertTrue(TestLexer.test("+","+,<EOF>", inspect.stack()[0].function))
+
+    def test_003(self):
+        """Separators"""
+        self.assertTrue(TestLexer.test("[]","[,],<EOF>", inspect.stack()[0].function))
+        
+    def test_004(self):
+        """Identifiers"""
+        self.assertTrue(TestLexer.test("_VOTien","_VOTien,<EOF>", inspect.stack()[0].function))
+     
+    def test_005(self):
+        """Literals INT"""
+        self.assertTrue(TestLexer.test("12","12,<EOF>", inspect.stack()[0].function))
+  
+    def test_006(self):
+        """Literals INT 16*1 + 1 = 17"""
+        self.assertTrue(TestLexer.test("0x11","0x11,<EOF>", inspect.stack()[0].function))
+    
+    def test_007(self):
+        """Literals FLOAT"""
+        self.assertTrue(TestLexer.test("12.e-8","12.e-8,<EOF>", inspect.stack()[0].function))
+    
+    def test_008(self):
+        """Literals String"""
+        self.assertTrue(TestLexer.test(""" "VOTIEN \\r" ""","VOTIEN \\r,<EOF>", inspect.stack()[0].function))
+        
+    def test_009(self):
+        """COMEMENTS"""
+        self.assertTrue(TestLexer.test("// VOTIEN","<EOF>", inspect.stack()[0].function))
+
+    def test_010(self):
+        """COMEMENTS"""
+        self.assertTrue(TestLexer.test("/* VO /* /*TIEN*/ */ SHIBA","SHIBA,<EOF>", inspect.stack()[0].function))
+
+    def test_011(self):
+        """ERROR_CHAR"""
+        self.assertTrue(TestLexer.test("^","ErrorToken ^", inspect.stack()[0].function))
+
+    def test_012(self):
+        """UNCLOSE_STRING"""
+        self.assertTrue(TestLexer.test(""" "VOTIEN\n" ""","Unclosed string: VOTIEN", inspect.stack()[0].function))
+    
+    def test_013(self):
+        """ILLEGAL_ESCAPE"""
+        self.assertTrue(TestLexer.test(""" "VOTIEN\\f" ""","Illegal escape in string: VOTIEN\\f", inspect.stack()[0].function))

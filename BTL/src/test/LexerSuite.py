@@ -2,11 +2,6 @@ import unittest
 from TestUtils import TestLexer
 
 class LexerSuite(unittest.TestCase):
-    
-    def test_lower_identifier(self):
-        """test identifiers"""
-        self.assertTrue(TestLexer.checkLexeme("""]
-                                              ""","],;,<EOF>",101))
       
     def test_lower_identifier(self):
         """test identifiers"""
@@ -74,15 +69,15 @@ class LexerSuite(unittest.TestCase):
         """test float literal"""
         self.assertTrue(TestLexer.checkLexeme("""3.14""","3.14,<EOF>",116))
 
-    def test_string_literal(self):
+    def test_string_literal_3(self):
         """test string literal"""
         self.assertTrue(TestLexer.checkLexeme(""" "hello" ""","hello,<EOF>",117))
         
-    def test_string_literal(self):
+    def test_string_literal_4(self):
         """test string literal"""
         self.assertTrue(TestLexer.checkLexeme(""" "This is a string with a newline \\n" ""","This is a string with a newline \\n,<EOF>",118))
         
-    def test_array_literal(self):
+    def test_array_literal_5(self):
         """test array literal"""
         self.assertTrue(TestLexer.checkLexeme(""" arr := [3]int{10, 20, 30}""","arr,:=,[,3,],int,{,10,,,20,,,30,},<EOF>",119))
         
@@ -122,10 +117,6 @@ class LexerSuite(unittest.TestCase):
     def test_nil_lit(self):
         """test nil"""
         self.assertTrue(TestLexer.checkLexeme("nil", "nil,<EOF>", 127))
-        
-    # def test_float_literal_3(self):
-    #     """test float literal"""
-    #     self.assertTrue(TestLexer.checkLexeme("""5.7e+-9""","5.7,e,+,-,9,<EOF>",115))
         
     def test_white_space(self):
         """test whitespace"""
@@ -171,7 +162,7 @@ class LexerSuite(unittest.TestCase):
         """test identifiers"""
         self.assertTrue(TestLexer.checkLexeme("_underscore_start","_underscore_start,<EOF>", 138))
         
-    def test_identifiers_1(self):
+    def test_identifiers_3(self):
         """test identifiers"""
         self.assertTrue(TestLexer.checkLexeme("A1B2C3_var","A1B2C3_var,<EOF>", 139))
         
@@ -182,3 +173,145 @@ class LexerSuite(unittest.TestCase):
     def test_unclose_string_2(self):
         """test unclose string"""
         self.assertTrue(TestLexer.checkLexeme(""" "Dep trai\r ""","Unclosed string: Dep trai",141))
+        
+    def test_float_literal_3(self):
+        """test float literal"""
+        self.assertTrue(TestLexer.checkLexeme("""5.7e+-9""","5.7,e,+,-,9,<EOF>",142))
+        
+    def test_float_literal_4(self):
+        """test float literal"""
+        self.assertTrue(TestLexer.checkLexeme("""000005.7e+00009""","000005.7e+00009,<EOF>",143))
+        
+    def test_float_literal_5(self):
+        """test float literal"""
+        self.assertTrue(TestLexer.checkLexeme("""000005.7e00009""","000005.7e00009,<EOF>",144))
+        
+    def test_float_literal_6(self):
+        """test float literal"""
+        self.assertTrue(TestLexer.checkLexeme("""000005.7e-00009""","000005.7e-00009,<EOF>",145))
+        
+    def test_int_literal(self):
+        """test int literal"""
+        self.assertTrue(TestLexer.checkLexeme("""042""","0,42,<EOF>",146))
+        
+    def test_int_literal_1(self):
+        """test int literal"""
+        self.assertTrue(TestLexer.checkLexeme("""0b11001 0B11001""","0b11001,0B11001,<EOF>",147))
+        
+    def test_int_literal_2(self):
+        """test int literal"""
+        self.assertTrue(TestLexer.checkLexeme("""0b99""","0,b99,<EOF>",148))
+        
+    def test_int_literal_3(self):
+        """test int literal"""
+        self.assertTrue(TestLexer.checkLexeme("""0B99""","0,B99,<EOF>",149))
+        
+    def test_int_literal_4(self):
+        """test int literal"""
+        self.assertTrue(TestLexer.checkLexeme("""0o01234567 0O01234567""","0o01234567,0O01234567,<EOF>",150))
+        
+    def test_int_literal_5(self):
+        """test int literal"""
+        self.assertTrue(TestLexer.checkLexeme("""0o088 0O088""","0o0,88,0O0,88,<EOF>",151))
+        
+    def test_int_literal_6(self):
+        """test int literal"""
+        self.assertTrue(TestLexer.checkLexeme("""0x123F 0x459f""","0x123F,0x459f,<EOF>",152))
+        
+    def test_int_literal_7(self):
+        """test int literal"""
+        self.assertTrue(TestLexer.checkLexeme("""0x123FG 0x459fG""","0x123F,G,0x459f,G,<EOF>",153))
+        
+    def test_newline(self):
+        """test newline"""
+        self.assertTrue(TestLexer.checkLexeme("""if{}
+                                              ""","if,{,},;,<EOF>",154))
+        
+    def test_newline_1(self):
+        """test newline"""
+        self.assertTrue(TestLexer.checkLexeme("""const a = "Tuan Anh"
+                                              ""","const,a,=,Tuan Anh,;,<EOF>",155))
+        
+    def test_newline_2(self):
+        """test newline"""
+        self.assertTrue(TestLexer.checkLexeme("""const a = a[2]
+                                              
+                                              
+                                              ""","const,a,=,a,[,2,],;,<EOF>",156))
+        
+    def test_newline_3(self):
+        """test newline"""
+        self.assertTrue(TestLexer.checkLexeme("""const a = foo()
+                                              ""","const,a,=,foo,(,),;,<EOF>",157))
+        
+    def test_newline_4(self):
+        """test newline"""
+        self.assertTrue(TestLexer.checkLexeme("""const a = _ab
+                                              ""","const,a,=,_ab,;,<EOF>",158))
+        
+    def test_newline_5(self):
+        """test newline"""
+        self.assertTrue(TestLexer.checkLexeme("""const a = 9
+                                              ""","const,a,=,9,;,<EOF>",159))
+        
+    def test_newline_6(self):
+        """test newline"""
+        self.assertTrue(TestLexer.checkLexeme("""const a = 0x11AF
+                                              ""","const,a,=,0x11AF,;,<EOF>",160))
+        
+    def test_newline_7(self):
+        """test newline"""
+        self.assertTrue(TestLexer.checkLexeme("""const a = 0o07
+                                              ""","const,a,=,0o07,;,<EOF>",161))
+        
+    def test_newline_8(self):
+        """test newline"""
+        self.assertTrue(TestLexer.checkLexeme("""const a = 0B111000
+                                              ""","const,a,=,0B111000,;,<EOF>",162))
+        
+    def test_newline_9(self):
+        """test newline"""
+        self.assertTrue(TestLexer.checkLexeme("""const a = 0.87
+                                              ""","const,a,=,0.87,;,<EOF>",163))
+        
+    def test_newline_10(self):
+        """test newline"""
+        self.assertTrue(TestLexer.checkLexeme("""const a = 0.87e9
+                                              ""","const,a,=,0.87e9,;,<EOF>",164))
+        
+    def test_newline_11(self):
+        """test newline"""
+        self.assertTrue(TestLexer.checkLexeme("""const a = true
+                                              ""","const,a,=,true,;,<EOF>",165))
+        
+    def test_newline_12(self):
+        """test newline"""
+        self.assertTrue(TestLexer.checkLexeme("""const a = false
+                                              ""","const,a,=,false,;,<EOF>",166))
+        
+    def test_newline_13(self):
+        """test newline"""
+        self.assertTrue(TestLexer.checkLexeme("""var z int
+                                              ""","var,z,int,;,<EOF>",167))
+        
+    def test_newline_14(self):
+        """test newline"""
+        self.assertTrue(TestLexer.checkLexeme("""var z string
+                                              ""","var,z,string,;,<EOF>",168))
+        
+    def test_newline_15(self):
+        """test newline"""
+        self.assertTrue(TestLexer.checkLexeme("""var z float
+                                              ""","var,z,float,;,<EOF>",169))
+        
+    def test_newline_16(self):
+        """test newline"""
+        self.assertTrue(TestLexer.checkLexeme("""var z bool
+                                              ""","var,z,bool,;,<EOF>",170))
+        
+    def test_newline_17(self):
+        """test newline"""
+        self.assertTrue(TestLexer.checkLexeme("""return
+                                              continue
+                                              break
+                                              ""","return,;,continue,;,break,;,<EOF>",171))

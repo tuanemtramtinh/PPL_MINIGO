@@ -247,23 +247,17 @@ ID: [a-zA-Z_][a-zA-Z0-9_]*;
 
 //TODO Literals 3.3.5 pdf
 
-BIN_INT_LIT: ('0b'|'0B') [0-1]+{
-    self.text = str(int(self.text, 0))
-} -> type(INT_LIT);
-OCT_INT_LIT: ('0o'|'0O') [0-7]+{
-    self.text = str(int(self.text, 0))
-} -> type(INT_LIT);
-HEX_INT_LIT: ('0x'|'0X') [0-9A-Fa-f]+{
-    self.text = str(int(self.text, 0))
-} -> type(INT_LIT);
+BIN_INT_LIT: ('0b'|'0B') [0-1]+ -> type(INT_LIT);
+OCT_INT_LIT: ('0o'|'0O') [0-7]+ -> type(INT_LIT);
+HEX_INT_LIT: ('0x'|'0X') [0-9A-Fa-f]+ -> type(INT_LIT);
 
 fragment DIGIT: [0-9];
 fragment DIGITS: ('0' | [1-9] DIGIT*);
-fragment OPT_FRAC: ('.'DIGIT*)?;
-fragment OPT_EXP: ([eE]('-'|'+')?DIGITS)?;
+fragment OPT_FRAC: (DIGIT*)?;
+fragment OPT_EXP: ([eE]('-'|'+')?DIGIT+)?;
 
-INT_LIT: DIGITS;
-FLOAT_LIT: DIGITS OPT_FRAC OPT_EXP;
+INT_LIT: ('0' | [1-9] DIGIT*);
+FLOAT_LIT: DIGIT+ DOT OPT_FRAC OPT_EXP;
 
 fragment ESC_SEQ: '\\' [ntr"\\];
 fragment ILLEGAL_ESC_SEQ: '\\' ~[ntr"\\];

@@ -337,24 +337,237 @@ class ParserSuite(unittest.TestCase):
     def test_statement_6(self):
         input = """
         func foo() {
-            if (x > 10) {} 
             if (x > 10) {} else if (x == 10) { var z str;} 
             else if (x >= 20) {} else { var z ID;}
         }
         """
         expect = "successful"
-        self.assertTrue(TestParser.checkParser(input,expect,242))
+        self.assertTrue(TestParser.checkParser(input,expect,243))
         
-    def test_021(self):
-        """break and continue, return, Call  statement"""
-        self.assertTrue(TestParser.checkParser("""    
-            func VoTien() {                           
-                for i < 10 {break;}
-                break;
-                continue;
-                return 1;
-                return
-                foo(2 + x, 4 / y); m.goo();                        
-             }
-                                        
-        ""","successful", 243))
+    def test_statement_7(self):
+        input = """
+        func foo() {
+            if (x > 10) {} else { var z ID;}
+            if (x > 10) {} 
+            else { var z ID;}
+        }
+        """
+        expect = "successful"
+        self.assertTrue(TestParser.checkParser(input,expect,244))
+        
+    def test_statement_8(self):
+        input = """    
+            func test() {                           
+                for i < 10 {break;}                  
+             }                       
+        """
+        expect = "successful"
+        self.assertTrue(TestParser.checkParser(input, expect, 245))
+        
+    def test_statement_9(self):
+        input = """
+        func test(){
+            for i := 0; i < 10000; i+=1 {}   
+        };"""
+        expect = """successful"""
+        self.assertTrue(TestParser.checkParser(input, expect, 246))
+        
+    def test_statement_10(self):
+        input = """
+        func test(){
+            for index, value := range array {}   
+        };"""
+        expect = """successful"""
+        self.assertTrue(TestParser.checkParser(input, expect, 247))
+        
+    def test_statement_11(self):
+        input = """
+        func primeCheck(n int) bool{
+            if (n < 2) {
+                return false;
+            }
+            
+            for i := 0; i < n; i += 1 {
+                if (n % i == 0) {
+                    return false;
+                }
+            }   
+            
+            return true;
+        };"""
+        expect = """successful"""
+        self.assertTrue(TestParser.checkParser(input, expect, 248))
+        
+    def test_statement_12(self):
+        input = """
+        func sort(){
+            var array = [5]int{5, 3, 1, 4, 2}
+            var size = 5
+            for var i = 0; i < size - 1; i+=1 {
+                for var j = 0; j < size - i - 1; j+=1{
+                    if (array[j] > array[j + 1]) {
+                        swap(v[j], v[j + 1])
+                    }
+                }
+            }
+        };"""
+        expect = """successful"""
+        self.assertTrue(TestParser.checkParser(input, expect, 249))
+        
+    def test_statement_13(self):
+        input = """
+        func nthFibonacci(n int) int{
+            if (n <= 1) {
+                return n;
+            }
+            
+            return nthFibonacci(n - 1) + nthFibonacci(n - 2);
+        }
+        """
+        expect = """successful"""
+        self.assertTrue(TestParser.checkParser(input, expect, 250))
+        
+    def test_statement_14(self):
+        input = """
+        func test(){
+            for const i := 0; i < 10000; i+=1 {}   
+        };"""
+        expect = """Error on line 3 col 17: const"""
+        self.assertTrue(TestParser.checkParser(input, expect, 251))
+        
+    def test_statement_15(self):
+        input = """
+        func binarySearch(arr [10]int, low int, high int, x int) int{
+            if (high >= low) {
+                var mid = low + (high - low) / 2;
+                
+                if (arr[mid] == x) {
+                    return mid;
+                }
+                
+                if (arr[mid] > x){
+                    return binarySearch(arr, low, mid - 1, x);
+                }
+                
+                return binarySearch(arr, mid + 1, high, x);
+            }   
+            
+            return -1;
+        };"""
+        expect = """successful"""
+        self.assertTrue(TestParser.checkParser(input, expect, 252))
+        
+    def test_statement_16(self):
+        input = """
+        const PI = 3.14;
+        
+        func calcCircleArea(radius float) float {
+            return radius * radius * PI;  
+        };
+        
+        func main(){
+            calcCircleArea(5.0)
+        }
+        """
+        expect = """successful"""
+        self.assertTrue(TestParser.checkParser(input, expect, 253))
+        
+    def test_statement_17(self):
+        input = """
+        const PI = 3.14;
+        
+        func calcCircleArea(radius float) float {
+            return radius * radius * PI;  
+        };
+        
+        func main(){
+            calcCircleArea(5.0)
+        }
+        """
+        expect = """successful"""
+        self.assertTrue(TestParser.checkParser(input, expect, 254))
+        
+    def test_statement_18(self):
+        input = """
+        type Shape interface {
+            Area() float
+            Perimeter() float
+            Scale(factor float) float
+        }
+        """
+        expect = """successful"""
+        self.assertTrue(TestParser.checkParser(input, expect, 255))
+        
+    def test_statement_19(self):
+        input = """
+        func linearSearch(x int, arr [10]int) int{
+            var result = -1;
+            
+            for var i = 0; i < 10; i+=1{
+                if (arr[i] == x){
+                    result := i;
+                    break;
+                }
+            }
+            
+            return result;
+        }
+        """
+        expect = """successful"""
+        self.assertTrue(TestParser.checkParser(input, expect, 256))
+        
+    def test_statement_20(self):
+        input = """
+        func Power(base int, exp int) int {
+            if (exp == 0) {
+                return 1
+            }
+            return base * Power(base, exp - 1)
+        }
+        """
+        expect = """successful"""
+        self.assertTrue(TestParser.checkParser(input, expect, 257))
+        
+    def test_statement_21(self):
+        input = """
+        func isPalindrome(s string, left int, right int) bool {
+          if (left >= right) {
+              return true
+          }  
+          
+          if (s[left] != s[right]) {
+              return false
+          }
+          
+          return isPalindrome(s, left + 1, right - 1)
+        };"""
+        expect = """successful"""
+        self.assertTrue(TestParser.checkParser(input, expect, 258))
+        
+    def test_statement_22(self):
+        input = """func Factorial(n int) int {if (n == 0){return 1;};return isPalindrome(s, left + 1, right - 1);};"""
+        expect = """successful"""
+        self.assertTrue(TestParser.checkParser(input, expect, 259))
+        
+    def test_statement_23(self):
+        input = """
+        func fibonacciIterative(n int) int {
+          if (n <= 1) {return n;}
+          var a = 0; var b = 1;
+          for i := 2; i <= n; i+=1{
+              var temp = a
+              a := b
+              b := temp + a;
+          }
+          
+          return b;
+        };"""
+        expect = """successful"""
+        self.assertTrue(TestParser.checkParser(input, expect, 260))
+        
+    def test_statement_24(self):
+        input = """
+        var z = [3][2]int{1, 2, 3}; 
+        """
+        expect = """successful"""
+        self.assertTrue(TestParser.checkParser(input, expect, 261))

@@ -1,0 +1,7 @@
+
+        type Shape interface {
+            Area() float
+            Perimeter() float
+            Scale(factor float) float
+        }
+        
