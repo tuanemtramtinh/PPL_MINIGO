@@ -169,6 +169,11 @@ class MiniGoVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by MiniGoParser#assignment_statement_no_semi.
+    def visitAssignment_statement_no_semi(self, ctx:MiniGoParser.Assignment_statement_no_semiContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by MiniGoParser#assignment_statement.
     def visitAssignment_statement(self, ctx:MiniGoParser.Assignment_statementContext):
         return self.visitChildren(ctx)
@@ -266,6 +271,21 @@ class MiniGoVisitor(ParseTreeVisitor):
 
     # Visit a parse tree produced by MiniGoParser#list_literal.
     def visitList_literal(self, ctx:MiniGoParser.List_literalContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by MiniGoParser#literal_primitive.
+    def visitLiteral_primitive(self, ctx:MiniGoParser.Literal_primitiveContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by MiniGoParser#list_literal_primitive_prime.
+    def visitList_literal_primitive_prime(self, ctx:MiniGoParser.List_literal_primitive_primeContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by MiniGoParser#list_literal_primitive.
+    def visitList_literal_primitive(self, ctx:MiniGoParser.List_literal_primitiveContext):
         return self.visitChildren(ctx)
 
 

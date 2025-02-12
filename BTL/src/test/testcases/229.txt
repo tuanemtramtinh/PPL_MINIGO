@@ -1,3 +1,5 @@
 
-        type Student struct {}
+        type Student struct {
+            age int;
+        }
         

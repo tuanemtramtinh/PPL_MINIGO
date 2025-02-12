@@ -32,9 +32,8 @@ options{
 	language = Python3;
 }
 
-// ! ---------------- PASER DEADLINE PASS 13 TEST CASE 23:59 16/1 ----------------------- */
+// ! ---------------- PASER ----------------------- */
 program: list_declaration EOF;
-// program: list_expression_prime EOF;
 
 //----------------------------------Terminate----------------------------------
 terminate: SEMICOLON;
@@ -53,25 +52,24 @@ declaration: var_declaration_global | const_declaration_global | func_declaratio
 var_declaration_global: var_declaration terminate;
 const_declaration_global: const_declaration terminate;
 
-
 //method
 method_declaration: LEFT_PAREN list_method_element RIGHT_PAREN;
 list_method_element: method_element COMMA list_method_element | method_element;
-method_element: ID all_types;
+method_element: ID ID;
 
 //function
-func_declaration: FUNC (method_declaration | ) ID LEFT_PAREN list_func_arguments_prime RIGHT_PAREN (all_types | ) LEFT_CURLY list_statement_prime RIGHT_CURLY terminate;
+func_declaration: FUNC (method_declaration | ) ID LEFT_PAREN list_func_arguments_prime RIGHT_PAREN (all_types | ) LEFT_CURLY list_statement RIGHT_CURLY terminate;
 list_func_arguments_prime: list_func_arguments | ;
 list_func_arguments: func_arguments COMMA list_func_arguments | func_arguments;
-func_arguments: ID all_types;
+func_arguments: list_ID all_types;
 
 //struct
-struct_declaration: TYPE ID STRUCT LEFT_CURLY (list_struct_argument | ) RIGHT_CURLY terminate;
+struct_declaration: TYPE ID STRUCT LEFT_CURLY list_struct_argument RIGHT_CURLY terminate;
 list_struct_argument: struct_argument list_struct_argument | struct_argument; 
-struct_argument: ID all_types terminate;
+struct_argument: ID all_types terminate | func_declaration;
 
 //interface
-interface_declaration: TYPE ID INTERFACE LEFT_CURLY (list_interface_method_declaration | ) RIGHT_CURLY terminate;
+interface_declaration: TYPE ID INTERFACE LEFT_CURLY list_interface_method_declaration RIGHT_CURLY terminate;
 
 list_interface_method_declaration: interface_method_declaration list_interface_method_declaration | interface_method_declaration;
 interface_method_declaration: ID LEFT_PAREN list_interface_method_element_prime RIGHT_PAREN (all_types | ) terminate;
@@ -92,31 +90,26 @@ var_declaration_stmt: var_declaration terminate;
 const_declaration_stmt: const_declaration terminate;
 
 //assignment
-assignment_statement: assignment_lhs (ASSIGN_COLON | ADD_ASSIGN | SUB_ASSIGN | MUL_ASSIGN | DIV_ASSIGN | MOD_ASSIGN) expression (SEMICOLON | );
+assignment_statement_no_semi: assignment_lhs (ASSIGN_COLON | ADD_ASSIGN | SUB_ASSIGN | MUL_ASSIGN | DIV_ASSIGN | MOD_ASSIGN) expression;
+assignment_statement: assignment_statement_no_semi (SEMICOLON | );
 
 assignment_lhs: assignment_lhs (LEFT_SQUARE expression RIGHT_SQUARE | DOT ID) | assignment_lhs_element;
 assignment_lhs_element: ID;
 
-// list_assignment_lhs: assignment_lhs DOT list_assignment_lhs | assignment_lhs;
-// assignment_lhs: (ID (list_array_index | )) ;
-
-// list_array_index: array_index list_array_index | array_index;
-// array_index: LEFT_SQUARE expression RIGHT_SQUARE; 
-
 //if
-if_statement: IF LEFT_PAREN expression RIGHT_PAREN LEFT_CURLY list_statement_prime RIGHT_CURLY (terminate | ) list_elseif_prime  else_statement_prime terminate;
+if_statement: IF LEFT_PAREN expression RIGHT_PAREN LEFT_CURLY list_statement RIGHT_CURLY  list_elseif_prime  else_statement_prime terminate;
 
 list_elseif_prime: list_elseif | ;
-list_elseif: elseif (terminate | ) list_elseif | elseif;
-elseif: ELSE IF LEFT_PAREN expression RIGHT_PAREN LEFT_CURLY list_statement_prime RIGHT_CURLY;
+list_elseif: elseif list_elseif | elseif;
+elseif: ELSE IF LEFT_PAREN expression RIGHT_PAREN LEFT_CURLY list_statement RIGHT_CURLY;
 
 else_statement_prime: else_statement | ;
-else_statement: ELSE LEFT_CURLY list_statement_prime RIGHT_CURLY;
+else_statement: ELSE LEFT_CURLY list_statement RIGHT_CURLY;
 
 //for
-for_statement: (basic_for | init_for | range_for) LEFT_CURLY list_statement_prime RIGHT_CURLY terminate;
+for_statement: (basic_for | init_for | range_for) LEFT_CURLY list_statement RIGHT_CURLY terminate;
 basic_for: FOR expression ;
-init_for: FOR (assignment_statement | var_declaration) SEMICOLON expression SEMICOLON assignment_statement;
+init_for: FOR (assignment_statement | var_declaration) SEMICOLON expression SEMICOLON assignment_statement_no_semi;
 range_for: FOR ID COMMA ID ASSIGN_COLON RANGE expression;
 
 //break
@@ -133,8 +126,6 @@ return_statement: RETURN (expression | ) terminate;
 
 //----------------------------------Literal----------------------------------
 
-//TODO Literal 6.6 pdf
-
 //literal
 literal:
 	INT_LIT
@@ -148,11 +139,15 @@ literal:
 list_literal_prime: list_literal | ;
 list_literal: literal COMMA list_literal | literal;
 
+literal_primitive: INT_LIT | FLOAT_LIT | STRING_LIT | TRUE |FALSE | NIL | struct_literal;
+list_literal_primitive_prime: list_literal_primitive | ;
+list_literal_primitive: literal_primitive COMMA list_literal_primitive | literal_primitive;
+
 //array_literal
 array_literal: array_type LEFT_CURLY list_array_element RIGHT_CURLY;
 
 list_array_element: array_element COMMA list_array_element | array_element;
-array_element: literal | LEFT_CURLY list_literal_prime  RIGHT_CURLY;
+array_element: list_literal_primitive | LEFT_CURLY array_element RIGHT_CURLY;
 
 list_array_specific: array_specific list_array_specific | array_specific;
 array_specific: LEFT_SQUARE INT_LIT RIGHT_SQUARE; 
@@ -163,7 +158,7 @@ array_declare_type: BOOLEAN | INT | FLOAT | STRING | ID;
 struct_literal: ID LEFT_CURLY list_struct_element_prime RIGHT_CURLY;
 list_struct_element_prime: list_struct_element | ;
 list_struct_element: struct_element COMMA list_struct_element | struct_element;
-struct_element: ID COLON expression;
+struct_element: (ID COLON expression) | func_declaration;
 
 //function
 function_call: ID LEFT_PAREN list_expression_prime RIGHT_PAREN;
@@ -183,9 +178,7 @@ expression7: LEFT_PAREN expression RIGHT_PAREN | literal | ID | function_call;
 //! ---------------- PASER ----------------------- */
 
 
-// ! ---------------- LEXER DEADLINE PASS 13 TEST CASE 23:59 16/1 ----------------------- */
-
-//TODO Keywords 3.3.2 pdf
+// ! ---------------- LEXER ----------------------- */
 IF: 'if';
 ELSE: 'else';
 FOR: 'for';
@@ -207,7 +200,6 @@ NIL: 'nil';
 TRUE: 'true';
 FALSE: 'false';
 
-//TODO Operators 3.3.3 pdf
 ADD: '+';
 SUB: '-';
 MUL: '*';
@@ -231,7 +223,6 @@ DIV_ASSIGN: '/=';
 MOD_ASSIGN: '%=';
 DOT: '.';
 
-//TODO Separators 3.3.4 pdf
 LEFT_PAREN: '(';
 RIGHT_PAREN: ')';
 LEFT_CURLY: '{';
@@ -242,10 +233,8 @@ COLON: ':';
 COMMA: ',';
 SEMICOLON: ';';
 
-//TODO Identifiers 3.3.1 pdf
 ID: [a-zA-Z_][a-zA-Z0-9_]*;
 
-//TODO Literals 3.3.5 pdf
 
 BIN_INT_LIT: ('0b'|'0B') [0-1]+ -> type(INT_LIT);
 OCT_INT_LIT: ('0o'|'0O') [0-7]+ -> type(INT_LIT);
@@ -270,10 +259,9 @@ STRING_LIT: '"' STRING_CHAR* '"'{
 BOOL_LIT: TRUE | FALSE;
 NIL_LIT: NIL;
 
-//TODO skip 3.1 and 3.2 pdf
 WS: [ \t\f\r]+ -> skip; // skip spaces, tabs
 NEWLINE: ('\r'? '\n') {
-    if self.lastTokenType == self.RIGHT_SQUARE or self.lastTokenType == self.RIGHT_PAREN or self.lastTokenType == self.RIGHT_CURLY or self.lastTokenType == self.ID or self.lastTokenType == self.INT_LIT or self.lastTokenType == self.FLOAT_LIT or self.lastTokenType == self.TRUE or self.lastTokenType == self.FALSE or self.lastTokenType == self.STRING_LIT or self.lastTokenType == self.INT or self.lastTokenType == self.FLOAT or self.lastTokenType == self.BOOLEAN or self.lastTokenType == self.STRING or self.lastTokenType == self.RETURN or self.lastTokenType == self.CONTINUE or self.lastTokenType == self.BREAK:
+    if self.lastTokenType == self.RIGHT_SQUARE or self.lastTokenType == self.RIGHT_PAREN or self.lastTokenType == self.RIGHT_CURLY or self.lastTokenType == self.ID or self.lastTokenType == self.INT_LIT or self.lastTokenType == self.FLOAT_LIT or self.lastTokenType == self.TRUE or self.lastTokenType == self.FALSE or self.lastTokenType == self.STRING_LIT or self.lastTokenType == self.INT or self.lastTokenType == self.FLOAT or self.lastTokenType == self.BOOLEAN or self.lastTokenType == self.STRING or self.lastTokenType == self.RETURN or self.lastTokenType == self.CONTINUE or self.lastTokenType == self.BREAK or self.lastTokenType == self.NIL:
         self.text = ";"
         self.type = self.SEMICOLON
     else:
@@ -282,22 +270,21 @@ NEWLINE: ('\r'? '\n') {
 COMMENT_BLOCK: '/*' (COMMENT_BLOCK | .)*? '*/' -> skip;
 COMMENT_LINE:  '//' ~[\r\n]*  -> skip;
 
-//TODO ERROR pdf BTL1 + lexererr.py
 ERROR_CHAR: . {raise ErrorToken(self.text)};
 UNCLOSE_STRING: '"' STRING_CHAR* ('\n'|'\r'|EOF) {
     if self.text[-1] == '\n':
         if self.text[-2] == '\r':
-            self.text = self.text[1:-2]
+            self.text = self.text[:-2]
         else:
-            self.text = self.text[1:-1]
+            self.text = self.text[:-1]
     elif self.text[-1] == '\r':
-        self.text = self.text[1: -1]
+        self.text = self.text[: -1]
     else:
-        self.text = self.text[1:]
+        self.text = self.text[:]
     raise UncloseString(self.text)
 };
-ILLEGAL_ESCAPE: '"' STRING_CHAR* ILLEGAL_ESC_SEQ '"' {
-    raise IllegalEscape(self.text[1:-1])
+ILLEGAL_ESCAPE: '"' STRING_CHAR* ILLEGAL_ESC_SEQ  {
+    raise IllegalEscape(self.text[:])
 };
 
 //! ---------------- LEXER ----------------------- */

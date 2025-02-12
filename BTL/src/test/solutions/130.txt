@@ -1,1 +1,1 @@
-Illegal escape in string: tuanhanhdeptrai\b
+Illegal escape in string: "tuanhanhdeptrai\b

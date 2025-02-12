@@ -1,0 +1,13 @@
+
+        func reverseArray(arr [10]int) {
+            var left = 0;
+            var right = len(arr) - 1;
+            for left < right {
+                var temp = arr[left];
+                arr[left] := arr[right];
+                arr[right] := temp;
+                left += 1;
+                right -= 1;
+            }
+        }
+        

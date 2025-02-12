@@ -1,7 +1,8 @@
 
         func foo() {
-            if (x > 10) {} else { var z ID;}
-            if (x > 10) {} 
-            else { var z ID;}
+            if (x > 10) { const b = 5; } else { var z ID;}
+            if (x > 10) {
+                const a = 5;    
+            } else { var z ID;}
         }
         

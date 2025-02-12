@@ -1,4 +1,4 @@
 
-        type Student interface {}; type S interface {}
-        type K interface{}
+        type Student interface {Add(x, y int) int;}; type S interface {Add(x, y int) int;}
+        type K interface{Add(x, y int) int;}
         

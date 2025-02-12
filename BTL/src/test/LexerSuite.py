@@ -33,7 +33,7 @@ class LexerSuite(unittest.TestCase):
     def test_unclose_string(self):
         """test unclose string"""
         self.assertTrue(TestLexer.checkLexeme(""""Dep trai
-                                              ""","Unclosed string: Dep trai",108))
+                                              ""","""Unclosed string: "Dep trai""",108))
     def test_keyword_struct(self):
         """test keyword struct"""
         self.assertTrue(TestLexer.checkLexeme("""type Person struct {}""","type,Person,struct,{,},<EOF>",109))
@@ -124,11 +124,11 @@ class LexerSuite(unittest.TestCase):
         
     def test_illegal_esacpe(self):
         """illegal_escape"""
-        self.assertTrue(TestLexer.checkLexeme(""" "tuanhanhdeptrai\\f" ""","Illegal escape in string: tuanhanhdeptrai\\f", 129))
+        self.assertTrue(TestLexer.checkLexeme(""" "tuanhanhdeptrai\\f" ""","""Illegal escape in string: "tuanhanhdeptrai\\f""", 129))
         
     def test_illegal_esacpe_1(self):
         """illegal_escape"""
-        self.assertTrue(TestLexer.checkLexeme(""" "tuanhanhdeptrai\\b" ""","Illegal escape in string: tuanhanhdeptrai\\b", 130))
+        self.assertTrue(TestLexer.checkLexeme(""" "tuanhanhdeptrai\\b" ""","""Illegal escape in string: "tuanhanhdeptrai\\b""", 130))
         
     def test_illegal_identifiers(self):
         """illegal_identifiers"""
@@ -168,11 +168,11 @@ class LexerSuite(unittest.TestCase):
         
     def test_unclose_string_1(self):
         """test unclose string"""
-        self.assertTrue(TestLexer.checkLexeme(""" "Dep trai ""","Unclosed string: Dep trai ",140))
+        self.assertTrue(TestLexer.checkLexeme(""" "Dep trai ""","""Unclosed string: "Dep trai """,140))
         
     def test_unclose_string_2(self):
         """test unclose string"""
-        self.assertTrue(TestLexer.checkLexeme(""" "Dep trai\r ""","Unclosed string: Dep trai",141))
+        self.assertTrue(TestLexer.checkLexeme(""" "Dep trai\r ""","""Unclosed string: "Dep trai""",141))
         
     def test_float_literal_3(self):
         """test float literal"""
@@ -314,4 +314,132 @@ class LexerSuite(unittest.TestCase):
         self.assertTrue(TestLexer.checkLexeme("""return
                                               continue
                                               break
-                                              ""","return,;,continue,;,break,;,<EOF>",171))
+                                              nil
+                                              ""","return,;,continue,;,break,;,nil,;,<EOF>",171))
+        
+    def test_wrong_token_1(self):
+        """test wrong token"""
+        self.assertTrue(TestLexer.checkLexeme("""2 ^ 3""","2,ErrorToken ^",172))
+        
+    def test_wrong_token_2(self):
+        """test wrong token"""
+        self.assertTrue(TestLexer.checkLexeme("""abc,#tuananhdeptrai""","abc,,,ErrorToken #",173))
+        
+    def test_wrong_token_3(self):
+        """test wrong token"""
+        self.assertTrue(TestLexer.checkLexeme("""@private""","ErrorToken @",174))
+        
+    def test_wrong_token_4(self):
+        """test wrong token"""
+        self.assertTrue(TestLexer.checkLexeme(""" `tuananhdeptrai` ""","ErrorToken `",175))
+        
+    def test_wrong_token_5(self):
+        """test wrong token"""
+        self.assertTrue(TestLexer.checkLexeme(""" a == b ? 5 : 6 ""","a,==,b,ErrorToken ?",176))
+        
+    def test_string_literal_6(self):
+        """test array literal"""
+        self.assertTrue(TestLexer.checkLexeme(""" "tuananhdeptrai \\t" ""","tuananhdeptrai \\t,<EOF>",177))
+        
+    def test_string_literal_7(self):
+        """test array literal"""
+        self.assertTrue(TestLexer.checkLexeme(""" "tuananhdeptrai \\r" ""","tuananhdeptrai \\r,<EOF>",178))
+        
+    def test_string_literal_8(self):
+        """test array literal"""
+        self.assertTrue(TestLexer.checkLexeme(""" "tuananhdeptrai \\" " ""","""tuananhdeptrai \\" ,<EOF>""",179))
+        
+    def test_string_literal_9(self):
+        """test array literal"""
+        self.assertTrue(TestLexer.checkLexeme(""" "\\\This is a backslash:" ""","""\\\This is a backslash:,<EOF>""",180))
+        
+    def test_float_literal_10(self):
+        """test float literal"""
+        self.assertTrue(TestLexer.checkLexeme(""" .5 """,""".,5,<EOF>""",181))
+        
+    def test_inline_comment_2(self):
+        """test inline comment"""
+        self.assertTrue(TestLexer.checkLexeme("""//Tuan Anh //Tuanh Em // wibu""","<EOF>",182))
+        
+    def test_inline_comment_3(self):
+        """test inline comment"""
+        self.assertTrue(TestLexer.checkLexeme("""//Tuan Anh /*Brother*/""","<EOF>",183))
+        
+    def test_nested_comment_2(self):
+        """test nested comment"""
+        self.assertTrue(TestLexer.checkLexeme("""/*
+                                              /*aaaa*/
+                                              */
+                                              //b //a
+                                              /*sos /**/
+                                              ""","<EOF>",184))
+        
+    def test_unterminated_comment(self):
+        """test unterminated comment"""
+        self.assertTrue(TestLexer.checkLexeme("/* This is an unclosed comment ", "/,*,This,is,an,unclosed,comment,<EOF>", 185))
+        
+    def test_unterminated_comment_1(self):
+        """test unterminated comment"""
+        self.assertTrue(TestLexer.checkLexeme("/* This is an /*nested*/ unclosed comment ", "unclosed,comment,<EOF>", 186))
+        
+    def test_invalid_float_exponent(self):
+        """test float literal with misplaced exponent"""
+        self.assertTrue(TestLexer.checkLexeme("3.5e+", "3.5,e,+,<EOF>", 187))
+        
+    def test_string_literal_10(self):
+        """test array literal"""
+        self.assertTrue(TestLexer.checkLexeme(""" "          " ""","""          ,<EOF>""",188))
+        
+    def test_string_literal_11(self):
+        """test array literal"""
+        self.assertTrue(TestLexer.checkLexeme(""" "\\"@#$%^&*()\\"" ""","""\\"@#$%^&*()\\",<EOF>""",189))
+        
+    def test_complex_expression(self):
+        """test complex expression"""
+        self.assertTrue(TestLexer.checkLexeme("x = (a + b) * (c - d) / e", "x,=,(,a,+,b,),*,(,c,-,d,),/,e,<EOF>", 190))
+        
+    def test_string_literal_12(self):
+        """test array literal"""
+        self.assertTrue(TestLexer.checkLexeme('"This is a \\"quoted\\" word"', 'This is a \\"quoted\\" word,<EOF>', 191))
+
+    def test_while_loop(self):
+        """test while loop"""
+        self.assertTrue(TestLexer.checkLexeme("while (i < 10) { i++ }", "while,(,i,<,10,),{,i,+,+,},<EOF>", 192))
+
+    def test_int_literal_8(self):
+        """test int literal"""
+        self.assertTrue(TestLexer.checkLexeme("""9999999999999999""","9999999999999999,<EOF>",193))
+        
+    def test_string_literal_13(self):
+        """test array literal"""
+        self.assertTrue(TestLexer.checkLexeme(' "Hell" "Way" ', 'Hell,Way,<EOF>', 194))
+        
+    def test_inline_comment_4(self):
+        """test inline comment"""
+        self.assertTrue(TestLexer.checkLexeme("""//Tuan Anh \n bro""","bro,<EOF>",195))
+        
+    def test_white_space_1(self):
+        """test mixed spaces and tabs"""
+        self.assertTrue(TestLexer.checkLexeme(" \t  x  \t=   5", "x,=,5,<EOF>", 196))
+
+    def test_extreme_nested_parentheses(self):
+        """test deeply nested parentheses beyond normal levels"""
+        self.assertTrue(TestLexer.checkLexeme("((((((((((((((((((((((((x))))))))))))))))))))))))", "(,(,(,(,(,(,(,(,(,(,(,(,(,(,(,(,(,(,(,(,(,(,(,(,x,),),),),),),),),),),),),),),),),),),),),),),),),<EOF>", 197))
+        
+    def test_operator_4(self):
+        """test operator"""
+        self.assertTrue(TestLexer.checkLexeme(">>> === !==", ">,>,>,==,=,!=,=,<EOF>", 198))
+        
+    def test_float_literal_11(self):
+        """test float literal"""
+        self.assertTrue(TestLexer.checkLexeme("""1.2.3.4.5.6""","""1.2,.,3.4,.,5.6,<EOF>""",199))
+        
+    def test_super_complex(self):
+        self.assertTrue(TestLexer.checkLexeme("""
+            var x = 42;
+            var y = 3.14;
+            z := x + y;
+            result := "Test";
+            z == y;
+            if x > 10 { x = 5; }
+        ""","""var,x,=,42,;,var,y,=,3.14,;,z,:=,x,+,y,;,result,:=,Test,;,z,==,y,;,if,x,>,10,{,x,=,5,;,},;,<EOF>""",200))

@@ -1,10 +1,11 @@
 
         func foo() {
-            if (x > 10) {} 
             if (x > 10) {
-                
-            }
-            else if (x == 10) {
+                var t string;
+            } 
+            if (x > 10) {
+                var x float;
+            } else if (x == 10) {
                 var z str;
             } else {
                 var z ID;

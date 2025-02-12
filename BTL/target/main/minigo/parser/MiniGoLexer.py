@@ -15,7 +15,7 @@ from lexererr import *
 def serializedATN():
     with StringIO() as buf:
         buf.write("\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\2B")
-        buf.write("\u0212\b\1\4\2\t\2\4\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7")
+        buf.write("\u0211\b\1\4\2\t\2\4\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7")
         buf.write("\t\7\4\b\t\b\4\t\t\t\4\n\t\n\4\13\t\13\4\f\t\f\4\r\t\r")
         buf.write("\4\16\t\16\4\17\t\17\4\20\t\20\4\21\t\21\4\22\t\22\4\23")
         buf.write("\t\23\4\24\t\24\4\25\t\25\4\26\t\26\4\27\t\27\4\30\t\30")
@@ -57,17 +57,17 @@ def serializedATN():
         buf.write("G\7G\u01e4\nG\fG\16G\u01e7\13G\3G\3G\3G\3G\3G\3H\3H\3")
         buf.write("H\3H\7H\u01f2\nH\fH\16H\u01f5\13H\3H\3H\3I\3I\3I\3J\3")
         buf.write("J\7J\u01fe\nJ\fJ\16J\u0201\13J\3J\5J\u0204\nJ\3J\3J\3")
-        buf.write("K\3K\7K\u020a\nK\fK\16K\u020d\13K\3K\3K\3K\3K\3\u01e5")
-        buf.write("\2L\3\3\5\4\7\5\t\6\13\7\r\b\17\t\21\n\23\13\25\f\27\r")
-        buf.write("\31\16\33\17\35\20\37\21!\22#\23%\24\'\25)\26+\27-\30")
-        buf.write("/\31\61\32\63\33\65\34\67\359\36;\37= ?!A\"C#E$G%I&K\'")
-        buf.write("M(O)Q*S+U,W-Y.[/]\60_\61a\62c\63e\64g\65i\66k\2m\2o\2")
-        buf.write("q\2s\2u\2w\2y\67{8}\2\177\2\u0081\2\u00839\u0085:\u0087")
-        buf.write(";\u0089<\u008b=\u008d>\u008f?\u0091@\u0093A\u0095B\3\2")
+        buf.write("K\3K\7K\u020a\nK\fK\16K\u020d\13K\3K\3K\3K\3\u01e5\2L")
+        buf.write("\3\3\5\4\7\5\t\6\13\7\r\b\17\t\21\n\23\13\25\f\27\r\31")
+        buf.write("\16\33\17\35\20\37\21!\22#\23%\24\'\25)\26+\27-\30/\31")
+        buf.write("\61\32\63\33\65\34\67\359\36;\37= ?!A\"C#E$G%I&K\'M(O")
+        buf.write(")Q*S+U,W-Y.[/]\60_\61a\62c\63e\64g\65i\66k\2m\2o\2q\2")
+        buf.write("s\2u\2w\2y\67{8}\2\177\2\u0081\2\u00839\u0085:\u0087;")
+        buf.write("\u0089<\u008b=\u008d>\u008f?\u0091@\u0093A\u0095B\3\2")
         buf.write("\20\5\2C\\aac|\6\2\62;C\\aac|\3\2\62\63\3\2\629\5\2\62")
         buf.write(";CHch\3\2\62;\3\2\63;\4\2GGgg\4\2--//\7\2$$^^ppttvv\6")
         buf.write("\2\f\f\17\17$$^^\5\2\13\13\16\17\"\"\4\2\f\f\17\17\4\3")
-        buf.write("\f\f\17\17\2\u0225\2\3\3\2\2\2\2\5\3\2\2\2\2\7\3\2\2\2")
+        buf.write("\f\f\17\17\2\u0224\2\3\3\2\2\2\2\5\3\2\2\2\2\7\3\2\2\2")
         buf.write("\2\t\3\2\2\2\2\13\3\2\2\2\2\r\3\2\2\2\2\17\3\2\2\2\2\21")
         buf.write("\3\2\2\2\2\23\3\2\2\2\2\25\3\2\2\2\2\27\3\2\2\2\2\31\3")
         buf.write("\2\2\2\2\33\3\2\2\2\2\35\3\2\2\2\2\37\3\2\2\2\2!\3\2\2")
@@ -244,12 +244,12 @@ def serializedATN():
         buf.write("\u0094\3\2\2\2\u0207\u020b\7$\2\2\u0208\u020a\5\u0081")
         buf.write("A\2\u0209\u0208\3\2\2\2\u020a\u020d\3\2\2\2\u020b\u0209")
         buf.write("\3\2\2\2\u020b\u020c\3\2\2\2\u020c\u020e\3\2\2\2\u020d")
-        buf.write("\u020b\3\2\2\2\u020e\u020f\5\177@\2\u020f\u0210\7$\2\2")
-        buf.write("\u0210\u0211\bK\b\2\u0211\u0096\3\2\2\2\37\2\u015a\u0161")
-        buf.write("\u0166\u016e\u0173\u017b\u0180\u018b\u018e\u0193\u0196")
-        buf.write("\u019a\u019f\u01a1\u01a8\u01ab\u01b0\u01be\u01c4\u01cc")
-        buf.write("\u01d3\u01d8\u01e3\u01e5\u01f3\u01ff\u0203\u020b\t\t\67")
-        buf.write("\2\3B\2\b\2\2\3F\3\3I\4\3J\5\3K\6")
+        buf.write("\u020b\3\2\2\2\u020e\u020f\5\177@\2\u020f\u0210\bK\b\2")
+        buf.write("\u0210\u0096\3\2\2\2\37\2\u015a\u0161\u0166\u016e\u0173")
+        buf.write("\u017b\u0180\u018b\u018e\u0193\u0196\u019a\u019f\u01a1")
+        buf.write("\u01a8\u01ab\u01b0\u01be\u01c4\u01cc\u01d3\u01d8\u01e3")
+        buf.write("\u01e5\u01f3\u01ff\u0203\u020b\t\t\67\2\3B\2\b\2\2\3F")
+        buf.write("\3\3I\4\3J\5\3K\6")
         return buf.getvalue()
 
 
@@ -424,7 +424,7 @@ class MiniGoLexer(Lexer):
     def NEWLINE_action(self, localctx:RuleContext , actionIndex:int):
         if actionIndex == 1:
 
-                if self.lastTokenType == self.RIGHT_SQUARE or self.lastTokenType == self.RIGHT_PAREN or self.lastTokenType == self.RIGHT_CURLY or self.lastTokenType == self.ID or self.lastTokenType == self.INT_LIT or self.lastTokenType == self.FLOAT_LIT or self.lastTokenType == self.TRUE or self.lastTokenType == self.FALSE or self.lastTokenType == self.STRING_LIT or self.lastTokenType == self.INT or self.lastTokenType == self.FLOAT or self.lastTokenType == self.BOOLEAN or self.lastTokenType == self.STRING or self.lastTokenType == self.RETURN or self.lastTokenType == self.CONTINUE or self.lastTokenType == self.BREAK:
+                if self.lastTokenType == self.RIGHT_SQUARE or self.lastTokenType == self.RIGHT_PAREN or self.lastTokenType == self.RIGHT_CURLY or self.lastTokenType == self.ID or self.lastTokenType == self.INT_LIT or self.lastTokenType == self.FLOAT_LIT or self.lastTokenType == self.TRUE or self.lastTokenType == self.FALSE or self.lastTokenType == self.STRING_LIT or self.lastTokenType == self.INT or self.lastTokenType == self.FLOAT or self.lastTokenType == self.BOOLEAN or self.lastTokenType == self.STRING or self.lastTokenType == self.RETURN or self.lastTokenType == self.CONTINUE or self.lastTokenType == self.BREAK or self.lastTokenType == self.NIL:
                     self.text = ";"
                     self.type = self.SEMICOLON
                 else:
@@ -442,13 +442,13 @@ class MiniGoLexer(Lexer):
 
                 if self.text[-1] == '\n':
                     if self.text[-2] == '\r':
-                        self.text = self.text[1:-2]
+                        self.text = self.text[:-2]
                     else:
-                        self.text = self.text[1:-1]
+                        self.text = self.text[:-1]
                 elif self.text[-1] == '\r':
-                    self.text = self.text[1: -1]
+                    self.text = self.text[: -1]
                 else:
-                    self.text = self.text[1:]
+                    self.text = self.text[:]
                 raise UncloseString(self.text)
 
      
@@ -456,7 +456,7 @@ class MiniGoLexer(Lexer):
     def ILLEGAL_ESCAPE_action(self, localctx:RuleContext , actionIndex:int):
         if actionIndex == 4:
 
-                raise IllegalEscape(self.text[1:-1])
+                raise IllegalEscape(self.text[:])
 
      
 
