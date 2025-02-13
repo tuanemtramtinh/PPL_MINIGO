@@ -1,2 +1,1 @@
-var z string
-                                              
+123.456

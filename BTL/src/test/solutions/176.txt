@@ -1,1 +1,1 @@
-a,==,b,ErrorToken ?
+She said \"Hi\",<EOF>

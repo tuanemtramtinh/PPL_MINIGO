@@ -1,4 +1,1 @@
-type Person struct {
-             name string ;
-             age int ;
-            }
+123.456

@@ -1,1 +1,4 @@
-0o01234567 0O01234567
+type Person struct {
+                name string ;
+                age int ;
+            }

@@ -1,1 +1,2 @@
- "Hell" "Way" 
+const a = "Hello, World!"
+                                              

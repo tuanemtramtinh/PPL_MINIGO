@@ -1,1 +1,1 @@
-var,z,int,;,<EOF>
+0x1A2B,<EOF>

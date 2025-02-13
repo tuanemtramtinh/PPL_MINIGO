@@ -1,1 +1,1 @@
-my,-,variable,<EOF>
+var,<EOF>

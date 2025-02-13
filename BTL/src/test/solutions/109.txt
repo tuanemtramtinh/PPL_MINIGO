@@ -1,1 +1,1 @@
-type,Person,struct,{,},<EOF>
+nil,;,<EOF>

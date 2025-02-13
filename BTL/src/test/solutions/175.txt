@@ -1,1 +1,1 @@
-ErrorToken `
+hello\tworld,<EOF>

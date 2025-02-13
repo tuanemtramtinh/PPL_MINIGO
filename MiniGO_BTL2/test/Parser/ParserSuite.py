@@ -492,6 +492,15 @@ class ParserSuite(unittest.TestCase):
                                         }
 ""","Error on line 3 col 40: }", inspect.stack()[0].function))
     
+    def test_126(self):
+        """Statement"""
+        self.assertTrue(TestParser.test("""
+                                    func Add() {
+                                        for var i [2] int = 0; foo().a.b(); i[3] := 1 {
+                                            return; 
+                                        }
+                                    };""","Error on line 3 col 77: [", inspect.stack()[0].function))
+    
     def test_151(self):
         """array_literal"""
         self.assertTrue(TestParser.test("""const a = [1]int{1+1}                    
@@ -507,17 +516,17 @@ class ParserSuite(unittest.TestCase):
         self.assertTrue(TestParser.test("""const a = [1]int{[1]int{1}}                    
 ""","Error on line 1 col 17: [", inspect.stack()[0].function))
         
-    def test_158(self):
-        self.assertTrue(TestParser.test("""
-        type Person struct {
-            func (p Person) Greet() string {
-                return "Hello, " + p.name
-            }; c c;
-            func (p Person) Greet() string {
-                return "Hello, " + p.name
-            } c c;                                                    
-        }      
-""","Error on line 8 col 14: c", inspect.stack()[0].function))
+#     def test_158(self):
+#         self.assertTrue(TestParser.test("""
+#         type Person struct {
+#             func (p Person) Greet() string {
+#                 return "Hello, " + p.name
+#             }; c c;
+#             func (p Person) Greet() string {
+#                 return "Hello, " + p.name
+#             } c c;                                                    
+#         }      
+# ""","Error on line 8 col 14: c", inspect.stack()[0].function))
         
     def test_159(self):
         self.assertTrue(TestParser.test("""
@@ -561,6 +570,15 @@ class ParserSuite(unittest.TestCase):
 }
             };  
 ""","Error on line 5 col 0: }", inspect.stack()[0].function))
+        
+    def test_176(self):
+        self.assertTrue(TestParser.test("""
+        type Person struct {
+            func (p Person) Greet() string {
+                return "Hello, " + p.name
+            };                                                 
+        }      
+""","Error on line 3 col 12: func", inspect.stack()[0].function))
     
 #     def test_043(self):
 #         self.assertTrue(TestParser.test("""

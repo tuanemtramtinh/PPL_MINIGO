@@ -1,1 +1,2 @@
-type Person struct {}
+
+            nil

@@ -1,1 +1,1 @@
-tuananhdeptrai \t,<EOF>
+Path: C:\\Program Files\\,<EOF>

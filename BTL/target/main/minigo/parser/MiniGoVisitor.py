@@ -49,16 +49,6 @@ class MiniGoVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by MiniGoParser#var_declaration_global.
-    def visitVar_declaration_global(self, ctx:MiniGoParser.Var_declaration_globalContext):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by MiniGoParser#const_declaration_global.
-    def visitConst_declaration_global(self, ctx:MiniGoParser.Const_declaration_globalContext):
-        return self.visitChildren(ctx)
-
-
     # Visit a parse tree produced by MiniGoParser#method_declaration.
     def visitMethod_declaration(self, ctx:MiniGoParser.Method_declarationContext):
         return self.visitChildren(ctx)
@@ -159,21 +149,6 @@ class MiniGoVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by MiniGoParser#var_declaration_stmt.
-    def visitVar_declaration_stmt(self, ctx:MiniGoParser.Var_declaration_stmtContext):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by MiniGoParser#const_declaration_stmt.
-    def visitConst_declaration_stmt(self, ctx:MiniGoParser.Const_declaration_stmtContext):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by MiniGoParser#assignment_statement_no_semi.
-    def visitAssignment_statement_no_semi(self, ctx:MiniGoParser.Assignment_statement_no_semiContext):
-        return self.visitChildren(ctx)
-
-
     # Visit a parse tree produced by MiniGoParser#assignment_statement.
     def visitAssignment_statement(self, ctx:MiniGoParser.Assignment_statementContext):
         return self.visitChildren(ctx)
@@ -181,11 +156,6 @@ class MiniGoVisitor(ParseTreeVisitor):
 
     # Visit a parse tree produced by MiniGoParser#assignment_lhs.
     def visitAssignment_lhs(self, ctx:MiniGoParser.Assignment_lhsContext):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by MiniGoParser#assignment_lhs_element.
-    def visitAssignment_lhs_element(self, ctx:MiniGoParser.Assignment_lhs_elementContext):
         return self.visitChildren(ctx)
 
 
@@ -236,6 +206,16 @@ class MiniGoVisitor(ParseTreeVisitor):
 
     # Visit a parse tree produced by MiniGoParser#range_for.
     def visitRange_for(self, ctx:MiniGoParser.Range_forContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by MiniGoParser#assignment_stmt_for.
+    def visitAssignment_stmt_for(self, ctx:MiniGoParser.Assignment_stmt_forContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by MiniGoParser#var_declaration_for.
+    def visitVar_declaration_for(self, ctx:MiniGoParser.Var_declaration_forContext):
         return self.visitChildren(ctx)
 
 

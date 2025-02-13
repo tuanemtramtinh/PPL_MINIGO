@@ -62,8 +62,25 @@ class LexerSuite(unittest.TestCase):
 
     def test_012(self):
         """UNCLOSE_STRING"""
-        self.assertTrue(TestLexer.test(""" "VOTIEN\n" ""","Unclosed string: VOTIEN", inspect.stack()[0].function))
+        self.assertTrue(TestLexer.test(""" "VOTIEN\n" ""","Unclosed string: \"VOTIEN", inspect.stack()[0].function))
     
     def test_013(self):
         """ILLEGAL_ESCAPE"""
-        self.assertTrue(TestLexer.test(""" "VOTIEN\\f" ""","Illegal escape in string: VOTIEN\\f", inspect.stack()[0].function))
+        self.assertTrue(TestLexer.test(""" "VOTIEN\\f ""","Illegal escape in string: \"VOTIEN\\f", inspect.stack()[0].function))
+        
+    def test_159(self):
+        self.assertTrue(TestLexer.test("""
+            func (p Person) Greet() string {
+                for i := 0
+                    i < 10
+                    i += 1 {
+                    return
+                }
+                for i := 0
+                    i < 10
+                    i += 1 
+                {
+                    return
+                }
+            };  
+""","Error on line 10 col 27: ;", inspect.stack()[0].function))    

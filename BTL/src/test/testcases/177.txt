@@ -1,1 +1,1 @@
- "tuananhdeptrai \t" 
+ "Path: C:\\Program Files\\" 

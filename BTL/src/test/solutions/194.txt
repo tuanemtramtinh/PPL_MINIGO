@@ -1,1 +1,1 @@
-Hell,Way,<EOF>
+const,a,=,Hello, World!,;,<EOF>

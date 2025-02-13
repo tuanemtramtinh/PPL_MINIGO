@@ -1,1 +1,5 @@
-000005.7e00009
+
+            // This is a comment
+            var x = 10; /* multi
+line comment */
+            

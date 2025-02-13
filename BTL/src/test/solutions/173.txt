@@ -1,1 +1,1 @@
-abc,,,ErrorToken #
+hello,<EOF>

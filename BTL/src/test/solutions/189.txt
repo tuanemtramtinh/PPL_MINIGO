@@ -1,1 +1,1 @@
-\"@#$%^&*()\",<EOF>
+const,a,=,_trieuman,;,<EOF>

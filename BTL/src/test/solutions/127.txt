@@ -1,1 +1,1 @@
-nil,<EOF>
+string,<EOF>

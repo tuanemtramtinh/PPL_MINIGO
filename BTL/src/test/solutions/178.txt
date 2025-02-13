@@ -1,1 +1,1 @@
-tuananhdeptrai \r,<EOF>
+Line1\nLine2\tTabbed,<EOF>

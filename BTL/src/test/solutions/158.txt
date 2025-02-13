@@ -1,1 +1,1 @@
-const,a,=,_ab,;,<EOF>
+Illegal escape in string: "Trieuman \	

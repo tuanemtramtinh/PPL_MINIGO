@@ -1,1 +1,1 @@
-This is a \"quoted\" word,<EOF>
+const,a,=,0x11,;,<EOF>

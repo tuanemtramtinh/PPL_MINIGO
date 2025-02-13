@@ -1,1 +1,1 @@
-bro,<EOF>
+myVariable,<EOF>

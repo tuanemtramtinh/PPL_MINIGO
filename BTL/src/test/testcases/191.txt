@@ -1,1 +1,2 @@
-"This is a \"quoted\" word"
+const a = 0x11
+                                              

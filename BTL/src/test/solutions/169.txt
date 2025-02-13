@@ -1,1 +1,1 @@
-var,z,float,;,<EOF>
+123.456e7,<EOF>

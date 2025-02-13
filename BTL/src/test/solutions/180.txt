@@ -1,1 +1,1 @@
-\\This is a backslash:,<EOF>
+Hello, World!\rThis is a test.,<EOF>

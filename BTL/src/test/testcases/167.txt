@@ -1,2 +1,1 @@
-var z int
-                                              
+0x1A2B

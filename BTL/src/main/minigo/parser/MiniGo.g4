@@ -43,14 +43,12 @@ array_type: list_array_specific array_declare_type;
 all_types: array_type | BOOLEAN | INT | FLOAT | STRING | ID;
 
 //----------------------------------Const and Var---------------------------
-var_declaration: VAR ID (all_types | (all_types | ) (ASSIGN expression));
-const_declaration: CONST ID ASSIGN expression;
+var_declaration: VAR ID (all_types | (all_types | ) (ASSIGN expression)) terminate;
+const_declaration: CONST ID ASSIGN expression terminate;
 
 //----------------------------------Declaration----------------------------------
 list_declaration: declaration+;
-declaration: var_declaration_global | const_declaration_global | func_declaration | struct_declaration | interface_declaration;
-var_declaration_global: var_declaration terminate;
-const_declaration_global: const_declaration terminate;
+declaration: var_declaration | const_declaration | func_declaration | struct_declaration | interface_declaration;
 
 //method
 method_declaration: LEFT_PAREN list_method_element RIGHT_PAREN;
@@ -66,7 +64,7 @@ func_arguments: list_ID all_types;
 //struct
 struct_declaration: TYPE ID STRUCT LEFT_CURLY list_struct_argument RIGHT_CURLY terminate;
 list_struct_argument: struct_argument list_struct_argument | struct_argument; 
-struct_argument: ID all_types terminate | func_declaration;
+struct_argument: ID all_types terminate;
 
 //interface
 interface_declaration: TYPE ID INTERFACE LEFT_CURLY list_interface_method_declaration RIGHT_CURLY terminate;
@@ -83,18 +81,12 @@ list_ID: ID COMMA list_ID | ID;
 
 list_statement_prime: list_statement | ;
 list_statement: statement list_statement | statement;
-statement: const_declaration_stmt | var_declaration_stmt | assignment_statement | if_statement | for_statement | break_statement | continue_statement | call_statement | return_statement;
-
-//var and const
-var_declaration_stmt: var_declaration terminate;
-const_declaration_stmt: const_declaration terminate;
+statement: const_declaration | var_declaration | assignment_statement | if_statement | for_statement | break_statement | continue_statement | call_statement | return_statement;
 
 //assignment
-assignment_statement_no_semi: assignment_lhs (ASSIGN_COLON | ADD_ASSIGN | SUB_ASSIGN | MUL_ASSIGN | DIV_ASSIGN | MOD_ASSIGN) expression;
-assignment_statement: assignment_statement_no_semi (SEMICOLON | );
+assignment_statement: assignment_lhs (ASSIGN_COLON | ADD_ASSIGN | SUB_ASSIGN | MUL_ASSIGN | DIV_ASSIGN | MOD_ASSIGN) expression SEMICOLON;
 
-assignment_lhs: assignment_lhs (LEFT_SQUARE expression RIGHT_SQUARE | DOT ID) | assignment_lhs_element;
-assignment_lhs_element: ID;
+assignment_lhs: assignment_lhs (LEFT_SQUARE expression RIGHT_SQUARE | DOT ID) | ID;
 
 //if
 if_statement: IF LEFT_PAREN expression RIGHT_PAREN LEFT_CURLY list_statement RIGHT_CURLY  list_elseif_prime  else_statement_prime terminate;
@@ -109,8 +101,11 @@ else_statement: ELSE LEFT_CURLY list_statement RIGHT_CURLY;
 //for
 for_statement: (basic_for | init_for | range_for) LEFT_CURLY list_statement RIGHT_CURLY terminate;
 basic_for: FOR expression ;
-init_for: FOR (assignment_statement | var_declaration) SEMICOLON expression SEMICOLON assignment_statement_no_semi;
+init_for: FOR (assignment_stmt_for | var_declaration_for) terminate expression terminate assignment_stmt_for;
 range_for: FOR ID COMMA ID ASSIGN_COLON RANGE expression;
+
+assignment_stmt_for: ID (ASSIGN_COLON | ADD_ASSIGN | SUB_ASSIGN | MUL_ASSIGN | DIV_ASSIGN | MOD_ASSIGN) expression;
+var_declaration_for: VAR ID (all_types | ) ASSIGN expression;
 
 //break
 break_statement: BREAK terminate;

@@ -1,2 +1,1 @@
-const a = 0o07
-                                              
+x = (a + b) * (c - d) / e

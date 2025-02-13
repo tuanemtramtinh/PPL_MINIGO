@@ -1,1 +1,1 @@
-.,5,<EOF>
+Hello, World!\nThis is a test.,<EOF>
