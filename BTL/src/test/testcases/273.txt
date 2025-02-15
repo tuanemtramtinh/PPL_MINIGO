@@ -1,6 +1,1 @@
-
-            type Person struct {
-                name string;
-                age int;
-            };
-        
+type Student struct {}

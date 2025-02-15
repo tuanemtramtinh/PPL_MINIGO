@@ -1,3 +1,4 @@
-    
-            const k = -a + -!-!c - ---[2]int{2};                         
+
+            func Sum(a int, b int) int {return a + b;}
+            func Multiply(x int, y int) int {return x * y;}
         

@@ -1,0 +1,8 @@
+    
+            func example() {
+                var id = "USR123";
+                var balance float = 1000.50;
+                
+                const PREFIX = "ID_";
+            }                                       
+        

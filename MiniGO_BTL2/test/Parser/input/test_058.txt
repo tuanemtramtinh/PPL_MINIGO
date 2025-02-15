@@ -1,0 +1,11 @@
+    
+            func example() {
+                if (x > 10) {
+                    return;
+                } else if (x == 10) {
+                    var y str = "Equal";
+                } else {
+                    var z float = 3.14;
+                }
+            }                                       
+        

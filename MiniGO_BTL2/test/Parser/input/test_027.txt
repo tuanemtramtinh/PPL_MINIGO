@@ -1,2 +1,4 @@
-    
-            var c [2][3]ID
+
+            func Greet() string {return "Hello";}
+            func Goodbye() string {return "Goodbye";}
+        

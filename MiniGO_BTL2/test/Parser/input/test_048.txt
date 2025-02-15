@@ -1,6 +1,9 @@
-
-                                    func Add() {
-                                        for var i = 0; i < 10; i += 1 {
-                                            // loop body
-                                        }
-                                    }
+    
+            func example() {
+                var x = 10 + 5 * 2;
+                var y = (20 - 3) / 2;
+                
+                const ANSWER = 42;
+                const MESSAGE = "bye bye";
+            }                                       
+        

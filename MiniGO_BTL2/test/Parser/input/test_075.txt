@@ -1,0 +1,16 @@
+    
+            func Banana() {
+                for i := 0; i < 10; i += 2 {
+                    const w = 10;
+                    var x = 3;
+                    return;
+                }
+            }
+            func Apple() {
+                for i := 0; i < 5; i += 1 {
+                    const y = 15;
+                    var z = 7;
+                    return;
+                }
+            }
+        

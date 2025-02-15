@@ -1,1 +1,1 @@
-const,a,=,"Hello, World!",;,<EOF>
+"Hell","Way",<EOF>

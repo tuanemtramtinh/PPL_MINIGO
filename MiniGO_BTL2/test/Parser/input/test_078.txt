@@ -1,0 +1,14 @@
+
+            func Pineapple() {
+                if (p > 100) {
+                    a[2][1].callCalculate();
+                    return;
+                } else {
+                    if (q < 50 && true) {
+                        break;
+                    } else {
+                        continue;
+                    }
+                }
+            }
+        

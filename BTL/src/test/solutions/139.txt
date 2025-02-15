@@ -1,1 +1,1 @@
-0b1010,<EOF>
+A1B2C3_var,<EOF>

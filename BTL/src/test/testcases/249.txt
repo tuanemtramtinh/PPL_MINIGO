@@ -1,3 +1,12 @@
 
-            var z abc = a[2][3][a + 2];                         
-        
+        func sort(){
+            var array = [5]int{5, 3, 1, 4, 2}
+            var size = 5
+            for var i = 0; i < size - 1; i+=1 {
+                for var j = 0; j < size - i - 1; j+=1{
+                    if (array[j] > array[j + 1]) {
+                        swap(v[j], v[j + 1])
+                    }
+                }
+            }
+        };

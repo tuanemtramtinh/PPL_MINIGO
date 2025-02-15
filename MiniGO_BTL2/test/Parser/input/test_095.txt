@@ -1,7 +1,7 @@
 
-                                        
-            func (c c) Add(x int) {}
-                                        
-            func Add(x int) {} var c int;
-                                        
-            var c int; type Calculator struct{} type Calculator struct{} var c int;
+            const a = [a][b]hello{a, a, {1,2,3}}
+            func Process(a, b int, c , d, e float, g Goo) {
+                Cleanup(1)
+                ExecuteTask(go)
+            }
+        

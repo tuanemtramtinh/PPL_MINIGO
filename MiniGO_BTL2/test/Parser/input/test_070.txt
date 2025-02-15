@@ -1,0 +1,18 @@
+    
+            func Grape() {
+                for i := 0; i < 10; i += 2 {
+                    var x = 1;
+                    const y = 5;
+                    var z = 2;
+                    return;
+                }
+            }
+            func Pear() {
+                for i := 0; i < 5; i += 3 {
+                    var k = 7;
+                    const l = 10;
+                    var m = 4;
+                    return;
+                }
+            }
+        

@@ -1,0 +1,7 @@
+    
+            func example() {
+                if (x > 0) {
+                    var y int = x + 1;
+                }
+            }                                       
+        

@@ -1,3 +1,11 @@
 
-            var p = Person { name: "Alice", age: 27 };
+        func foo(){
+            if (1) {
+                const a = 10;
+            } else if {
+                const b = 100;
+            } else {
+                
+            }
+        };
         

@@ -1,0 +1,16 @@
+    
+            func Lime() {
+                for index, value := range array {
+                    var t = 3;
+                    const u = 6;
+                    return;
+                }
+            }
+            func Avocado() {
+                for index, value := range fruits {
+                    var v = 8;
+                    const w = 5;
+                    return;
+                }
+            }
+        

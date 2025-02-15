@@ -1,6 +1,10 @@
-
-                                    func Add() {
-                                        for const i = 0; i < 10; i += 1 {
-                                            // loop body
-                                        }
-                                    }
+    
+            func example() {
+                var a bool = true;
+                var b = false;
+                var c int;
+                
+                const MAX_VALUE = 100;
+                const MIN_VALUE int = 0;
+            }                                       
+        

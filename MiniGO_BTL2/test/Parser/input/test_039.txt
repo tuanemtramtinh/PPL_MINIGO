@@ -1,3 +1,10 @@
-    
-            type Calculator interface {}
-            type Person struct{};
+
+            type Employee struct {
+                Name string;
+                Age int;
+            }
+
+            func (e Employee) GetDetails() string {
+                return e.Name + " is " + e.Age + " years old.";
+            }
+        

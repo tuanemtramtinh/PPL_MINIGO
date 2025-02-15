@@ -1,0 +1,11 @@
+    
+            func example() {
+                if (x > 0) { 
+                    if (y > 0) {
+                        var z int = x + y;
+                    } else {
+                        var w int = x - y;
+                    }
+                }
+            }                                       
+        

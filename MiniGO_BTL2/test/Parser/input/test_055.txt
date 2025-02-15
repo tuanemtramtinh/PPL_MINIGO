@@ -1,0 +1,8 @@
+    
+            func example() {
+                var matrix [[3][3]int];
+                var records [100]Pear;
+                
+                const MAX_RECORDS = 100;
+            }                                       
+        

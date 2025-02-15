@@ -1,1 +1,1 @@
-float,<EOF>
+Illegal escape in string: "tuanhanhdeptrai\f

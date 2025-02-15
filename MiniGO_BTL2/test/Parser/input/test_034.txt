@@ -1,5 +1,10 @@
 
-                                    func Add() {
-                                        for index, value := range arr[2] {
-                                        }
-                                    }
+            func (p Pear) Calculate(a int, b int, c int) int {
+                result := a + b;
+                result *= c;
+                return result;
+            }
+            func (p Pear) Subtract(a int, b int) int {
+                return a - b;
+            }
+        

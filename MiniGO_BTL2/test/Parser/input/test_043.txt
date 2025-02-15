@@ -1,7 +1,13 @@
 
-                                    func Add() {
-                                        if (x.foo().b[2]) 
-                                        {
-                                            if (){}
-                                        } 
-                                    }
+            type Updater interface {
+                Update(val int) int;
+            }
+
+            type Data struct {
+                Value int;
+            }
+
+            func (d Data) Update(val int) int {
+                return d.Value + val;
+            }
+        

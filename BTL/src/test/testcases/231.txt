@@ -1,15 +1,15 @@
 
-                func (p Person) Greet() string {
-                    for i := 0
-                        i < 10
-                        i += 1 {
-                        return
-                    }
-                    for i := 0
-                        i < 10
-                        i += 1 
-                    {
-                        return
-                    }
-                };  
+        type Student interface {
+            Add(x, y int) int;
+            
+            Subtract(a, b float, c int) float;
+            
+            
+            
+            Reset()
+            
+            
+            SayHello(name string)
+            
+        }
         

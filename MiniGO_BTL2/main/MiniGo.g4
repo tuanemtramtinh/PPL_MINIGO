@@ -1,3 +1,5 @@
+// 2252038
+
 grammar MiniGo;
 
 @lexer::header {
@@ -68,6 +70,7 @@ struct_argument: ID all_types SEMICOLON;
 //interface
 interface_declaration: TYPE ID INTERFACE LEFT_CURLY list_interface_method_declaration RIGHT_CURLY SEMICOLON;
 
+// list_interface_method_declaration_prime: list_interface_method_declaration | ;
 list_interface_method_declaration: interface_method_declaration list_interface_method_declaration | interface_method_declaration;
 interface_method_declaration: ID LEFT_PAREN list_interface_method_element_prime RIGHT_PAREN (all_types | ) SEMICOLON;
 
@@ -133,14 +136,12 @@ list_literal_prime: list_literal | ;
 list_literal: literal COMMA list_literal | literal;
 
 literal_primitive: ID | INT_LIT | FLOAT_LIT | STRING_LIT | BOOL_LIT | NIL_LIT | struct_literal;
-list_literal_primitive_prime: list_literal_primitive | ;
-list_literal_primitive: literal_primitive COMMA list_literal_primitive | literal_primitive;
 
 //array_literal
 array_literal: array_type LEFT_CURLY list_array_element RIGHT_CURLY;
 
 list_array_element: array_element COMMA list_array_element | array_element;
-array_element: list_literal_primitive | (LEFT_CURLY array_element RIGHT_CURLY);
+array_element: literal_primitive | (LEFT_CURLY list_array_element RIGHT_CURLY);
 
 list_array_specific: array_specific list_array_specific | array_specific;
 array_specific: LEFT_SQUARE (INT_LIT | ID) RIGHT_SQUARE; 
@@ -151,7 +152,7 @@ array_declare_type: BOOLEAN | INT | FLOAT | STRING | ID;
 struct_literal: ID LEFT_CURLY list_struct_element_prime RIGHT_CURLY;
 list_struct_element_prime: list_struct_element | ;
 list_struct_element: struct_element COMMA list_struct_element | struct_element;
-struct_element: (ID COLON expression) | func_declaration;
+struct_element: ID COLON expression;
 
 //function
 function_call: ID LEFT_PAREN list_expression_prime RIGHT_PAREN;
@@ -262,7 +263,7 @@ COMMENT_BLOCK: '/*' (COMMENT_BLOCK | .)*? '*/' -> skip;
 COMMENT_LINE:  '//' ~[\r\n]*  -> skip;
 
 ERROR_CHAR: . {raise ErrorToken(self.text)};
-UNCLOSE_STRING: '"' STRING_CHAR* ('\n'|'\r'|EOF) {
+UNCLOSE_STRING: '"' STRING_CHAR* ('\r\n'|'\n'|EOF) {
     if self.text[-1] == '\n':
         if self.text[-2] == '\r':
             self.text = self.text[:-2]

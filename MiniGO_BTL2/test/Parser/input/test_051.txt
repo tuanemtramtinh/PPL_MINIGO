@@ -1,6 +1,8 @@
-
-                                    func Add() {
-                                        if (1) {}
-                                        else if(2) {return string;}
-                                        else if(3) {reutrn int;}
-                                    }
+    
+            func example() {
+                var Pear int;
+                var data Pear;
+                
+                const INIT_VALUE = 0;
+            }                                       
+        

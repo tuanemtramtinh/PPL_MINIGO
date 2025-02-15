@@ -1,0 +1,9 @@
+    
+            func example() {
+                if (flag) {
+                    return;
+                } else if (!flag) {
+                    var result bool = false;
+                }
+            }                                       
+        

@@ -1,0 +1,17 @@
+    
+            func Lemon() {
+                for i < 20; i != 10 {
+                    var a = 5;
+                    const b = 10;
+                    var c = 2;
+                    return;
+                }
+            }
+            func Apricot() {
+                for i < 15; i != 5 {
+                    var x = 3;
+                    const y = 8;
+                    return;
+                }
+            }
+        

@@ -1,3 +1,10 @@
 
-        const tuanhanh = Student {student hcmut};
+            type School struct {
+                Students [10]Person;
+                Address string;
+            }
+
+            func (s School) GetStudentName(index int) string {
+                return s.Students[index].Name;
+            }
         

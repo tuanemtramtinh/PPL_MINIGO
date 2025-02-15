@@ -1,3 +1,17 @@
 
-                func (c c) Add(x, c int) {return ;}
+        func Add(x int, y int) int {
+            return x + y;
+        }
+        func Sub(x int, y int) int {
+            return x - y;
+        }
+        func Mul(x int, y int) int {
+            return x * y;
+        }
+        func Div(x int, y int) float {
+            return x / y;
+        }
+        func Mod(x int, y int) int {
+            return x % y;
+        }
         

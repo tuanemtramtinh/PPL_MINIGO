@@ -1,7 +1,3 @@
-
-            func Add() {
-                for index, value := range arr {
-                 a[1 + 1] := 1;
-                }
-            }
-        
+func Add() {
+            if (5 - 1) {}
+        };

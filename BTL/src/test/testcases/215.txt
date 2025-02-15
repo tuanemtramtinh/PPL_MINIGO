@@ -1,1 +1,1 @@
-const abc = a.a.foo();
+const tuanhanhdeptrai = d(1, 2);

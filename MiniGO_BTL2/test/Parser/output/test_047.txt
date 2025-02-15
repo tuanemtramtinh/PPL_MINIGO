@@ -1,1 +1,1 @@
-Error on line 3 col 44: const
+Error on line 8 col 32: int

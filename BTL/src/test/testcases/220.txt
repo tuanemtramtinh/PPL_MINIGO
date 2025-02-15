@@ -1,3 +1,1 @@
-    
-                func Add(a) [2]id {return ;}
-        
+var x int = 10;

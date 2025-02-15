@@ -1,3 +1,1 @@
-type interface {
-                draw() ;
-            }
+0x123FG 0x459fG

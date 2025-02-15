@@ -1,1 +1,13 @@
-const a = 1
+
+        func testIfElse() {
+            if (a > b) {
+                if (b > c) {
+                    return a;
+                } else {
+                    return b;
+                }
+            } else {
+                return c;
+            }
+        }
+        

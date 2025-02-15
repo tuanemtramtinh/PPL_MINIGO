@@ -1,6 +1,4 @@
 
-                                    func Add() {
-                                        for const i = 0; i < 10; i += 1 {
-                                            // loop body
-                                        }
-                                    }
+            func (p Pear) SumArray(arr [3] int) int {return arr[0] + arr[1] + arr[2];}
+            func (p Pear) MultiplyArray(nums [2] float) float {return nums[0] * nums[1];}
+        

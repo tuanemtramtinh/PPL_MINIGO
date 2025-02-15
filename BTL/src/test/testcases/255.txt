@@ -1,6 +1,7 @@
 
-            func Add() {
-                const a = a[2].b
-                var a = a[2].b; var a = "s";           
-            }
+        type Shape interface {
+            Area() float
+            Perimeter() float
+            Scale(factor float) float
+        }
         

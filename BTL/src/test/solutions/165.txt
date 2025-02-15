@@ -1,1 +1,1 @@
-0b1010,<EOF>
+const,a,=,true,;,<EOF>

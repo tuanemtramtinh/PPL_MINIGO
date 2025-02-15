@@ -1,0 +1,8 @@
+    
+            func example() {
+                var list [10]int;
+                var numbers [5]float;
+                
+                const SIZE = 10;
+            }                                       
+        

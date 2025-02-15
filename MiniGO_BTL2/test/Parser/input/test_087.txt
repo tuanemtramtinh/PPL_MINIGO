@@ -1,0 +1,8 @@
+
+            type Factorial struct {
+                func (f Factorial) Compute(n int) int {
+                    if n == 0 { return 1 }
+                    return n * f.Compute(n-1)
+                }
+            }
+        

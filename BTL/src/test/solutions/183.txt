@@ -1,1 +1,1 @@
-abc123_def,<EOF>
+<EOF>

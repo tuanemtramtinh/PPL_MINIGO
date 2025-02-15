@@ -1,1 +1,1 @@
-&&,ErrorToken ^
+const,a,=,"Tuan Anh",;,<EOF>

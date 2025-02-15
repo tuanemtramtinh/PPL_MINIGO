@@ -1,10 +1,6 @@
 
-            type Person struct {
-                func (p Person) Greet() string {
-                    return "Hello, " + p.name
-                }; c c;
-                func (p Person) Greet() string {
-                    return "Hello, " + p.name
-                } c c;                                                    
-            }      
+        type Student struct {
+            maze [100][100] int;
+            scholarship Scholar;
+        }
         

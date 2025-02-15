@@ -1,3 +1,1 @@
-    
-            var z VOTIEN = ID {};                         
-        
+const M = (foo(10) + bar) * (arr[0] - 3) / obj.method(2);

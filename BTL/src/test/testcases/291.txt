@@ -1,6 +1,6 @@
 
-            const a = 1;
-            var b = 2;
-            type Data struct { x int; };
-            func foo() { return; };
+        func foo (n int) bool {
+            if (n % 2) return true;
+            return false;
+        }
         

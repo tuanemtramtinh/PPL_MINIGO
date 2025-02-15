@@ -1041,13 +1041,8 @@ class ParserSuite(unittest.TestCase):
                                             var a = {1, 2};
                                         ""","Error on line 2 col 52: {", inspect.stack()[0].function))
         
-    # def test_183(self):
-    #     """Expressions"""
-    #     self.assertTrue(TestParser.test("""    
-    #         var z VOTIEN = a[2, 3];                         
-    #     ""","Error on line 2 col 30: ,", inspect.stack()[0].function))
-        
-    # def test_184(self):
-    #     input = """const tuanhanh = Student {student hcmut};"""
-    #     expect = "Error on line 2 col 33: {"
-    #     self.assertTrue(TestParser.test(input, expect, inspect.stack()[0].function))
+    def test_183(self):
+        """Expressions"""
+        self.assertTrue(TestParser.test("""    
+            var z VOTIEN = a[2, 3];                         
+        ""","Error on line 2 col 30: ,", inspect.stack()[0].function))

@@ -1,1 +1,1 @@
-ErrorToken @
+const,a,=,a,[,2,],;,<EOF>

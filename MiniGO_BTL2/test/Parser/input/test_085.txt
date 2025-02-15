@@ -1,0 +1,22 @@
+
+            func Lemon() {
+                for i := 0; i < 7; i += 1 {
+                    if (check) {
+                        callVerify();
+                        return;
+                    } else {
+                        for j := 0
+                            j < 5
+                            j += 1 {
+                            callTest();
+                            if (result == "failure") {
+                                break;
+                                for index, value := range array { i := a + 2; }
+                            } else {
+                                continue;
+                            }
+                        }
+                    }
+                }
+            }
+        

@@ -1,4 +1,14 @@
 
-            type I interface {
-                Foo();
+        func isPalindrome(s string) bool {
+            var i = 0;
+            var j = len(s) - 1;
+            for i < j {
+                if (s[i] != s[j]) {
+                    return false;
+                }
+                i += 1;
+                j -= 1;
+            }
+            return true;
+        }
         

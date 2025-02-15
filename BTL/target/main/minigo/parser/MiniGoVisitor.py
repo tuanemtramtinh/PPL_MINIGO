@@ -254,16 +254,6 @@ class MiniGoVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by MiniGoParser#list_literal_primitive_prime.
-    def visitList_literal_primitive_prime(self, ctx:MiniGoParser.List_literal_primitive_primeContext):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by MiniGoParser#list_literal_primitive.
-    def visitList_literal_primitive(self, ctx:MiniGoParser.List_literal_primitiveContext):
-        return self.visitChildren(ctx)
-
-
     # Visit a parse tree produced by MiniGoParser#array_literal.
     def visitArray_literal(self, ctx:MiniGoParser.Array_literalContext):
         return self.visitChildren(ctx)

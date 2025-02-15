@@ -1,3 +1,5 @@
 
-            func Add(x, y int, b float) {return ;}           
+        type Student struct {
+            age int;
+        }
         

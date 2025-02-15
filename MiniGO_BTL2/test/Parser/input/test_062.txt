@@ -1,0 +1,7 @@
+    
+            func example() {
+                if (x + y > 10) {
+                    var sum int = x + y;
+                }
+            }                                       
+        

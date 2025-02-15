@@ -1,5 +1,10 @@
-
-                                    func Add() {
-                                        for index, value := range arr[2] {
-                                        }
-                                    }
+    
+            func example() {
+                var name = "John Doe";
+                var age int = 25;
+                var height float = 1.75;
+                
+                const DEFAULT_NAME = "Unknown";
+                const DEFAULT_AGE = 18;
+            }                                       
+        

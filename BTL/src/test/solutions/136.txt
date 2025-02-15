@@ -1,1 +1,1 @@
-continue,<EOF>
+myVariable,<EOF>

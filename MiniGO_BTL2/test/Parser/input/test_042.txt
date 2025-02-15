@@ -1,3 +1,14 @@
-    
-            var z VOTIEN = a[];                         
+
+            type Closer interface {
+                Close() bool;
+            }
+
+            type File struct {
+                Filename string;
+            }
+
+            func (f File) Close() bool {
+                // return false;
+                return true
+            }
         

@@ -1,3 +1,4 @@
 func foo () {
-            return ;
+            const bar = foo;
+
         };

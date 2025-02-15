@@ -1,1 +1,1 @@
-"abcde",<EOF>
+p,:=,Person,{,},<EOF>

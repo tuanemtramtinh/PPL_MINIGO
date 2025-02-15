@@ -1,1 +1,2 @@
- "Trieuman \" " 
+const a = foo()
+                                              

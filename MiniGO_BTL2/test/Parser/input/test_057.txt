@@ -1,0 +1,9 @@
+    
+            func example() {
+                if (true) {
+                    return;
+                } else {
+                    var z int = 5;
+                }
+            }                                       
+        

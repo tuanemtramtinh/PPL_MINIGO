@@ -1,4 +1,4 @@
 
-                                    func Add() {
-                                        a.a.a[2][3].c[2].a[2].b := 2;       
-                                    }
+            func GetNumbers() [2][3] int {return hello;}
+            func GetCoordinates() [3][4] float {return groot}
+        

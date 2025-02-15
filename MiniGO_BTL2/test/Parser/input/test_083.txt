@@ -1,0 +1,21 @@
+
+            func Strawberry() {
+                for i := 0
+                    i < 10; i += 1 {
+                    if (flag) {
+                        callApple();
+                        return;
+                    } else if(!flag + 1){
+                        continue;
+                        foo();           
+                    } else {
+                        callBanana()
+                        if (value == 10) {
+                            break;
+                        } else {
+                            continue;
+                        }
+                    }
+                }
+            }
+        

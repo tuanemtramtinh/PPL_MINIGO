@@ -1,0 +1,9 @@
+    
+            func example() {
+                if (status == "active") {
+                    var flag bool = true;
+                } else {
+                    var flag bool = false;
+                }
+            }                                       
+        

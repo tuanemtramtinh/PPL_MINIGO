@@ -1,0 +1,17 @@
+    
+            func Strawberry() {
+                for i := 0; i < 10; i += 1 {
+                    var x = 3;
+                    const y = 6;
+                    var z = 8;
+                    return;
+                }
+            }
+            func Papaya() {
+                for i := 0; i < 5; i += 2 {
+                    var a = 1;
+                    const b = 3;
+                    return;
+                }
+            }
+        

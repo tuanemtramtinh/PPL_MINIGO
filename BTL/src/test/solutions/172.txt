@@ -1,1 +1,1 @@
-0.1E-10,<EOF>
+2,ErrorToken ^

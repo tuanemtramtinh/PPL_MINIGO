@@ -1,1 +1,5 @@
-const nums = [5]int{1,2,3,4,5};
+
+        type Address struct {
+            street string;
+            city string;
+        }

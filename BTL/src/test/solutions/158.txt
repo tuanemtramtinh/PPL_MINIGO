@@ -1,1 +1,1 @@
-Illegal escape in string: "Trieuman \	
+const,a,=,_ab,;,<EOF>

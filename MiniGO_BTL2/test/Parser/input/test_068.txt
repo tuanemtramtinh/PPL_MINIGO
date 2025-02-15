@@ -1,0 +1,16 @@
+    
+            func Mango() {
+                for index, value := range array {
+                    var c = 5;
+                    const d = 20;
+                    return;
+                }
+            }
+            func Cherry() {
+                for index, value := range fruits {
+                    var f = 3;
+                    const g = 10;
+                    return;
+                }
+            }
+        

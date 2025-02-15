@@ -1,6 +1,2 @@
-/*
-                                              /*aaaa*/
-                                              */
-                                              //b //a
-                                              /*sos /**/
+const a = 0x11AF
                                               

@@ -1,2 +1,17 @@
 
-            func (c c) Add(x, c int) {return ;}
+            type case struct {
+                    case1 string
+                    case2 Go
+                }                               
+            func CheckValue(x int) string {
+                if (check) {
+                    callVerify();
+                    return;
+                    for j := 0; j < 5; j += 1 {
+                        if (i + j == 3) { 
+                            break 
+                        }else if (i - j >= k + j){}
+                    }
+                }
+            }
+        

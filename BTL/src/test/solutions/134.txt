@@ -1,1 +1,1 @@
-nil,<EOF>
+*,pointer,<EOF>

@@ -1,0 +1,14 @@
+
+            func LoopTest() {
+                for i := 0; i < 5; i += 1 {
+                    for j := 0; j < 5; j += 1 {
+                        if (i + j == 3) { 
+                            break 
+                        }
+                        if (i == j) { 
+                            continue 
+                        }
+                    }
+                }
+            }
+        

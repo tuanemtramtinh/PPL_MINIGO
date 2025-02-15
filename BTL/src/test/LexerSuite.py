@@ -172,7 +172,7 @@ class LexerSuite(unittest.TestCase):
         
     def test_unclose_string_2(self):
         """test unclose string"""
-        self.assertTrue(TestLexer.checkLexeme(""" "Dep trai\r ""","""Unclosed string: "Dep trai""",141))
+        self.assertTrue(TestLexer.checkLexeme(""" "Dep trai\r\n ""","""Unclosed string: "Dep trai""",141))
         
     def test_float_literal_3(self):
         """test float literal"""
@@ -443,5 +443,3 @@ class LexerSuite(unittest.TestCase):
             z == y;
             if x > 10 { x = 5; }
         ""","""var,x,=,42,;,var,y,=,3.14,;,z,:=,x,+,y,;,result,:=,"Test",;,z,==,y,;,if,x,>,10,{,x,=,5,;,},;,<EOF>""",200))
-
-    

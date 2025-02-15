@@ -1,5 +1,7 @@
 
-            type I interface {
-                Foo();
-            };
+        func foo(){
+            if (1) {
+                const a = 10;
+            } else {}
+        };
         

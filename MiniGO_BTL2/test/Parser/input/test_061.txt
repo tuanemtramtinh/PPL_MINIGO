@@ -1,0 +1,13 @@
+    
+            func example() {
+                if (a == 10) {
+                    var x int = 100;
+                } else {
+                    if (b == 20) {
+                        var y int = 200;
+                    } else {
+                        var z int = 300;
+                    }
+                }
+            }                                       
+        
