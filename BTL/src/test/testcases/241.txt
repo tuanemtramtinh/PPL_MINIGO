@@ -1,14 +1,6 @@
 
-        func foo() {
-            if (x > 10) {
-                var t string;
-            } 
-            if (x > 10) {
-                var x float;
-            } else if (x == 10) {
-                var z str;
-            } else {
-                var z ID;
-            }
-        }
+            func abc() {
+                x  := foo() + 3 / 4;
+                x.c[2][4] := 1 + 2;                       
+            }                                       
         

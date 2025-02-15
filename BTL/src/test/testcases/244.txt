@@ -1,8 +1,10 @@
 
-        func foo() {
-            if (x > 10) { const b = 5; } else { var z ID;}
-            if (x > 10) {
-                const a = 5;    
-            } else { var z ID;}
-        }
+            func abc() {                           
+                for i < 10 {break;}
+                break;
+                continue;
+                return 1;
+                return
+                foo(2 + x, 4 / y); m.goo();                        
+            }
         

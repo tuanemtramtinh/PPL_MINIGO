@@ -1,3 +1,2 @@
-
-        func Add(x tuanemdeptrai) tuananhdeptrai{const a = 5 * 3;}
+const a = [1]int{1+1}                    
         

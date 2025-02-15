@@ -1,1 +1,3 @@
-const tuanhanhdeptrai = 1 + b * a[1].b.d(1,2) / a[1][2] - foo(2)[1];
+    
+                var z abc = [2]int{};                         
+        

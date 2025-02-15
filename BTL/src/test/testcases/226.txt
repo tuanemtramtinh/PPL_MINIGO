@@ -1,6 +1,2 @@
-
-        func (s Student) Submit(x int) int {
-            var form = s.form;
-            return form;
-        }
+const a = [1]int{{1, 0x1}, ID{}, {{ID{}}}}                    
         

@@ -1,1 +1,1 @@
-Line1\rLine2,<EOF>
+"Line1\rLine2",<EOF>

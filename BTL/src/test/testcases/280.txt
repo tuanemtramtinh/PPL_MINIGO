@@ -1,5 +1,11 @@
 
-        func foo() {
-            var p = Person{name: "John", age: 30,};
-        }
+            const a = 1;
+            var x = 2;
+            type Person struct {
+                name string;
+                age int;
+            };
+            func main() {
+                return;
+            };
         

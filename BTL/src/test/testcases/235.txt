@@ -1,3 +1,6 @@
 
-        const tuanhanhdeptrai = Student {student hcmut};
+        type Student struct {
+            name string;
+            age int;
+        }
         

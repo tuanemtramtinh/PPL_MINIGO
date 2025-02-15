@@ -1,1 +1,1 @@
-const tuanhanhdeptrai = Person{name: "Tuanemtramtinh", university: HCMUT, age: 30};
+const a = [5][0]string{1, "string"};

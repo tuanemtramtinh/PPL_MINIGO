@@ -1,8 +1,5 @@
 
-        func absoluteValue(x int) int {
-            if (x < 0) {
-                return -x;
-            }
-            return x;
-        }
+            func main() {
+                if (a > 0) { return; } else { return; };
+            };
         

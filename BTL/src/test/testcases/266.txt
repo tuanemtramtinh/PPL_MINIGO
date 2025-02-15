@@ -1,3 +1,5 @@
-func Add() {
-            for i < 5 {}
-        }
+
+            func foo(){
+                a[1 + 1] := 1;
+            } 
+        

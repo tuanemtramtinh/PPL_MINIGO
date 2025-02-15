@@ -1,5 +1,1 @@
-
-        func lcm(a int, b int) int {
-            return (a * b) / gcd(a, b);
-        }
-        
+const result = (a && b) || c;

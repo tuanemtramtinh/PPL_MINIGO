@@ -1,3 +1,5 @@
 
-        const tuanhanhdeptrai = a[1,2,4][2];
+        type Student struct {
+            age int;
+        }
         

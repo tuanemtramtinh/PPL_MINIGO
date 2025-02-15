@@ -1,7 +1,5 @@
 
-        func foo(){
-            if (1) {
-                const a = 10;
-            } else {}
-        };
+            type I interface {
+                Foo();
+            };
         

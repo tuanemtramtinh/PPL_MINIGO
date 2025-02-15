@@ -258,10 +258,8 @@ class ParserSuite(unittest.TestCase):
         self.assertTrue(TestParser.checkParser(input,expect,234))
         
     def test_illegal_var_declaration_2(self):
-        input = """
-        const tuanhanhdeptrai = Student {student hcmut};
-        """
-        expect = "Error on line 2 col 41: {"
+        input = """const tuanhanh = Student {student hcmut};"""
+        expect = "Error on line 1 col 35: hcmut"
         self.assertTrue(TestParser.checkParser(input,expect,235))
         
     def test_illegal_var_declaration_3(self):
@@ -598,48 +596,49 @@ class ParserSuite(unittest.TestCase):
     def test_statement_26(self):
         """Statement"""
         input = """
-        func Add() {}"""
-        expect = "Error on line 2 col 21: }"
+        func Add() {}
+        """
+        expect = "successful"
         self.assertTrue(TestParser.checkParser(input, expect, 263))
         
     def test_statement_27(self):
         """Statement"""
         input = """func Add() {
             if (5 - 1) {}
-        }"""
-        expect = "Error on line 2 col 25: }"
+        };"""
+        expect = "successful"
         self.assertTrue(TestParser.checkParser(input, expect, 264))
         
     def test_statement_28(self):
         """Statement"""
         input = """func Add() {
             for i:=0; i < 10000; i+=1 {}
-        }"""
-        expect = "Error on line 2 col 40: }"
+        };"""
+        expect = "successful"
         self.assertTrue(TestParser.checkParser(input, expect, 265))
         
     def test_statement_29(self):
         """Statement"""
         input = """func Add() {
             for i < 5 {}
-        }"""
-        expect = "Error on line 2 col 24: }"
+        };"""
+        expect = "successful"
         self.assertTrue(TestParser.checkParser(input, expect, 266))
         
     def test_statement_30(self):
         """Statement"""
         input = """func Add() {
             for i < 5 {}
-        }"""
-        expect = "Error on line 2 col 24: }"
+        };"""
+        expect = "successful"
         self.assertTrue(TestParser.checkParser(input, expect, 267))
         
     def test_statement_31(self):
         """Statement"""
         input = """func Add() {
             for index, value := range array {}
-        }"""
-        expect = "Error on line 2 col 47: ;"
+        };"""
+        expect = "successful"
         self.assertTrue(TestParser.checkParser(input, expect, 268))
         
     def test_statement_32(self):
@@ -681,7 +680,7 @@ class ParserSuite(unittest.TestCase):
             } else {}
         };
         """
-        expect = "Error on line 5 col 21: }"
+        expect = "successful"
         self.assertTrue(TestParser.checkParser(input, expect, 274))
         
     def test_statement_38(self):

@@ -1,14 +1,5 @@
 
-        func linearSearch(x int, arr [10]int) int{
-            var result = -1;
-            
-            for var i = 0; i < 10; i+=1{
-                if (arr[i] == x){
-                    result := i;
-                    break;
-                }
+            func Add() {
+                a[2].b := 2;       
             }
-            
-            return result;
-        }
         

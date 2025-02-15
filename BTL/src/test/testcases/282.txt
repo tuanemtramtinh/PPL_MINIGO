@@ -1,8 +1,5 @@
 
-        // This is a single-line comment
-        func commentTest() {
-            /* This is a 
-               multi-line comment */
-            var a = 5; // inline comment
-        }
+            type Person struct {
+                name string;
+                age int;
         

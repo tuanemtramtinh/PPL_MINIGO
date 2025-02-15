@@ -1,8 +1,5 @@
 
-        func Power(base int, exp int) int {
-            if (exp == 0) {
-                return 1
+            func Add() {
+                a.foo() += 2;       
             }
-            return base * Power(base, exp - 1)
-        }
         

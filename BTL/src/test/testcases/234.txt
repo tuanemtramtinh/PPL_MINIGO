@@ -1,3 +1,7 @@
 
-        const tuanhanhdeptrai = a[1].b.d.;
+                func (p Person) Greet() string {
+                    for i < 10 {
+    // loop body
+    }
+                };  
         

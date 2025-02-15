@@ -1,1 +1,1 @@
-hello\nworld,<EOF>
+"hello\nworld",<EOF>

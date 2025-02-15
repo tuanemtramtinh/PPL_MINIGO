@@ -1,10 +1,5 @@
 
-        func mergeSort(arr [10]int, left int, right int) {
-            if (left < right) {
-                var mid = (left + right) / 2;
-                mergeSort(arr, left, mid);
-                mergeSort(arr, mid + 1, right);
-                merge(arr, left, mid, right);
-            }
-        }
+            func main() {
+                for i, v := range arr { v; };
+            };
         

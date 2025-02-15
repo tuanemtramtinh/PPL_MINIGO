@@ -1,1 +1,3 @@
-const tuanhanhdeptrai = d();
+
+                type abc struct {}                                                                       
+        

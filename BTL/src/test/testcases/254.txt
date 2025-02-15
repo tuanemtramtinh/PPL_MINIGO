@@ -1,11 +1,4 @@
 
-        const PI = 3.14;
-        
-        func calcCircleArea(radius float) float {
-            return radius * radius * PI;  
-        };
-        
-        func main(){
-            calcCircleArea(5.0)
-        }
+            type Calculator interface {}
+            type Person struct{};
         

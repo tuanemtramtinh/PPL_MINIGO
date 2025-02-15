@@ -1,3 +1,2 @@
-
-        func (s Student) Submit() Student {const point = 100000;}
+const a = [1]int{[1]int{1}}                    
         

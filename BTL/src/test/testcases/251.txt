@@ -1,4 +1,3 @@
 
-        func test(){
-            for const i := 0; i < 10000; i+=1 {}   
-        };
+            const k = ID {a : 2}.c[2] + 2[2] + true.foo() + (2).foo();                         
+        

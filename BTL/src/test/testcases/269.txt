@@ -1,1 +1,8 @@
-const a = [1][2]int{[1][2]int};
+
+            type Calculator interface {
+                Add(x, y int) int;
+                Subtract(a, b float, c int) [3]int;
+                Reset();
+                SayHello(name string);
+            };
+        
