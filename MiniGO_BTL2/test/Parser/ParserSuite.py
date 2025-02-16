@@ -1046,3 +1046,5 @@ class ParserSuite(unittest.TestCase):
         self.assertTrue(TestParser.test("""    
             var z VOTIEN = a[2, 3];                         
         ""","Error on line 2 col 30: ,", inspect.stack()[0].function))
+        
+  

@@ -1,1 +1,3 @@
-const tuanhanh = Student {student hcmut};
+    
+            type Person struct {name string}                         
+        
