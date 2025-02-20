@@ -1,1 +1,1 @@
-value,+,another_value,;,<EOF>
+a,<EOF>

@@ -1,1 +1,1 @@
-total,=,price,*,quantity,<EOF>
+<EOF>

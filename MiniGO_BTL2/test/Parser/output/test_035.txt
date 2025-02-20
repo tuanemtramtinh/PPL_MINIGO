@@ -1,1 +1,1 @@
-Error on line 3 col 16: func
+Error on line 2 col 34: }

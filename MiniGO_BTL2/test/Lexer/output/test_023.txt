@@ -1,1 +1,1 @@
-0,xGHI,<EOF>
+<EOF>
