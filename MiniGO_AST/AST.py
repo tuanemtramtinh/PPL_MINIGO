@@ -3,7 +3,7 @@ from abc import ABC, abstractmethod, ABCMeta
 from dataclasses import dataclass
 from typing import List
 from Visitor import Visitor
-
+from typing import Tuple
 
 class AST(ABC):
     def __eq__(self, other): 
@@ -49,10 +49,31 @@ class Program(AST):
     decl : List[Decl]
 
     def __str__(self):
-        return "Program([" + ','.join(str(i) for i in self.decl) + "])"
+        return "Program([" + ',\n\t\t\t'.join(str(i) for i in self.decl) + "\n\t\t])"
     
     def accept(self, v: Visitor, param):
         return v.visitProgram(self, param)
+@dataclass
+class ParamDecl(Decl):
+    parName: str
+    parType: Type
+    def __str__(self):
+        return "ParamDecl(\"" + self.parName + "\"," + str(self.parType) + ")"
+
+    def accept(self, v, param):
+        return v.visitParamDecl(self, param)
+
+@dataclass    
+class VarDecl(Decl,BlockMember):
+    varName : str
+    varType : Type # None if there is no type
+    varInit : Expr # None if there is no initialization
+
+    def __str__(self):
+        return "VarDecl(\"" + self.varName +  (("\"," + str(self.varType)) if self.varType else "\", None") + (", None" if self.varInit is None else (","+ str(self.varInit))) + ")"
+
+    def accept(self, v, param):
+        return v.visitVarDecl(self, param)
 
 @dataclass    
 class ConstDecl(Decl,BlockMember):
@@ -61,11 +82,56 @@ class ConstDecl(Decl,BlockMember):
     iniExpr : Expr
 
     def __str__(self):
-        return f"ConstDecl(\"{self.conName}\", {str(self.conType) if self.conType else 'None'}, {str(self.iniExpr)})"
+        return "ConstDecl(\"" + self.conName + "\"," + ((+str(self.conType)) if self.conType else "None") + "," + str(self.iniExpr) + ")"
 
     def accept(self, v, param):
         return v.visitConstDecl(self, param)
 
+@dataclass
+class Block(Stmt):
+    member:List[BlockMember]
+
+    def __str__(self):
+        return "Block([" + ','.join(str(i) for i in self.member)  + "])"
+
+    def accept(self, v, param):
+        return v.visitBlock(self, param)
+@dataclass
+class FuncDecl(Decl):
+    name: str
+    params: List[ParamDecl]
+    retType: Type # VoidType if there is no return type
+    body: Block
+
+    def __str__(self):
+        return "FuncDecl(\"" + self.name + "\",[" +  ','.join(str(i) for i in self.params) + "]," + str(self.retType) + "," + str(self.body) + ")"
+    
+    def accept(self, v, param):
+        return v.visitFuncDecl(self, param)
+
+@dataclass
+class MethodDecl(Decl):
+    receiver: str
+    recType: Type 
+    fun: FuncDecl
+
+    def __str__(self):
+        return "MethodDecl(\""+ self.receiver + "\"," + str(self.recType) + "," + str(self.fun) +")"
+
+    def accept(self, v, param):
+        return v.visitMethodDecl(self,param)
+    
+@dataclass
+class Prototype(AST):
+    name: str
+    params:List[Type]
+    retType: Type # VoidType if there is no return type
+
+    def __str__(self):
+        return "Prototype(\"" + self.name + "\",[" + ','.join(str(i) for i in self.params) + "]," + str(self.retType) + ")"
+
+    def accept(self, v, param):
+        return v.visitPrototype(self,param)
 
 class IntType(Type):
     def __str__(self):
@@ -108,7 +174,7 @@ class ArrayType(Type):
     eleType:Type
         
     def __str__(self):
-        return "ArrayType(" + str(self.eleType) + ",[" + ','.join(str(i) for i in self.dimens) + "])"
+        return "ArrayType(" + "[" + ','.join(str(i) for i in self.dimens) + '],' +  str(self.eleType) + ")"
 
     def accept(self, v, param):
         return v.visitArrayType(self, param)
@@ -120,7 +186,7 @@ class StructType(Type):
     methods:List[MethodDecl]
         
     def __str__(self):
-        return "StructType("+ self.name + ",[" + ','.join(("(" + i + "," + str(j) + ")") for i,j in self.elements) + "],["+ ','.join(str(i) for i in self.methods) +"])"
+        return "StructType(\""+ self.name + "\",[" + ','.join(("(\"" + i + "\"," + str(j) + ")") for i,j in self.elements) + "],["+ ','.join(str(i) for i in self.methods) +"])"
 
     def accept(self, v, param):
         return v.visitStructType(self, param)
@@ -131,11 +197,105 @@ class InterfaceType(Type):
     methods:List[Prototype]
         
     def __str__(self):
-        return "InterfaceType(" + self.name + ",["+ ','.join(str(i) for i in self.methods) +"])"
+        return "InterfaceType(\"" + self.name + "\",["+ ','.join(str(i) for i in self.methods) +"])"
 
     def accept(self, v, param):
         return v.visitInterfaceType(self, param)
 
+@dataclass
+class Assign(Stmt):
+    lhs: LHS
+    rhs: Expr # if assign operator is +=, rhs is BinaryOp(+,lhs,rhs), similar to -=,*=,/=,%=
+
+    def __str__(self):
+        return "Assign(" + str(self.lhs) + "," + str(self.rhs) + ")"
+
+    def accept(self, v, param):
+        return v.visitAssign(self, param)
+
+
+@dataclass
+class If(Stmt):
+    expr:Expr
+    thenStmt:Block
+    elifStmt:List[Tuple[Expr,Block]]
+    elseStmt:Block # None if there is no else
+
+    def __str__(self):
+        if self.elifStmt:
+            elif_str = "[" + ", ".join(
+                f"({str(e)},{str(block)})"
+                for e, block in self.elifStmt
+            ) + "]"
+        else:
+            elif_str = "None"
+
+        return f"If({str(self.expr)}, {str(self.thenStmt)}, {elif_str}, {str(self.elseStmt) if self.elseStmt else 'None'})"
+
+    def accept(self, v, param):
+        return v.visitIf(self, param)
+
+
+@dataclass
+class ForBasic(Stmt):
+    cond:Expr
+    loop:Block
+
+    def __str__(self):
+        return "ForBasic(" + str(self.cond) + "," + str(self.loop) + ")"
+
+    def accept(self, v, param):
+        return v.visitForBasic(self, param)
+
+@dataclass
+class ForStep(Stmt):
+    init:Stmt
+    cond:Expr
+    upda:Assign
+    loop:Block
+
+    def __str__(self):
+        return "ForStep(" + str(self.init) + "," + str(self.cond) + "," + str(self.upda) + "," + str(self.loop) + ")"
+
+    def accept(self, v, param):
+        return v.visitForStep(self, param)
+
+@dataclass
+class ForEach(Stmt):
+    idx: Id
+    value: Id
+    arr: Expr
+    loop:Block
+
+    def __str__(self):
+        return "ForEach(" + str(self.idx) + "," + str(self.value) + "," + str(self.arr) + "," + str(self.loop) + ")"
+
+    def accept(self, v, param):
+        return v.visitForEach(self, param)
+
+class Break(Stmt):
+    def __str__(self):
+        return "Break()"
+
+    def accept(self, v, param):
+        return v.visitBreak(self, param)
+    
+class Continue(Stmt):
+    def __str__(self):
+        return "Continue()"
+
+    def accept(self, v, param):
+        return v.visitContinue(self, param)
+
+@dataclass
+class Return(Stmt):
+    expr:Expr # None if there is no expr
+
+    def __str__(self):
+        return "Return(" + ("None" if (self.expr is None) else str(self.expr)) + ")"
+
+    def accept(self, v, param):
+        return v.visitReturn(self, param)
 
 @dataclass
 class Id(Type,LHS):
@@ -292,9 +452,3 @@ class NilLiteral(Literal):
 
     def accept(self, v, param):
         return v.visitNilLiteral(self, param)
-
-
-
-
-
-

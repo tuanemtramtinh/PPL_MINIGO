@@ -1,1 +1,2 @@
-ConstDecl("VoTien", None, Id("a"))
+Program([ConstDecl("VoTien",None,Id("a"))
+		])

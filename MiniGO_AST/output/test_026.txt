@@ -1,1 +1,2 @@
-ConstDecl("VoTien", None, FieldAccess(FieldAccess(Id("a"),"b"),"c"))
+Program([ConstDecl("VoTien",None,FieldAccess(FieldAccess(Id("a"),"b"),"c"))
+		])
