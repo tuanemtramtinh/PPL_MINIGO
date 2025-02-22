@@ -35,92 +35,91 @@ options{
 }
 
 // ! ---------------- PASER ----------------------- */
-program: (CONST ID ASSIGN expression SEMICOLON) EOF;
-// program: list_declaration EOF;
+program: list_declaration EOF;
 
 //----------------------------------Declaration----------------------------------
-// list_declaration: declaration list_declaration | declaration;
-// declaration: var_declaration | const_declaration | func_declaration | struct_declaration | interface_declaration;
+list_declaration: declaration list_declaration | declaration;
+declaration: var_declaration | const_declaration | func_declaration | struct_declaration | interface_declaration;
 
 
 //----------------------------------Type----------------------------------
 array_type: list_array_specific array_declare_type;
-// all_types: array_type | BOOLEAN | INT | FLOAT | STRING | ID;
+all_types: array_type | BOOLEAN | INT | FLOAT | STRING | ID;
 
 //----------------------------------Const and Var---------------------------
-// var_declaration: VAR ID (all_types | (all_types | ) (ASSIGN expression)) SEMICOLON;
-// const_declaration: CONST ID ASSIGN expression SEMICOLON;
+var_declaration: VAR ID (all_types | (all_types | ) (ASSIGN expression)) SEMICOLON;
+const_declaration: CONST ID ASSIGN expression SEMICOLON;
 
 //method
-// method_declaration: LEFT_PAREN list_method_element RIGHT_PAREN;
-// list_method_element: method_element COMMA list_method_element | method_element;
-// method_element: ID ID;
+method_declaration: LEFT_PAREN list_method_element RIGHT_PAREN;
+list_method_element: method_element COMMA list_method_element | method_element;
+method_element: ID ID;
 
 //function
-// func_declaration: FUNC (method_declaration | ) ID LEFT_PAREN list_func_arguments_prime RIGHT_PAREN (all_types | ) LEFT_CURLY list_statement_prime RIGHT_CURLY SEMICOLON;
-// list_func_arguments_prime: list_func_arguments | ;
-// list_func_arguments: func_arguments COMMA list_func_arguments | func_arguments;
-// func_arguments: list_ID all_types;
+func_declaration: FUNC (method_declaration | ) ID LEFT_PAREN list_func_arguments_prime RIGHT_PAREN (all_types | ) LEFT_CURLY list_statement_prime RIGHT_CURLY SEMICOLON;
+list_func_arguments_prime: list_func_arguments | ;
+list_func_arguments: func_arguments COMMA list_func_arguments | func_arguments;
+func_arguments: list_ID all_types;
 
 //struct
-// struct_declaration: TYPE ID STRUCT LEFT_CURLY list_struct_argument RIGHT_CURLY SEMICOLON;
+struct_declaration: TYPE ID STRUCT LEFT_CURLY list_struct_argument RIGHT_CURLY SEMICOLON;
 // list_struct_argument_prime: list_struct_argument | ;
-// list_struct_argument: struct_argument list_struct_argument | struct_argument; 
-// struct_argument: ID all_types SEMICOLON;
+list_struct_argument: struct_argument list_struct_argument | struct_argument; 
+struct_argument: ID all_types SEMICOLON;
 
 //interface
-// interface_declaration: TYPE ID INTERFACE LEFT_CURLY list_interface_method_declaration RIGHT_CURLY SEMICOLON;
+interface_declaration: TYPE ID INTERFACE LEFT_CURLY list_interface_method_declaration RIGHT_CURLY SEMICOLON;
 
 // list_interface_method_declaration_prime: list_interface_method_declaration | ;
-// list_interface_method_declaration: interface_method_declaration list_interface_method_declaration | interface_method_declaration;
-// interface_method_declaration: ID LEFT_PAREN list_interface_method_element_prime RIGHT_PAREN (all_types | ) SEMICOLON;
+list_interface_method_declaration: interface_method_declaration list_interface_method_declaration | interface_method_declaration;
+interface_method_declaration: ID LEFT_PAREN list_interface_method_element_prime RIGHT_PAREN (all_types | ) SEMICOLON;
 
-// list_interface_method_element_prime: list_interface_method_element | ;
-// list_interface_method_element: interface_method_element COMMA list_interface_method_element | interface_method_element;
-// interface_method_element: list_ID all_types;
-// list_ID: ID COMMA list_ID | ID;
+list_interface_method_element_prime: list_interface_method_element | ;
+list_interface_method_element: interface_method_element COMMA list_interface_method_element | interface_method_element;
+interface_method_element: list_ID all_types;
+list_ID: ID COMMA list_ID | ID;
 
 //----------------------------------Statement----------------------------------
 
-// list_statement_prime: list_statement | ;
-// list_statement: statement list_statement | statement;
-// statement: const_declaration | var_declaration | assignment_statement | if_statement | for_statement | break_statement | continue_statement | call_statement | return_statement;
+list_statement_prime: list_statement | ;
+list_statement: statement list_statement | statement;
+statement: const_declaration | var_declaration | assignment_statement | if_statement | for_statement | break_statement | continue_statement | call_statement | return_statement;
 
 //assignment
-// assignment_statement: assignment_lhs (ASSIGN_COLON | ADD_ASSIGN | SUB_ASSIGN | MUL_ASSIGN | DIV_ASSIGN | MOD_ASSIGN) expression SEMICOLON;
+assignment_statement: assignment_lhs (ASSIGN_COLON | ADD_ASSIGN | SUB_ASSIGN | MUL_ASSIGN | DIV_ASSIGN | MOD_ASSIGN) expression SEMICOLON;
 
-// assignment_lhs: assignment_lhs (LEFT_SQUARE expression RIGHT_SQUARE | DOT ID) | ID;
+assignment_lhs: assignment_lhs (LEFT_SQUARE expression RIGHT_SQUARE | DOT ID) | ID;
 
 //if
-// if_statement: IF LEFT_PAREN expression RIGHT_PAREN LEFT_CURLY list_statement_prime RIGHT_CURLY  list_elseif_prime  else_statement_prime SEMICOLON;
+if_statement: IF LEFT_PAREN expression RIGHT_PAREN LEFT_CURLY list_statement_prime RIGHT_CURLY  list_elseif_prime  else_statement_prime SEMICOLON;
 
-// list_elseif_prime: list_elseif | ;
-// list_elseif: elseif list_elseif | elseif;
-// elseif: ELSE IF LEFT_PAREN expression RIGHT_PAREN LEFT_CURLY list_statement_prime RIGHT_CURLY;
+list_elseif_prime: list_elseif | ;
+list_elseif: elseif list_elseif | elseif;
+elseif: ELSE IF LEFT_PAREN expression RIGHT_PAREN LEFT_CURLY list_statement_prime RIGHT_CURLY;
 
-// else_statement_prime: else_statement | ;
-// else_statement: ELSE LEFT_CURLY list_statement_prime RIGHT_CURLY;
+else_statement_prime: else_statement | ;
+else_statement: ELSE LEFT_CURLY list_statement_prime RIGHT_CURLY;
 
 //for
-// for_statement: (basic_for | init_for | range_for) LEFT_CURLY list_statement_prime RIGHT_CURLY SEMICOLON;
-// basic_for: FOR expression ;
-// init_for: FOR (assignment_stmt_for | var_declaration_for) SEMICOLON expression SEMICOLON assignment_stmt_for;
-// range_for: FOR ID COMMA ID ASSIGN_COLON RANGE expression;
+for_statement: (basic_for | init_for | range_for) LEFT_CURLY list_statement_prime RIGHT_CURLY SEMICOLON;
+basic_for: FOR expression ;
+init_for: FOR (assignment_stmt_for | var_declaration_for) SEMICOLON expression SEMICOLON assignment_stmt_for;
+range_for: FOR ID COMMA ID ASSIGN_COLON RANGE expression;
 
-// assignment_stmt_for: ID (ASSIGN_COLON | ADD_ASSIGN | SUB_ASSIGN | MUL_ASSIGN | DIV_ASSIGN | MOD_ASSIGN) expression;
-// var_declaration_for: VAR ID (all_types | ) ASSIGN expression;
+assignment_stmt_for: ID (ASSIGN_COLON | ADD_ASSIGN | SUB_ASSIGN | MUL_ASSIGN | DIV_ASSIGN | MOD_ASSIGN) expression;
+var_declaration_for: VAR ID (all_types | ) ASSIGN expression;
 
 //break
-// break_statement: BREAK SEMICOLON;
+break_statement: BREAK SEMICOLON;
 
 //continue
-// continue_statement: CONTINUE SEMICOLON;
+continue_statement: CONTINUE SEMICOLON;
 
 //call
-// call_statement: ((assignment_lhs DOT) | )ID LEFT_PAREN list_expression_prime RIGHT_PAREN SEMICOLON;
+call_statement: ((assignment_lhs DOT) | )ID LEFT_PAREN list_expression_prime RIGHT_PAREN SEMICOLON;
 
 //return
-// return_statement: RETURN (expression | ) SEMICOLON;
+return_statement: RETURN (expression | ) SEMICOLON;
 
 //----------------------------------Literal----------------------------------
 

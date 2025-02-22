@@ -1,3 +1,9 @@
-    
-            var z VOTIEN = ID {a: };                         
-        
+
+        type INTERFACE interface {
+            foo();
+            foo() int;
+            foo() [2]ID;
+            foo(a int);
+            foo(a int, b int);
+            foo(a, b int);
+        }

@@ -1,3 +1,6 @@
-    
-            var z VOTIEN = ID {};                         
-        
+
+    type ID struct {
+        a int;
+        b ID;
+        c [2]int;
+    }

@@ -206,7 +206,14 @@ class ASTGeneration(MiniGoVisitor):
 
     # Visit a parse tree produced by MiniGoParser#if_statement.
     def visitIf_statement(self, ctx:MiniGoParser.If_statementContext):
-        return If(self.visit(ctx.expression()), Block(self.visit(ctx.list_statement_prime())), self.visit(ctx.list_elseif_prime()), self.visit(ctx.else_statement_prime()))
+        def process(list_else_if, else_stmt):
+            if len(list_else_if) == 0: return else_stmt
+            exp, block = list_else_if[0]
+            return If(exp, block, process(list_else_if[1:], else_stmt))
+        
+        list_else_if = self.visit(ctx.list_elseif_prime())
+        else_stmt = self.visit(ctx.else_statement_prime())
+        return If(self.visit(ctx.expression()), Block(self.visit(ctx.list_statement_prime())), process(list_else_if, else_stmt))
 
 
     # Visit a parse tree produced by MiniGoParser#list_elseif_prime.
@@ -281,8 +288,8 @@ class ASTGeneration(MiniGoVisitor):
 
     # Visit a parse tree produced by MiniGoParser#var_declaration_for.
     def visitVar_declaration_for(self, ctx:MiniGoParser.Var_declaration_forContext):
-        # type = self.visit(ctx.all_types()) if ctx.all_types() else None
-        return Assign(Id(ctx.ID().getText()), self.visit(ctx.expression()))
+        type = self.visit(ctx.all_types()) if ctx.all_types() else None
+        return VarDecl(ctx.ID().getText(), type, self.visit(ctx.expression()))
 
 
     # Visit a parse tree produced by MiniGoParser#break_statement.

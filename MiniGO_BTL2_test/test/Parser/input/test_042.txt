@@ -1,3 +1,5 @@
-    
-            var z VOTIEN = a[2, 3];                         
-        
+
+        func foo () {
+            if (a) {return;}
+            if (b) {return;} else {return;}
+        }

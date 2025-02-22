@@ -1,3 +1,11 @@
-    
-            var z VOTIEN = a >= 2 <= "string" > a[2][3] < ID{A: 2} >= [2]S{2};                         
-        
+
+    func foo () {
+        var a int = 1;
+        var a float = 1;
+        var a boolean;
+        var a string = 1;
+        var a = 1;
+        var a ID = 1;
+        var a [ID][1] int = 1;
+        const a = 1;
+    }

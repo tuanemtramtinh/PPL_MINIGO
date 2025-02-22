@@ -1,3 +1,5 @@
-    
-            var z VOTIEN = a.a.a[2].c[2].foo(1, a.b);                         
-        
+
+        func foo () {
+            for var a = 1; a < 10; a := 1 {return;}
+            for a += 1; a < 10; a -= 1 {return;}
+        }

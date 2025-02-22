@@ -1,3 +1,4 @@
-    
-            var z VOTIEN = a[];                         
-        
+
+        func foo () {
+            for(1) {return;}
+        }

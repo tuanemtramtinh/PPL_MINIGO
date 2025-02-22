@@ -218,19 +218,10 @@ class Assign(Stmt):
 class If(Stmt):
     expr:Expr
     thenStmt:Block
-    elifStmt:List[Tuple[Expr,Block]]
     elseStmt:Block # None if there is no else
 
     def __str__(self):
-        if self.elifStmt:
-            elif_str = "[" + ", ".join(
-                f"({str(e)},{str(block)})"
-                for e, block in self.elifStmt
-            ) + "]"
-        else:
-            elif_str = "None"
-
-        return f"If({str(self.expr)}, {str(self.thenStmt)}, {elif_str}, {str(self.elseStmt) if self.elseStmt else 'None'})"
+        return f"If({str(self.expr)}, {str(self.thenStmt)}, {str(self.elseStmt) if self.elseStmt else 'None'})"
 
     def accept(self, v, param):
         return v.visitIf(self, param)
@@ -452,3 +443,9 @@ class NilLiteral(Literal):
 
     def accept(self, v, param):
         return v.visitNilLiteral(self, param)
+
+
+
+
+
+

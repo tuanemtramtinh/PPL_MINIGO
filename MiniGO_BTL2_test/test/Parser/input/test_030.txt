@@ -1,3 +1,2 @@
-    
-            var z VOTIEN = [2]int{};                         
-        
+
+    const a = 1;
