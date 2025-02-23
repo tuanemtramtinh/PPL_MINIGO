@@ -1,6 +1,3 @@
-
-    type ID struct {
-        a int;
-        b ID;
-        c [2]int;
-    }
+    
+            var z VOTIEN = ID {};                         
+        

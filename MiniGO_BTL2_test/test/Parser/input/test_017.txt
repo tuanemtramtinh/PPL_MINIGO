@@ -1,1 +1,9 @@
-const VoTien = 1 >= 2 <= 3 > 4 < 5 == 6 != 7; 
+    
+            func VoTien() {
+                var x int = foo() + 3 / 4;
+                var y = "Hello" / 4;   
+                var z str;
+                                        
+                const VoTien = a.b() + 2;
+            }                                       
+        

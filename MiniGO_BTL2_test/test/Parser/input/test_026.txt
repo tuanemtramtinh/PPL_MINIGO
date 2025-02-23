@@ -1,1 +1,3 @@
-const VoTien = a.b.c; 
+    
+            var z VOTIEN = []int{1};                         
+        

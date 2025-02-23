@@ -1,1 +1,3 @@
-const VoTien = foo(); 
+    
+            var z VOTIEN 1;                         
+        

@@ -11,20 +11,6 @@ from TestUtils import TestAST
 from AST import *
 import inspect
 
-"""
- * Initial code for Assignment 1, 2
- * Programming Language Principles
- * Author: Võ Tiến
- * Link FB : https://www.facebook.com/Shiba.Vo.Tien
- * Link Group : https://www.facebook.com/groups/khmt.ktmt.cse.bku
- * Date: 07.01.2025
-"""
-import sys
-from antlr4 import *
-import unittest
-import inspect
-from AST import *
-
 class ASTGenSuite(unittest.TestCase):
     def test_001(self):
         input = """const VoTien = foo( 1 ); """
@@ -58,7 +44,7 @@ class ASTGenSuite(unittest.TestCase):
 
     def test_006(self):
         input = """const VoTien = foo( a[2][3] ); """
-        expect = Program([ConstDecl("VoTien",None,FuncCall("foo",[ArrayCell(ArrayCell(Id("a"),[IntLiteral(2)]),[IntLiteral(3)])]))
+        expect = Program([ConstDecl("VoTien",None,FuncCall("foo",[ArrayCell(Id("a"),[IntLiteral(2),IntLiteral(3)])]))
 		])
         self.assertTrue(TestAST.test(input, str(expect), inspect.stack()[0].function))
 
@@ -418,7 +404,7 @@ class ASTGenSuite(unittest.TestCase):
         input = """
             const a = a[1][2][3][4];
 """
-        expect = Program([ConstDecl("a",None,ArrayCell(ArrayCell(ArrayCell(ArrayCell(Id("a"),[IntLiteral(1)]),[IntLiteral(2)]),[IntLiteral(3)]),[IntLiteral(4)]))
+        expect = Program([ConstDecl("a",None,ArrayCell(Id("a"),[IntLiteral(1),IntLiteral(2),IntLiteral(3),IntLiteral(4)]))
 		])
         self.assertTrue(TestAST.test(input, str(expect), inspect.stack()[0].function))
 
@@ -821,10 +807,17 @@ class ASTGenSuite(unittest.TestCase):
     def test_088(self):
         input = """
             func foo(){
-                a["s"][foo()] := 1;
+                a["s"][foo()] := a[2][2][3];
+                a[2] := a[3][4];
+                b.c.a[2] := b.c.a[2];
+                b.c.a[2][3] := b.c.a[2][3];
             } 
 """
-        expect = Program([FuncDecl("foo",[],VoidType(),Block([Assign(ArrayCell(ArrayCell(Id("a"),[StringLiteral("s")]),[FuncCall("foo",[])]),IntLiteral(1))]))
+        expect = Program([FuncDecl("foo",[],VoidType(),Block([
+            Assign(ArrayCell(Id("a"),[StringLiteral("s"),FuncCall("foo",[])]),ArrayCell(Id("a"),[IntLiteral(2),IntLiteral(2),IntLiteral(3)])),
+            Assign(ArrayCell(Id("a"),[IntLiteral(2)]),ArrayCell(Id("a"),[IntLiteral(3),IntLiteral(4)])),
+            Assign(ArrayCell(FieldAccess(FieldAccess(Id("b"),"c"),"a"),[IntLiteral(2)]),ArrayCell(FieldAccess(FieldAccess(Id("b"),"c"),"a"),[IntLiteral(2)])),
+            Assign(ArrayCell(FieldAccess(FieldAccess(Id("b"),"c"),"a"),[IntLiteral(2),IntLiteral(3)]),ArrayCell(FieldAccess(FieldAccess(Id("b"),"c"),"a"),[IntLiteral(2),IntLiteral(3)]))]))
 		])
         self.assertTrue(TestAST.test(input, str(expect), inspect.stack()[0].function))
 

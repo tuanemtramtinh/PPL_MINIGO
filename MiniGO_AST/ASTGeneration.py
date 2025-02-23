@@ -198,10 +198,15 @@ class ASTGeneration(MiniGoVisitor):
         elif ctx.MOD_ASSIGN(): rhs = BinaryOp('%', assignment_lhs, self.visit(ctx.expression()))
         
         return Assign(assignment_lhs, rhs)
+    
+    
     # Visit a parse tree produced by MiniGoParser#assignment_lhs.
     def visitAssignment_lhs(self, ctx:MiniGoParser.Assignment_lhsContext):
         if ctx.getChildCount() == 1: return Id(ctx.ID().getText())
-        return ArrayCell(self.visit(ctx.assignment_lhs()), [self.visit(ctx.expression())]) if ctx.expression() else FieldAccess(self.visit(ctx.assignment_lhs()), ctx.ID().getText())
+        if ctx.expression():
+            assigment_lhs = self.visit(ctx.assignment_lhs())
+            return ArrayCell(assigment_lhs.arr, assigment_lhs.idx  + [self.visit(ctx.expression())]) if type(assigment_lhs) == ArrayCell else ArrayCell(assigment_lhs, [self.visit(ctx.expression())])
+        return FieldAccess(self.visit(ctx.assignment_lhs()), ctx.ID().getText())
 
 
     # Visit a parse tree produced by MiniGoParser#if_statement.
@@ -448,9 +453,11 @@ class ASTGeneration(MiniGoVisitor):
 
 
     # Visit a parse tree produced by MiniGoParser#expression6.
-    def visitExpression6(self, ctx:MiniGoParser.Expression6Context):
+    def visitExpression6(self, ctx:MiniGoParser.Expression6Context): 
         if ctx.getChildCount() == 1: return self.visit(ctx.expression7())
-        elif ctx.expression(): return ArrayCell(self.visit(ctx.expression6()), [self.visit(ctx.expression())])
+        elif ctx.expression(): 
+            result = self.visit(ctx.expression6())
+            return ArrayCell(result.arr, result.idx  + [self.visit(ctx.expression())]) if type(result) == ArrayCell else ArrayCell(result, [self.visit(ctx.expression())])
         elif ctx.function_call():
             func_name, func_arg = self.visit(ctx.function_call())
             return MethCall(self.visit(ctx.expression6()), func_name, func_arg)

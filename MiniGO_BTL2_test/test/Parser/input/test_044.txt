@@ -1,4 +1,3 @@
-
-        func foo () {
-            for a, b := range 2 {return;}
-        }
+    
+            var z VOTIEN = a.a.a[2].foo();                         
+        

@@ -1,4 +1,3 @@
-
-        func foo () {
-            for(1) {return;}
-        }
+    
+            var z VOTIEN = a[];                         
+        

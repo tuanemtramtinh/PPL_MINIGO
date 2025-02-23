@@ -1,1 +1,3 @@
-const VoTien = a.b[2].c.d(); 
+    
+            var z VOTIEN = [2]int{1;                         
+        

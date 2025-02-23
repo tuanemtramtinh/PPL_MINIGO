@@ -9,7 +9,7 @@
           "args": [
               "test",
               "ASTGenSuite",
-              "test_033"
+              "test_040"
           ],
           "console": "integratedTerminal"
       }

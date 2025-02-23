@@ -1,4 +1,3 @@
-
-    func (ID ID) foo (a int) {var a = 1;}
-    func (ID ID) foo (a int, b ID) {var a = 1;}
-    func (ID ID) foo (a, b int) {var a = 1;}
+    
+            var z VOTIEN = ID + 3;                         
+        

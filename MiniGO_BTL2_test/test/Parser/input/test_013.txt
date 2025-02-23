@@ -1,1 +1,5 @@
-const VoTien = [1][2] int {1., STRUCT{}, nil}; 
+
+            func (c Calculator) VoTien(x int) int {return;};  
+            func (c Calculator) VoTien() ID {return;}      
+            func (c Calculator) VoTien(x int, y [2]VoTien) {return;}                                                      
+        
