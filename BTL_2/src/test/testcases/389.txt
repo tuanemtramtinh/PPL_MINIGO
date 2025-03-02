@@ -1,0 +1,8 @@
+
+        type khanhpear struct {
+            price float;
+        }
+        func (p khanhpear) fruit() float {
+            return p.price * 2;
+        }
+        

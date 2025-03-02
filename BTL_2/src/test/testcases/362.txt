@@ -1,0 +1,17 @@
+
+        
+        func fruit(a int, b float, arr ID) {
+            for i := a; i[1] > b; i -= arr[b % 2] {
+                if (i % 2 == 0) {
+                    return arr[i];
+                } else {
+                    if (b * 3 < arr[a % 3]) {
+                        return arr[b / 2];
+                    } else {
+                        return arr[a - 1];
+                    }
+                }
+            }
+        }
+
+    

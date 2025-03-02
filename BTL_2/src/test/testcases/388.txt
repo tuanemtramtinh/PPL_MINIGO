@@ -1,0 +1,5 @@
+
+        type khanhpear struct {
+            value int;
+        }
+        

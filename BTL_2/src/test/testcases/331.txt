@@ -1,0 +1,10 @@
+
+        
+        func fruit (a, b int) {
+            if (a) {return;}
+            if (b >= fruit) {return;}
+            if (game <= heino) {return;}
+            if (damedane == !MA) {return;}
+            if (tuai) {return outgroup();} else {return nauxoi();}
+        }
+    

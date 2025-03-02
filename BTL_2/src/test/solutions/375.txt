@@ -1,0 +1,1 @@
+Program([StructType(khanhpear,[(name,StringType),(age,IntType)],[])])

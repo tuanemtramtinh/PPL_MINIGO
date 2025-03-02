@@ -1,0 +1,6 @@
+
+        type khanhpear interface {
+            Add(x, y int) int;
+            Subtract(a, b, c float) float;
+        }
+        

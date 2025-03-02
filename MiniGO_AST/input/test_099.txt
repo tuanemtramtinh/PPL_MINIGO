@@ -1,4 +1,11 @@
 
-            func votien() {
-                a.b.c[2].d()
-            }
+        func foo() {
+           const b = 5;
+           const b = 5;
+           const b = 5;
+           const b = 5;
+           const b = 5;
+           const b = 5;
+           print(b, b, b)
+        }
+        

@@ -1,0 +1,11 @@
+
+        type khanhpear struct {
+            x float;
+            y float;
+        }
+        
+        type khanhpear struct {
+            topLeft khanhpear;
+            bottomRight khanhpear;
+        }
+        

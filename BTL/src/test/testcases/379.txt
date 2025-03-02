@@ -1,0 +1,6 @@
+
+        type Calculator struct {value int;};
+        func (c Calculator) Add(x int) int {c.value += x; return c.value;};
+        func Add(x int, y int) int {return x + y;};
+        func main() {var calc Calculator; calc.value = 10; result := calc.Add(5); PutIntLn(result); const result2 = Add(1, 2); PutIntLn(result2);};
+        

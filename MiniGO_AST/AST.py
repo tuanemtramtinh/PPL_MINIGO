@@ -402,7 +402,7 @@ class BooleanLiteral(PrimLit):
     value:bool
 
     def __str__(self):
-        return "BooleanLiteral(" + str(self.value).lower() + ")"
+        return "BooleanLiteral(" + str(self.value).capitalize() + ")"
 
     def accept(self, v, param):
         return v.visitBooleanLiteral(self, param)

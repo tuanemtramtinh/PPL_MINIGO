@@ -1,0 +1,10 @@
+
+        
+        func fruit(a, b ID) {
+            for index, value := range b[a.id % 2] {
+                return;
+                return value * index;
+            }
+        }
+
+    

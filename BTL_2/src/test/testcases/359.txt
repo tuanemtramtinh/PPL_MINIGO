@@ -1,0 +1,10 @@
+
+        
+        func fruit(arr [6][n]ID, x int, y int) {
+            for arr[x + y] {
+                return;
+                return arr[(x * 2) % y];
+            }
+        }
+
+    

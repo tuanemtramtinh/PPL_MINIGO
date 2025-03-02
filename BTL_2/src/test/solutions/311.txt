@@ -1,0 +1,1 @@
+Program([FuncDecl(pear,[],IntType,Block([Return()]))])

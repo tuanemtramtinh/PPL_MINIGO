@@ -1,0 +1,1 @@
+Program([InterfaceType(khanhpear,[Prototype(GetID,[],IntType),Prototype(SetID,[IntType],VoidType)])])

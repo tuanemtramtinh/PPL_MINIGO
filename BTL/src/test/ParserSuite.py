@@ -1061,3 +1061,9 @@ class ParserSuite(unittest.TestCase):
         expect = "successful"
         self.assertTrue(TestParser.checkParser(input, expect, 300))
         
+    def test_statement_64(self):
+        input = """
+        const a = k[1][2].a[1][2].c;
+        """
+        expect = "successful"
+        self.assertTrue(TestParser.checkParser(input, expect, 300))

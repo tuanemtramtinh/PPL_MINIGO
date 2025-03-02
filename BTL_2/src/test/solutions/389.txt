@@ -1,0 +1,1 @@
+Program([StructType(khanhpear,[(price,FloatType)],[]),MethodDecl(p,Id(khanhpear),FuncDecl(fruit,[],FloatType,Block([Return(BinaryOp(FieldAccess(Id(p),price),*,IntLiteral(2)))])))])

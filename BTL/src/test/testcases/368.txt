@@ -1,0 +1,1 @@
+func add(x int) int {var x = 10; return x;};

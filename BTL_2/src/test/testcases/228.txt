@@ -1,0 +1,7 @@
+
+        type Student struct {
+            name string;
+            age int;
+            school string;
+        }
+        

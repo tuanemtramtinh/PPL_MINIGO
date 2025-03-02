@@ -1,0 +1,9 @@
+
+        
+        func fruit(x int, y int, arr [10]int) {
+            if (arr[x] + arr[y] > 100) { return arr[x] * 2; 
+            }else if (arr[x - 1] < arr[y + 1]) { return arr[y] - arr[x]; 
+            }else { return arr[0]; }
+        }
+
+    

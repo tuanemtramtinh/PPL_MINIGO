@@ -1,0 +1,1 @@
+Program([StructType(khanhpear,[(status,BoolType)],[]),MethodDecl(s,Id(khanhpear),FuncDecl(fruit,[],BoolType,Block([Return(FieldAccess(Id(s),status))])))])

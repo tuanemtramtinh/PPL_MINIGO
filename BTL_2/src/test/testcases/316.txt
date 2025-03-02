@@ -1,0 +1,6 @@
+
+            type PearLe interface {
+                Go(x, y int) float;
+                Stop();
+            }
+    

@@ -1,0 +1,9 @@
+
+        
+        func fruit(arr [5][2]ID, index int) {
+            if (arr[index].value > 0) { return arr[index]; 
+            }else if (arr[index - 1].value < 0) { return arr[index - 1]; 
+            }else { return arr[0]; }
+        }
+
+        

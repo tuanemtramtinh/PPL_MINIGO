@@ -1,2 +1,2 @@
-Program([InterfaceType("Votien",[Prototype("Add",[IntType()],VoidType())])
+Program([FuncDecl("nestedLoop",[],VoidType(),Block([ForStep(Assign(Id("i"),IntLiteral(0)),BinaryOp("<", Id("i"), IntLiteral(5)),Assign(Id("i"),BinaryOp("+", Id("i"), IntLiteral(1))),Block([ForStep(Assign(Id("j"),IntLiteral(0)),BinaryOp("<", Id("j"), IntLiteral(5)),Assign(Id("j"),BinaryOp("+", Id("j"), IntLiteral(1))),Block([If(BinaryOp("==", BinaryOp("%", BinaryOp("*", Id("i"), Id("j")), IntLiteral(3)), IntLiteral(0)), Block([Continue()]), None),If(BinaryOp(">", BinaryOp("+", Id("i"), Id("j")), IntLiteral(6)), Block([Break()]), None)]))]))]))
 		])

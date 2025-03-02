@@ -1,0 +1,1 @@
+Program([StructType(khanhpear,[(id,StringType),(name,StringType),(position,StringType),(salary,FloatType)],[]),StructType(khanhpear,[(name,StringType),(manager,Id(khanhpear)),(employees,ArrayType(Id(khanhpear),[IntLiteral(10)]))],[])])

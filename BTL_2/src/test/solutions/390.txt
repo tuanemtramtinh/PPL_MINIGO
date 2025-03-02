@@ -1,0 +1,1 @@
+Program([StructType(khanhpear,[(amount,IntType)],[]),MethodDecl(a,Id(khanhpear),FuncDecl(fruit,[ParDecl(x,IntType)],IntType,Block([Return(BinaryOp(FieldAccess(Id(a),amount),+,Id(x)))])))])

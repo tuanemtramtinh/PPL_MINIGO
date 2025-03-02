@@ -1,0 +1,8 @@
+
+        type khanhpear struct {
+            status boolean;
+        }
+        func (s khanhpear) fruit() boolean {
+            return s.status;
+        }
+        

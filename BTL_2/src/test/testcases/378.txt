@@ -1,0 +1,14 @@
+
+        type khanhpear struct {
+            id string;
+            name string;
+            position string;
+            salary float;
+        }
+        
+        type khanhpear struct {
+            name string;
+            manager khanhpear;
+            employees [10]khanhpear;
+        }
+        

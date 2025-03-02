@@ -1,0 +1,6 @@
+
+        type khanhpear struct {
+            value int;
+            next [1][xx][2]khanhpear;
+        }
+        

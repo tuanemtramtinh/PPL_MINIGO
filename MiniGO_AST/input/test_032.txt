@@ -1,2 +1,5 @@
 
-            const a = [1][3]float{1.};
+        func tuananh(){
+            a[1][2][3].c.d.s.c.e(b(d(h())));
+        }
+        

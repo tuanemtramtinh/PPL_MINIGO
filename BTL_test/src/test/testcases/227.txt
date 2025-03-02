@@ -1,0 +1,3 @@
+
+        func (s Student) Submit() Student {const point = 100000;}
+        

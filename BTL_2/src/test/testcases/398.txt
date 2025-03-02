@@ -1,0 +1,11 @@
+
+        type khanhpear struct {
+            count int;
+        }
+        func (p khanhpear) fruit(n int) int {
+            for i := 1; i <= n; i := i * 2 {
+                p.count := p.count + i;
+            }
+            return p.count;
+        }
+        

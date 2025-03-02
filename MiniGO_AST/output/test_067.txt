@@ -1,2 +1,2 @@
-Program([InterfaceType("Votien",[Prototype("Add",[IntType(),IntType(),IntType()],VoidType())])
+Program([FuncDecl("gcd",[ParamDecl("a",IntType()),ParamDecl("b",IntType())],IntType(),Block([If(BinaryOp("==", Id("b"), IntLiteral(0)), Block([Return(Id("a"))]), None),Return(FuncCall("gcd",[Id("b"),BinaryOp("%", Id("a"), Id("b"))]))]))
 		])

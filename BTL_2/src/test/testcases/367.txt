@@ -1,0 +1,3 @@
+
+        var colors COLOR = [3]string{"red", "green", "blue"};
+        

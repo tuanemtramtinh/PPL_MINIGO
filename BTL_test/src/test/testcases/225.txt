@@ -1,0 +1,3 @@
+
+        func Add(x tuanemdeptrai) tuananhdeptrai{const a = 5 * 3;}
+        

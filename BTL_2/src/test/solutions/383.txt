@@ -1,0 +1,1 @@
+Program([InterfaceType(khanhpear,[Prototype(Compute,[IntType,FloatType],FloatType),Prototype(Display,[StringType],VoidType),Prototype(Reset,[],VoidType)])])

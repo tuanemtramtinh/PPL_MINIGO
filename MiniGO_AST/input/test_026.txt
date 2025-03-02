@@ -1,2 +1,6 @@
 
-            const a = true + false - true;
+        func tuananh(){
+            var b int;
+            const PI = 3.14;
+        }
+        

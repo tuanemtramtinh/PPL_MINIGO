@@ -1,0 +1,1 @@
+Program([ConstDecl(data,ArrayLiteral([IntLiteral(5)],BoolType,[BooleanLiteral(true),BooleanLiteral(false),BooleanLiteral(true),BooleanLiteral(false),BooleanLiteral(true)]))])

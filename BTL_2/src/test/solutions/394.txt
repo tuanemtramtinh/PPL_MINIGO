@@ -1,0 +1,1 @@
+Program([StructType(khanhpear,[(message,StringType)],[]),MethodDecl(m,Id(khanhpear),FuncDecl(fruit,[],StringType,Block([Return(MethodCall(ArrayCell(FieldAccess(FieldAccess(Id(m),message),hello),[IntLiteral(2),IntLiteral(3)]),fruit,[]))])))])

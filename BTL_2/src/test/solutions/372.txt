@@ -1,0 +1,1 @@
+Program([ConstDecl(rectangle,StructLiteral(Shape,[(width,FloatLiteral(10.5)),(height,FloatLiteral(20.3))]))])

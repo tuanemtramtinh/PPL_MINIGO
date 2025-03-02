@@ -1,0 +1,1 @@
+Program([VarDecl(colors,Id(COLOR),ArrayLiteral([IntLiteral(3)],StringType,[StringLiteral(red),StringLiteral(green),StringLiteral(blue)]))])

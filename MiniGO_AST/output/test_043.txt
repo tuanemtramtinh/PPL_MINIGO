@@ -1,2 +1,2 @@
-Program([ConstDecl("a",None,BinaryOp("==", BinaryOp("<=", BinaryOp(">=", BinaryOp("<", BinaryOp(">", IntLiteral(1), IntLiteral(2)), IntLiteral(3)), IntLiteral(4)), IntLiteral(5)), IntLiteral(6)))
+Program([FuncDecl("tuananh",[ParamDecl("a",IntType()),ParamDecl("c",StringType()),ParamDecl("x",ArrayType([IntLiteral(3),IntLiteral(2),IntLiteral(9),IntLiteral(1)],Id("tuananh"))),ParamDecl("k",ArrayType([IntLiteral(3),IntLiteral(2),IntLiteral(9),IntLiteral(1)],Id("tuananh")))],VoidType(),Block([ConstDecl("deptari",None,ArrayCell(FuncCall("a",[FuncCall("b",[FuncCall("c",[FuncCall("d",[FuncCall("e",[FuncCall("f",[FuncCall("g",[FuncCall("h",[])])])])])])])]),[IntLiteral(3),IntLiteral(2),IntLiteral(9),IntLiteral(1),IntLiteral(3),IntLiteral(2),IntLiteral(9),IntLiteral(1)]))]))
 		])

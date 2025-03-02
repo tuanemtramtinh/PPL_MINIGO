@@ -1,0 +1,13 @@
+
+        func fruit(n int) int {
+            sum := 0;
+            for i, arr := range [x][y][z]int{2, {arr}}{
+                if (i % 2 == 0 ){
+                    sum := sum + i;
+                } else {
+                    sum := sum - i;
+                }
+            }
+            return sum;
+        }
+        

@@ -1,0 +1,8 @@
+
+        type khanhpear struct {
+            amount int;
+        }
+        func (a khanhpear) fruit(x int) int {
+            return a.amount + x;
+        }
+        

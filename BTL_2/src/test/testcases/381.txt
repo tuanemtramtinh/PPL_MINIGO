@@ -1,0 +1,6 @@
+
+        type khanhpear interface {
+            GetID() int;
+            SetID(id int);
+        }
+        

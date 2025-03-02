@@ -1,2 +1,1 @@
-
-            func (Votien v) foo(Votien int) {return;}
+var tuananh [3][2] int = 6 > 3 + 5 - 1 * (2 + call(a.b.c.d()));

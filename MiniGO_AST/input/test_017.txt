@@ -1,5 +1,1 @@
-
-            func votien() {
-                var a int;
-                const a = nil;
-            }
+var tuananh deptrai = ID{name: "hello", name: "world"}.b;

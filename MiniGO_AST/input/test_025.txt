@@ -1,4 +1,9 @@
 
-            func votien() {
-                for index, value := range array[2] {return;}
-            }
+        type tuananh interface {
+            Add (x int, y float, c string);
+            Sub (x, y int);
+            Mul (x, y, z float, d string) string;
+            Div () [3][2]int;
+            test () hack; 
+        }
+        

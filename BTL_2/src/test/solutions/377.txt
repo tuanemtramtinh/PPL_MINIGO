@@ -1,0 +1,1 @@
+Program([StructType(khanhpear,[(x,FloatType),(y,FloatType)],[]),StructType(khanhpear,[(topLeft,Id(khanhpear)),(bottomRight,Id(khanhpear))],[])])

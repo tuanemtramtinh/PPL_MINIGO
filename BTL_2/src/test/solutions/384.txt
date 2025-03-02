@@ -1,0 +1,1 @@
+Program([InterfaceType(khanhpear,[Prototype(Process,[ArrayType(IntType,[IntLiteral(10)]),ArrayType(IntType,[IntLiteral(10)])],IntType),Prototype(Transform,[StringType],StringType)])])

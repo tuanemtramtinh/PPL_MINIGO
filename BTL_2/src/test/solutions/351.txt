@@ -1,0 +1,1 @@
+Program([FuncDecl(fruit,[ParDecl(n,IntType)],VoidType,Block([For(Assign(Id(i),IntLiteral(0)),BinaryOp(Id(i),<,Id(n)),Assign(Id(i),BinaryOp(Id(i),+,IntLiteral(2))),Block([Return(),Return(IntLiteral(1))]))]))])

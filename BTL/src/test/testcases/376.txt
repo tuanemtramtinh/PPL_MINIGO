@@ -1,0 +1,1 @@
+func SayHello(name string) {PutStringLn("Hello, " + name);};

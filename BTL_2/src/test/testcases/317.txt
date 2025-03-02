@@ -1,0 +1,8 @@
+
+            const ambaturine = 0 <= 1 <= 2;
+            var coconut = 1 > 2 < 3 >= 4 <=5 == 6;
+            type PearLe interface {
+                Go(x, y coconut) float;
+                ambaturine();
+            }
+    

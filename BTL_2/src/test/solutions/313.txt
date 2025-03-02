@@ -1,0 +1,1 @@
+Program([FuncDecl(pear,[ParDecl(a,IntType)],VoidType,Block([VarDecl(a,BinaryOp(Id(a),+,Id(b)))]))])

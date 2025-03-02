@@ -1,2 +1,7 @@
 
-            const a = 1 + 2 && 3;
+        func tuananh(){
+            continue;
+            break;
+            return;
+        }
+        

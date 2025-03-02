@@ -1,0 +1,1 @@
+Program([VarDecl(car,StructLiteral(Car,[(brand,StringLiteral(Toyota)),(year,IntLiteral(2022)),(electric,BooleanLiteral(false))]))])

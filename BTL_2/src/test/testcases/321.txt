@@ -1,0 +1,8 @@
+
+            func votien() {
+                a += 1;
+                b -= banana;
+                c *= hihi[2] || trump * 5;
+                d := hsr[2][3][D[go][go]];
+            }
+    

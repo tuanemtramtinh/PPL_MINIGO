@@ -1,2 +1,6 @@
 
-            func  (Cat c) foo(a [2]ID) {return;}
+        func tuananh(arr [10]int) {
+            arr[2 + 3 * (4 - 1)] := arr[1] + arr[2 * 3] / 2;
+            arr[arr[3] % 5] := arr[arr[4]] + 10;
+        }
+        

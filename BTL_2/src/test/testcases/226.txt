@@ -1,0 +1,6 @@
+
+        func (s Student) Submit(x int) int {
+            var form = s.form;
+            return form;
+        }
+        

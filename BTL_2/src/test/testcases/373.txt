@@ -1,0 +1,3 @@
+
+        const book = Book{title: "Programming 101", pages: 300, price: 29.99}
+        

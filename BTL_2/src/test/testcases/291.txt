@@ -1,0 +1,6 @@
+
+        func foo (n int) bool {
+            if (n % 2) return true;
+            return false;
+        }
+        

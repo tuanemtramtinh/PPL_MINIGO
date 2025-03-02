@@ -1,4 +1,5 @@
 
-            func votien() {
-                if(1) {return;}
-            }
+        type tuananh struct {
+            a int;
+        }
+        

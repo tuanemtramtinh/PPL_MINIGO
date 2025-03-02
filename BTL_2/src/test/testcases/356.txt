@@ -1,0 +1,10 @@
+
+        
+        func fruit(n int, step int) {
+            for i := n / 2; i[step % 3] > n - 1; i += step * 2 - 1 {
+                return;
+                return n * step;
+            }
+        }
+
+    

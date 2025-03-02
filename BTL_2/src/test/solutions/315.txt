@@ -1,0 +1,1 @@
+Program([StructType(Fruit,[(a,IntType),(b,FloatType),(c,Id(hihi))],[])])

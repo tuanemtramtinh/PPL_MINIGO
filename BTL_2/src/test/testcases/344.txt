@@ -1,0 +1,11 @@
+
+        
+        func fruit(a ID, b ID) {
+            if (a.value > b.value) { return a; 
+            }else if (b.value >= 10) { return haha(); 
+            }else if (b.value == 10) { return huhu(); 
+            }else if (b.value +  arr[2] != 10) { return tri(); 
+            }else { return a.b.fruit(); }
+        }
+
+        

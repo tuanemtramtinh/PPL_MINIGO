@@ -1,0 +1,7 @@
+
+        type khanhpear interface {
+            Compute(a int, b float) float;
+            Display(msg string);
+            Reset();
+        }
+        

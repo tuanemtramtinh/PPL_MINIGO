@@ -1,2 +1,2 @@
-Program([VarDecl("a",Id("Votien"),FloatLiteral(1.0))
+Program([FuncDecl("tuananh",[ParamDecl("a",IntType()),ParamDecl("c",StringType()),ParamDecl("x",ArrayType([IntLiteral(3),IntLiteral(2),IntLiteral(9),IntLiteral(1)],Id("tuananh"))),ParamDecl("k",ArrayType([IntLiteral(3),IntLiteral(2),IntLiteral(9),IntLiteral(1)],Id("tuananh")))],VoidType(),Block([ConstDecl("a",None,UnaryOp("!",UnaryOp("-",UnaryOp("!",IntLiteral(2)))))]))
 		])

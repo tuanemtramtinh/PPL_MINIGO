@@ -1,0 +1,8 @@
+
+        type khanhpear struct {
+            weight float;
+        }
+        func (w khanhpear) fruit(y float) float {
+            return w.weight - y;
+        }
+        

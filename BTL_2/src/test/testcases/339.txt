@@ -1,0 +1,6 @@
+
+        
+        func fruit(flag boolean) {
+            if (flag) { return "Yes"; }else { return "No"; }
+        }
+    

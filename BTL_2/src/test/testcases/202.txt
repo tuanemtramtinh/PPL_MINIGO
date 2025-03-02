@@ -1,0 +1,4 @@
+func foo () {
+            const bar = foo;
+
+        };

@@ -1,0 +1,1 @@
+func main() {var multiArr [2][5]int;};

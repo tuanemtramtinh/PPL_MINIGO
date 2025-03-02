@@ -1,0 +1,1 @@
+func main() {const result = Add(1, 2);};

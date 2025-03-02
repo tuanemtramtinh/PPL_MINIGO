@@ -1,0 +1,6 @@
+
+        type Person struct {name string; age int;};
+        func greet(name string) {PutStringLn("Hello, " + name);};
+        func (p Person) updateAge(newAge int) {p.age = newAge;};
+        func main() {p := Person{name: "Alice", age: 30}; greet(p.name); p.updateAge(31); PutIntLn(p.age);};
+        

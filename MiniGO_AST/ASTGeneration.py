@@ -344,6 +344,7 @@ class ASTGeneration(MiniGoVisitor):
         elif ctx.STRING_LIT(): return StringLiteral(ctx.STRING_LIT().getText()[1:-1])
         elif ctx.BOOL_LIT(): return BooleanLiteral(ctx.BOOL_LIT().getText() == 'true')
         elif ctx.NIL_LIT(): return NilLiteral()
+        elif ctx.ID(): return Id(ctx.ID().getText())
         return self.visit(ctx.getChild(0))
 
 

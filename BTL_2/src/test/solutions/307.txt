@@ -1,0 +1,1 @@
+Program([ConstDecl(pear,FuncCall(PearLe,[StructLiteral(Fruit,[(a,IntLiteral(1)),(b,IntLiteral(2)),(c,StringLiteral(hihi))])]))])

@@ -1,0 +1,10 @@
+
+            
+            func fruit(arr [3][MAGAMING]ID) {
+                for arr[i + 1] {
+                    return;
+                    return 1;
+                }
+            }
+
+        

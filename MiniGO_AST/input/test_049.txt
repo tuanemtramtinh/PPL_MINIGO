@@ -1,2 +1,14 @@
 
-            const a = ID {}.a[2];
+        func tuananh(){
+            const x = [2][3][4]int{1, 2, 3}
+        }
+        func tuananh(){
+            const x = [2][3][4]int{1, 2, 3}
+        }
+        func tuananh(){
+            const x = [2][3][4]int{1, 2, 3}
+        }
+        func tuananh(){
+            const x = [2][3][4]int{1, 2, 3}
+        }
+        

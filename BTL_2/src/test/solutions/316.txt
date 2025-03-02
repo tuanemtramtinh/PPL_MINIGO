@@ -1,0 +1,1 @@
+Program([InterfaceType(PearLe,[Prototype(Go,[IntType,IntType],FloatType),Prototype(Stop,[],VoidType)])])

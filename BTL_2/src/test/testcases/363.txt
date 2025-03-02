@@ -1,0 +1,15 @@
+
+        
+        func fruit(x int, y int) {
+            for index, value := range [3]int{x, y, {x, arr}} {
+                if (index % 2 == 0) {
+                    return value * 2;
+                } else if (value + index > 10) {
+                    return value - 3;
+                } else {
+                    return 1;
+                }
+            }
+        }
+
+    

@@ -1,2 +1,2 @@
-Program([FuncDecl("foo",[],VoidType(),Block([VarDecl("a",IntType(), None)]))
+Program([FuncDecl("foo",[],VoidType(),Block([Assign(ArrayCell(FieldAccess(FieldAccess(FieldAccess(FieldAccess(FieldAccess(FieldAccess(FieldAccess(FieldAccess(Id("a"),"b"),"c"),"d"),"e"),"f"),"g"),"h"),"g"),[IntLiteral(1),IntLiteral(2),IntLiteral(3),IntLiteral(4),IntLiteral(5)]),StructLiteral("ID",[("a",StructLiteral("ID1",[("b",StructLiteral("ID2",[("c",StructLiteral("ID3",[("d",StructLiteral("ID4",[("e",StructLiteral("ID5",[("b",FuncCall("c",[FuncCall("d",[FuncCall("e",[ArrayCell(Id("arr"),[IntLiteral(1),IntLiteral(2),StructLiteral("ID6",[("v",StructLiteral("ID7",[]))])])])])]))]))]))]))]))]))]))]))
 		])

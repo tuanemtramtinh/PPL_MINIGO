@@ -1,0 +1,5 @@
+
+        func foo() {
+            var p = Person{name: "John", age: 30,};
+        }
+        

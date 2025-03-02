@@ -1,0 +1,4 @@
+/*
+ a b c
+ x = y + 3
+*/ new_value * 2

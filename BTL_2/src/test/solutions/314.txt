@@ -1,0 +1,1 @@
+Program([VarDecl(khanhPear,ArrayCell(Id(a),[BinaryOp(FuncCall(pear1,[IntLiteral(1),IntLiteral(2)]),+,ArrayCell(FieldAccess(FieldAccess(Id(a),b),c),[IntLiteral(2)])),MethodCall(FieldAccess(FieldAccess(Id(a),b),c),pear2,[Id(x),Id(y),Id(z)])]))])

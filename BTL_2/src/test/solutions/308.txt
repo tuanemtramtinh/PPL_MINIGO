@@ -1,0 +1,1 @@
+Program([ConstDecl(pear,FuncCall(fruit,[ArrayLiteral([IntLiteral(1)],IntType,[Id(byebye)]),ArrayLiteral([IntLiteral(2),IntLiteral(4)],FloatType,[IntLiteral(24)])]))])

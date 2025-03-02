@@ -1,2 +1,13 @@
 
-            const a = ID {}.a;
+        func tuananh(a int, c string, x, k [3][2][9][1]tuananh){
+            for ID{b: true, k: true}.z {
+                return;
+                for i:= 0; i < n; i += 1{
+                    for index, value := range [2]int{1,2} {
+                        return;
+                    }
+                    return 1;
+                }
+            }
+        }
+        

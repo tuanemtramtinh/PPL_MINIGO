@@ -1,0 +1,8 @@
+
+        type khanhpear struct {
+            message string;
+        }
+        func (m khanhpear) fruit() string {
+            return m.message.hello[2][3].fruit();
+        }
+        

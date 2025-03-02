@@ -1,0 +1,10 @@
+
+        
+        func fruit(arr [10]ID) {
+            for arr[i] < 10 {
+                return;
+                return 1;
+            }
+        }
+
+    

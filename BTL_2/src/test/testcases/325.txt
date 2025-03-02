@@ -1,0 +1,4 @@
+
+            var a int = [2][2]int{{1, true}, {"hello", 3.14e21}};
+            const b = a.b.c.d.e.g.f.g.h.i.j.k.l.m.n;
+    

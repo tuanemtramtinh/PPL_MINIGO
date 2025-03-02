@@ -1,0 +1,3 @@
+
+            var khanhPear = a[pear1(1, 2) + a.b.c[2]][a.b.c.pear2(x,y,z)];
+    

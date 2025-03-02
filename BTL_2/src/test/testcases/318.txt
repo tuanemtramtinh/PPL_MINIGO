@@ -1,0 +1,3 @@
+
+            func (seed s) mango(a , b int) {return seeds;};
+    

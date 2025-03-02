@@ -1,0 +1,3 @@
+func Add() {
+            for index, value := range array {}
+        };

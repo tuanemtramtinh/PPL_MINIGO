@@ -1,0 +1,1 @@
+Program([InterfaceType(khanhpear,[Prototype(Add,[IntType,IntType],IntType),Prototype(Subtract,[FloatType,FloatType,FloatType],FloatType)])])

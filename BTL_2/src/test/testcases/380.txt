@@ -1,0 +1,5 @@
+
+        type khanhpear interface {
+            Speak(name string);
+        }
+        

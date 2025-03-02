@@ -1,7 +1,5 @@
 
-            func votien() {
-                for index, value := range [2]int{1,2} {
-                     return;
-                    return 1;
-                }
-            }
+        func foo() {
+            x.y.z.b.d.s.e.gv.as.sa.sfas.saga.asg.b(a[d(c[a(b[d(x)])])]);
+        }
+        

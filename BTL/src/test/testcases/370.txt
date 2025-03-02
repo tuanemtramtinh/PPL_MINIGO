@@ -1,0 +1,1 @@
+func updateName(p Person) {p.name = "Bob";}; func main() {var p = Person{name: "Alice", age: 30}; updateName(p); PutStringLn(p.name);};

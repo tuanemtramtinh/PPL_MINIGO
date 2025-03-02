@@ -1,7 +1,59 @@
 
-            func foo(){
-                a["s"][foo()] := a[2][2][3];
-                a[2] := a[3][4];
-                b.c.a[2] := b.c.a[2];
-                b.c.a[2][3] := b.c.a[2][3];
-            } 
+        func foo() {
+            if (1) {
+                for _, v := range ID{} {
+                    aa := 1;
+                    for _, v := range ID{} {
+                        aa := 1;
+                        for _, v := range ID{} {
+                            aa := 1;
+                            for _, v := range ID{} {
+                                aa := 1;
+                            }
+                        }
+                    }
+                }    
+            } else if (1) {
+                for _, v := range ID{} {
+                    aa := 1;
+                    for _, v := range ID{} {
+                        aa := 1;
+                        for _, v := range ID{} {
+                            aa := 1;
+                            for _, v := range ID{} {
+                                aa := 1;
+                            }
+                        }
+                    }
+                }    
+            } else if (1) {
+                for _, v := range ID{} {
+                    aa := 1;
+                    for _, v := range ID{} {
+                        aa := 1;
+                        for _, v := range ID{} {
+                            aa := 1;
+                            for _, v := range ID{} {
+                                aa := 1;
+                            }
+                        }
+                    }
+                }    
+            } else if (1) {
+                for _, v := range ID{} {
+                    aa := 1;
+                    for _, v := range ID{} {
+                        aa := 1;
+                        for _, v := range ID{} {
+                            aa := 1;
+                            for _, v := range ID{} {
+                                aa := 1;
+                            }
+                        }
+                    }
+                }    
+            } else {
+                return 1;
+            }
+        }
+        

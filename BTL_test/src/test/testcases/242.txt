@@ -1,0 +1,6 @@
+
+        func foo() {
+            if (x > 10) {var z s;} 
+            if (x > 10) {var b school;} else if (x == 10) { var z str;} else { var z ID;}
+        }
+        

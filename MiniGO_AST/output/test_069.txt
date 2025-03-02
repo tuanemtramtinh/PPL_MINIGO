@@ -1,2 +1,2 @@
-Program([InterfaceType("Votien",[Prototype("Add",[],ArrayType([IntLiteral(2)],StringType())),Prototype("Add",[],Id("ID"))])
+Program([FuncDecl("nthFibonacci",[ParamDecl("n",IntType())],IntType(),Block([VarDecl("a", None,IntLiteral(0)),VarDecl("b", None,IntLiteral(1)),ForStep(Assign(Id("i"),IntLiteral(2)),BinaryOp("<=", Id("i"), Id("n")),Assign(Id("i"),BinaryOp("+", Id("i"), IntLiteral(1))),Block([VarDecl("temp", None,BinaryOp("+", Id("a"), Id("b"))),Assign(Id("a"),Id("b")),Assign(Id("b"),Id("temp"))])),Return(Id("b"))]))
 		])

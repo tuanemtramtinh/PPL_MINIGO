@@ -1,1 +1,1 @@
-const VoTien = foo( [1]int{1}, [1][1]int{2} ); 
+const tuananhdeptrai = d || e && p || t && r || a && i;

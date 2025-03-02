@@ -1,0 +1,6 @@
+
+        type khanhpear struct {
+            name string;
+            age int;
+        }
+        

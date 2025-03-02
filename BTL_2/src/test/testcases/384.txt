@@ -1,0 +1,6 @@
+
+        type khanhpear interface {
+            Process(data , file [10]int) int;
+            Transform(input string) string;
+        }
+        

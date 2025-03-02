@@ -1,0 +1,1 @@
+Program([FuncDecl(fruit,[ParDecl(n,IntType),ParDecl(step,IntType)],VoidType,Block([For(Assign(Id(i),BinaryOp(Id(n),/,IntLiteral(2))),BinaryOp(ArrayCell(Id(i),[BinaryOp(Id(step),%,IntLiteral(3))]),>,BinaryOp(Id(n),-,IntLiteral(1))),Assign(Id(i),BinaryOp(Id(i),+,BinaryOp(BinaryOp(Id(step),*,IntLiteral(2)),-,IntLiteral(1)))),Block([Return(),Return(BinaryOp(Id(n),*,Id(step)))]))]))])

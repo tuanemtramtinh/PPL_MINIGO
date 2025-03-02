@@ -1,0 +1,1 @@
+Program([FuncDecl(fruit,[ParDecl(x,IntType),ParDecl(y,IntType)],VoidType,Block([If(BinaryOp(BinaryOp(BinaryOp(Id(x),*,Id(y)),%,IntLiteral(2)),==,IntLiteral(0)),Block([Return(BinaryOp(Id(x),-,Id(y)))]),If(BinaryOp(BinaryOp(BinaryOp(Id(x),+,Id(y)),/,IntLiteral(2)),>,IntLiteral(5)),Block([Return(BinaryOp(Id(x),+,Id(y)))]),Block([Return(BinaryOp(Id(x),*,Id(y)))])))]))])

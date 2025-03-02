@@ -1,0 +1,15 @@
+
+        
+        func fruit(n int, arr, eng ID) {
+            for arr[n * 2 + 1] {
+                if (arr[2] * n > 10) {
+                    return arr[n];
+                } else {
+                    for i := 0; i[2] < 5; i += n / 2 {
+                        return i * arr[n % 2];
+                    }
+                }
+            }
+        }
+
+    

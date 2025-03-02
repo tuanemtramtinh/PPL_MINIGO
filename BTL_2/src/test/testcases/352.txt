@@ -1,0 +1,10 @@
+
+            
+            func fruit(arr ID) {
+                for i, value := range arr {
+                    return;
+                    return 1;
+                }
+            }
+
+        

@@ -1,2 +1,2 @@
-Program([ConstDecl("a",None,FieldAccess(StructLiteral("ID",[]),"a"))
+Program([FuncDecl("tuananh",[ParamDecl("a",IntType()),ParamDecl("c",StringType()),ParamDecl("x",ArrayType([IntLiteral(3),IntLiteral(2),IntLiteral(9),IntLiteral(1)],Id("tuananh"))),ParamDecl("k",ArrayType([IntLiteral(3),IntLiteral(2),IntLiteral(9),IntLiteral(1)],Id("tuananh")))],VoidType(),Block([ForBasic(FieldAccess(StructLiteral("ID",[("b",BooleanLiteral(True)),("k",BooleanLiteral(True))]),"z"),Block([Return(None),ForStep(Assign(Id("i"),IntLiteral(0)),BinaryOp("<", Id("i"), Id("n")),Assign(Id("i"),BinaryOp("+", Id("i"), IntLiteral(1))),Block([ForEach(Id("index"),Id("value"),ArrayLiteral([IntLiteral(2)],IntType(),[IntLiteral(1),IntLiteral(2)]),Block([Return(None)])),Return(IntLiteral(1))]))]))]))
 		])

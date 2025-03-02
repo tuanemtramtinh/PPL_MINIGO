@@ -1,0 +1,7 @@
+
+        
+        func fruit(a int, b int) {
+            if (a + b > 10) { return a * b; }else if (a - b < 5) { return a / b; }else { return a % b; }
+        }
+
+    

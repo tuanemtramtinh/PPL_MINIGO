@@ -1,0 +1,1 @@
+Program([ConstDecl(book,StructLiteral(Book,[(title,StringLiteral(Programming 101)),(pages,IntLiteral(300)),(price,FloatLiteral(29.99))]))])

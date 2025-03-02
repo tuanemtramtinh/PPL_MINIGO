@@ -1,2 +1,2 @@
-Program([ConstDecl("a",None,ArrayLiteral([IntLiteral(1)],Id("ID"),[StructLiteral("Votien",[])]))
+Program([FuncDecl("tuananh",[],VoidType(),Block([MethCall(Id("a"),"b",[])]))
 		])

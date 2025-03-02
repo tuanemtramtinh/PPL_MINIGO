@@ -1,2 +1,2 @@
-Program([FuncDecl("foo",[ParamDecl("a",ArrayType([IntLiteral(2)],Id("ID")))],VoidType(),Block([Return(None)]))
+Program([FuncDecl("primeCheck",[ParamDecl("n",IntType())],Id("bool"),Block([If(BinaryOp("<", Id("n"), IntLiteral(2)), Block([Return(BooleanLiteral(False))]), None),ForStep(Assign(Id("i"),IntLiteral(0)),BinaryOp("<", Id("i"), Id("n")),Assign(Id("i"),BinaryOp("+", Id("i"), IntLiteral(1))),Block([If(BinaryOp("==", BinaryOp("%", Id("n"), Id("i")), IntLiteral(0)), Block([Return(BooleanLiteral(False))]), None)])),Return(BooleanLiteral(True))]))
 		])

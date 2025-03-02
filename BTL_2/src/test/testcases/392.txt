@@ -1,0 +1,8 @@
+
+        type khanhpear struct {
+            count int;
+        }
+        func (c khanhpear) fruit() int {
+            return c.count * 10;
+        }
+        

@@ -1,0 +1,1 @@
+Program([FuncDecl(fruit,[ParDecl(a,IntType),ParDecl(b,IntType)],VoidType,Block([If(Id(a),Block([Return()])),If(Id(b),Block([Return()]),Block([Return()]))]))])

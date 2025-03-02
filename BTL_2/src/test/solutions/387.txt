@@ -1,0 +1,1 @@
+Program([FuncDecl(fruit,[ParDecl(x,FloatType),ParDecl(y,FloatType)],FloatType,Block([Return(BinaryOp(Id(x),*,Id(y)))]))])

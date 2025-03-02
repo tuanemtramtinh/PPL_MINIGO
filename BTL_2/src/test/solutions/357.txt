@@ -1,0 +1,1 @@
+Program([FuncDecl(fruit,[ParDecl(a,Id(ID)),ParDecl(b,Id(ID))],VoidType,Block([ForEach(Id(index),Id(value),ArrayCell(Id(b),[BinaryOp(FieldAccess(Id(a),id),%,IntLiteral(2))]),Block([Return(),Return(BinaryOp(Id(value),*,Id(index)))]))]))])

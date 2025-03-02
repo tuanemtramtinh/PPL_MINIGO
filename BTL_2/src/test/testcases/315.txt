@@ -1,0 +1,7 @@
+
+            type Fruit struct {
+                a int;
+                b float;
+                c hihi;
+            }
+    

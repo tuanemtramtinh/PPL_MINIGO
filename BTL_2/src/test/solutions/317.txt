@@ -1,0 +1,1 @@
+Program([ConstDecl(ambaturine,BinaryOp(BinaryOp(IntLiteral(0),<=,IntLiteral(1)),<=,IntLiteral(2))),VarDecl(coconut,BinaryOp(BinaryOp(BinaryOp(BinaryOp(BinaryOp(IntLiteral(1),>,IntLiteral(2)),<,IntLiteral(3)),>=,IntLiteral(4)),<=,IntLiteral(5)),==,IntLiteral(6))),InterfaceType(PearLe,[Prototype(Go,[Id(coconut),Id(coconut)],FloatType),Prototype(ambaturine,[],VoidType)])])

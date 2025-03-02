@@ -1,0 +1,3 @@
+
+            const pear = fruit(2, 3.5, "mammam", true, false)
+    

@@ -1,5 +1,6 @@
 
-            func votien() {
-                for i < 10 {return;}
-                for var i = 0; i < 10; i += 1  {return;}
-            }
+        type tuananh interface {
+            Add (x int, y float, c string);
+            Sub (x, y int);
+        }
+        

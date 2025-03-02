@@ -1,2 +1,5 @@
 
-            func foo(a,b,c,d [ID][2][c] ID ){return;}
+        func foo(){
+            return foo().foo(a + b * c - d + arr[1][2][3][4]).foo(foo(foo(foo(foo(arr[1] - "a" + "d" + nil))))) * form(arr[1][1][2][3][foo()]).x
+        }
+        

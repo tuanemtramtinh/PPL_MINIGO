@@ -1,0 +1,7 @@
+
+        type khanhpear struct {
+            brand string;
+            year int;
+            electric boolean;
+        }
+        

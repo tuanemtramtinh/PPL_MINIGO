@@ -1,0 +1,10 @@
+
+        
+        func fruit(arr [10]ID, x int) {
+            for arr[x * 2 + 1] < (x + 5) * 3 {
+                return;
+                return arr[x - 1];
+            }
+        }
+
+    

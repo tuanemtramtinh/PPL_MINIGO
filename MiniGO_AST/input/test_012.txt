@@ -1,4 +1,1 @@
-
-            var Votien = 1;
-            var Votien int;
-            var Votine int = 1;
+const tuananhdeptrai = call(tuan.anh.dep.trai);

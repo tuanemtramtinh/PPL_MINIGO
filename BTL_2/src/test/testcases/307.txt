@@ -1,0 +1,3 @@
+
+            const pear = PearLe(Fruit {a: 1, b: 2, c: "hihi"});
+    

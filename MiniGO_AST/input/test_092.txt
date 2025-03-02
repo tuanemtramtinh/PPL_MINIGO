@@ -1,5 +1,7 @@
 
-            func foo(){
-                return;
-                return foo() + 2;
-            } 
+        func foo() {
+            const a = 3.14e10;
+            const b = 3.14e10;
+            execute(foo(execute(foot())))
+        }
+        

@@ -1,0 +1,11 @@
+
+        
+        func fruit(a int, b int, c int) {
+            if ((a + b) * c > 20) { 
+                return a - b; 
+            }else if ((b - c) / 2 < 5) {
+              return c; 
+            }else { return a * b * c; }
+        }
+
+    
