@@ -1,5 +1,4 @@
 
-        func lcm(a int, b int) int {
-            return (a * b) / gcd(a, b);
-        }
-        
+            type Votien interface {
+                Add(a, c int, b int) [2]string;
+            }

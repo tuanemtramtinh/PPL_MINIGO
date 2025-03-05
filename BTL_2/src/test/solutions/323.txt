@@ -1,1 +1,1 @@
-Program([FuncDecl(lofiiiii,[],VoidType,Block([FuncCall(fruit,[IntLiteral(1),IntLiteral(2)]),MethodCall(ArrayCell(Id(a),[IntLiteral(2)]),fruit,[IntLiteral(1),IntLiteral(3)]),MethodCall(FieldAccess(ArrayCell(Id(a),[IntLiteral(2)]),fruit),hello,[IntLiteral(1)])]))])
+Program([InterfaceType(tuananh,[Prototype(Add,[],VoidType)])])

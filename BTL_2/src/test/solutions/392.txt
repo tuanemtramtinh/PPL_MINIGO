@@ -1,1 +1,1 @@
-Program([StructType(khanhpear,[(count,IntType)],[]),MethodDecl(c,Id(khanhpear),FuncDecl(fruit,[],IntType,Block([Return(BinaryOp(FieldAccess(Id(c),count),*,IntLiteral(10)))])))])
+Program([FuncDecl(foo,[],VoidType,Block([ConstDecl(a,FloatLiteral(3.14e10)),ConstDecl(b,FloatLiteral(3.14e10)),FuncCall(execute,[FuncCall(foo,[FuncCall(execute,[FuncCall(foot,[])])])])]))])

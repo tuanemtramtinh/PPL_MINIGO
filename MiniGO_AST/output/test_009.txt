@@ -1,2 +1,2 @@
-Program([ConstDecl("tuananhdeptrai",None,StructLiteral("tuananh",[("dep",Id("trai")),("hoc",Id("bachkhoa"))]))
+Program([ConstDecl("VoTien",None,FuncCall("foo",[BinaryOp("*", Id("a"), BinaryOp("+", IntLiteral(1), IntLiteral(2)))]))
 		])

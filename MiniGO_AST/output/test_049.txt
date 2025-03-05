@@ -1,5 +1,2 @@
-Program([FuncDecl("tuananh",[],VoidType(),Block([ConstDecl("x",None,ArrayLiteral([IntLiteral(2),IntLiteral(3),IntLiteral(4)],IntType(),[IntLiteral(1),IntLiteral(2),IntLiteral(3)]))])),
-			FuncDecl("tuananh",[],VoidType(),Block([ConstDecl("x",None,ArrayLiteral([IntLiteral(2),IntLiteral(3),IntLiteral(4)],IntType(),[IntLiteral(1),IntLiteral(2),IntLiteral(3)]))])),
-			FuncDecl("tuananh",[],VoidType(),Block([ConstDecl("x",None,ArrayLiteral([IntLiteral(2),IntLiteral(3),IntLiteral(4)],IntType(),[IntLiteral(1),IntLiteral(2),IntLiteral(3)]))])),
-			FuncDecl("tuananh",[],VoidType(),Block([ConstDecl("x",None,ArrayLiteral([IntLiteral(2),IntLiteral(3),IntLiteral(4)],IntType(),[IntLiteral(1),IntLiteral(2),IntLiteral(3)]))]))
+Program([ConstDecl("a",None,ArrayCell(FieldAccess(StructLiteral("ID",[]),"a"),[IntLiteral(2)]))
 		])

@@ -1,1 +1,1 @@
-Program([FuncDecl(pear,[],IntType,Block([Return()]))])
+Program([ConstDecl(tuananhdeptrai,BinaryOp(BinaryOp(BinaryOp(Id(d),||,BinaryOp(Id(e),&&,Id(p))),||,BinaryOp(Id(t),&&,Id(r))),||,BinaryOp(Id(a),&&,Id(i))))])

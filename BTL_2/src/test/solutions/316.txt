@@ -1,1 +1,1 @@
-Program([InterfaceType(PearLe,[Prototype(Go,[IntType,IntType],FloatType),Prototype(Stop,[],VoidType)])])
+Program([VarDecl(tuananh,Id(deptrai),FuncCall(deptrai,[StructLiteral(ID,[(name,StringLiteral("hello")),(num,IntLiteral(6)),(hel,Nil)])]))])

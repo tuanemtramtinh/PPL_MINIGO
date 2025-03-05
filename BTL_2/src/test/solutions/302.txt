@@ -1,1 +1,1 @@
-Program([ConstDecl(pear,FuncCall(fruit,[IntLiteral(2),FloatLiteral(3.5),StringLiteral(mammam),BooleanLiteral(true),BooleanLiteral(false)]))])
+Program([ConstDecl(tuananhdeptrai,UnaryOp(-,IntLiteral(5)))])

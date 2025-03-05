@@ -1,7 +1,2 @@
 
-        func foo() {
-            if (x > 10) {var b x;} else if (x == 10) { 
-                var z str;
-            } else if (x >= 20) { const b = 10; } else { var z ID;}
-        }
-        
+            func foo(a int, b [1]int) {return;}

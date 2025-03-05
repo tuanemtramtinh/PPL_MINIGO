@@ -1,2 +1,2 @@
-Program([FuncDecl("checkLeapYear",[ParamDecl("x",IntType())],Id("bool"),Block([If(BinaryOp("==", BinaryOp("%", Id("n"), IntLiteral(4)), IntLiteral(0)), Block([If(BinaryOp("==", BinaryOp("%", Id("n"), IntLiteral(100)), IntLiteral(0)), Block([Return(BinaryOp("==", BinaryOp("%", Id("n"), IntLiteral(400)), IntLiteral(0)))]), None),Return(BooleanLiteral(True))]), None),Return(BooleanLiteral(False))]))
+Program([VarDecl("a",ArrayType([IntLiteral(2),IntLiteral(3)],IntType()), None)
 		])

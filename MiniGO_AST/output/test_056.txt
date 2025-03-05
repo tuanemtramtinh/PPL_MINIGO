@@ -1,2 +1,2 @@
-Program([FuncDecl("absoluteValue",[ParamDecl("x",IntType())],IntType(),Block([If(BinaryOp("<", Id("x"), IntLiteral(0)), Block([Return(UnaryOp("-",Id("x")))]), None),Return(Id("x"))]))
+Program([ConstDecl("a",None,Id("a"))
 		])

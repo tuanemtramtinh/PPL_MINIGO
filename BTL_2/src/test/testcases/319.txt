@@ -1,4 +1,1 @@
-
-            func (ripe p) banana(a , b int, c why) {return a.a.a.a.a.a.a.a[1][2][3][4][5][6];}
-            func (seed s) mango(a , b int) {return a[1].b.c()[2].d.e();}
-    
+var tuananh string = call(a(b(c(d(e())))));

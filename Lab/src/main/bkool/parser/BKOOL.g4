@@ -12,20 +12,21 @@ options {
 // The single quote itself can appear as two single quotes back to back in a string: 'isn''t'.
 
 
-program: vardecls EOF;
+program: ids EOF;
 
-vardecls: vardecl vardecltail;
+// vardecls: vardecl vardecltail;
 
-vardecltail: vardecl vardecltail | ;
+// vardecltail: vardecl vardecltail | ;
 
-vardecl: mptype ids ';' ;
+// vardecl: mptype ids ';' ;
 
-mptype: INTTYPE | FLOATTYPE;
+// mptype: INTTYPE | FLOATTYPE;
 
-ids: ID ',' ids | ID; 
+ids: SEP ',' ids | SEP; 
 
 INTTYPE: 'int';
 
 FLOATTYPE: 'float';
 
 ID: [a-z]+ ;
+SEP: [[/]()];

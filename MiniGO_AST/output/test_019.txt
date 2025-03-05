@@ -1,2 +1,2 @@
-Program([VarDecl("tuananh",StringType(),FuncCall("call",[FuncCall("a",[FuncCall("b",[FuncCall("c",[FuncCall("d",[FuncCall("e",[])])])])])]))
+Program([FuncDecl("votien",[],VoidType(),Block([Break(),Continue()]))
 		])

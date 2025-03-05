@@ -1,3 +1,1 @@
-
-            const pear = PearLe(Fruit {a: 1, b: 2, c: "hihi"});
-    
+const tuananhdeptrai = [3] int {1, 2, 3};

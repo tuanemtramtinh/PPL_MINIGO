@@ -1,6 +1,25 @@
 
-        
-        func fruit(flag boolean) {
-            if (flag) { return "Yes"; }else { return "No"; }
+        func tuananh(){
+            if (1) {
+                return 1;
+            } else if (1) {
+                a := 2;
+                return 2;
+            } else if (1) {
+                a := 2;
+                return 2;
+            } else if (1) {
+                a := 2;
+                return 2;
+            } else if (1) {
+                a := 2;
+                return 2;
+            } else if (1) {
+                a := 2;
+                return 2;
+            } else {
+                return 3;
+                d := 5;
+            }
         }
-    
+        

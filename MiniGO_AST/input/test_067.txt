@@ -1,8 +1,4 @@
 
-        func gcd(a int, b int) int {
-            if (b == 0) {
-                return a
+            type Votien interface {
+                Add(a, c int, b int) ;
             }
-            return gcd(b, a % b);
-        }
-        

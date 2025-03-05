@@ -1,3 +1,1 @@
-
-            const pear = chickeN(cock(123), arr[2][ID]);
-    
+const tuananhdeptrai = tuananh.deptrai();

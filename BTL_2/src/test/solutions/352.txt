@@ -1,1 +1,1 @@
-Program([FuncDecl(fruit,[ParDecl(arr,Id(ID))],VoidType,Block([ForEach(Id(i),Id(value),Id(arr),Block([Return(),Return(IntLiteral(1))]))]))])
+Program([FuncDecl(Factorial,[ParDecl(n,IntType)],IntType,Block([If(BinaryOp(Id(n),==,IntLiteral(0)),Block([Return(IntLiteral(1))])),Return(FuncCall(isPalindrome,[Id(s),BinaryOp(Id(left),+,IntLiteral(1)),BinaryOp(Id(right),-,IntLiteral(1))]))]))])

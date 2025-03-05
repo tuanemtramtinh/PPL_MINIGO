@@ -1,5 +1,5 @@
 
-        func fruit(x int, y int) int {
-            return x + y;
+        func foo() {
+            a.b.c.d.e.f.g.h.j[ID{b: ID{} }].d();
         }
         

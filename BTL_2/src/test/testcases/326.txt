@@ -1,10 +1,6 @@
 
-            type gogogo interface {
-                fruit();
-                fruit(a int) int;
-                fruit(b int, c float) [2]ID;
-                fruit(a int);
-                fruit(a int, b int);
-                fruit(a, b int, c float);
-            }
-    
+        func tuananh(){
+            var b int;
+            const PI = 3.14;
+        }
+        

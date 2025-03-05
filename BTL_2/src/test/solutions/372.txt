@@ -1,1 +1,1 @@
-Program([ConstDecl(rectangle,StructLiteral(Shape,[(width,FloatLiteral(10.5)),(height,FloatLiteral(20.3))]))])
+Program([FuncDecl(primeCheck,[ParDecl(n,IntType)],Id(bool),Block([If(BinaryOp(Id(n),<,IntLiteral(2)),Block([Return(BooleanLiteral(false))])),For(Assign(Id(i),IntLiteral(0)),BinaryOp(Id(i),<,Id(n)),Assign(Id(i),BinaryOp(Id(i),+,IntLiteral(1))),Block([If(BinaryOp(BinaryOp(Id(n),%,Id(i)),==,IntLiteral(0)),Block([Return(BooleanLiteral(false))]))])),Return(BooleanLiteral(true))]))])

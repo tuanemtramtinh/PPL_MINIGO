@@ -10,16 +10,10 @@ else:
 
 def serializedATN():
     return [
-        4,1,5,37,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,1,0,1,0,
-        1,0,1,1,1,1,1,1,1,2,1,2,1,2,1,2,3,2,23,8,2,1,3,1,3,1,3,1,3,1,4,1,
-        4,1,5,1,5,1,5,1,5,3,5,35,8,5,1,5,0,0,6,0,2,4,6,8,10,0,1,1,0,3,4,
-        32,0,12,1,0,0,0,2,15,1,0,0,0,4,22,1,0,0,0,6,24,1,0,0,0,8,28,1,0,
-        0,0,10,34,1,0,0,0,12,13,3,2,1,0,13,14,5,0,0,1,14,1,1,0,0,0,15,16,
-        3,6,3,0,16,17,3,4,2,0,17,3,1,0,0,0,18,19,3,6,3,0,19,20,3,4,2,0,20,
-        23,1,0,0,0,21,23,1,0,0,0,22,18,1,0,0,0,22,21,1,0,0,0,23,5,1,0,0,
-        0,24,25,3,8,4,0,25,26,3,10,5,0,26,27,5,1,0,0,27,7,1,0,0,0,28,29,
-        7,0,0,0,29,9,1,0,0,0,30,31,5,5,0,0,31,32,5,2,0,0,32,35,3,10,5,0,
-        33,35,5,5,0,0,34,30,1,0,0,0,34,33,1,0,0,0,35,11,1,0,0,0,2,22,34
+        4,1,5,14,2,0,7,0,2,1,7,1,1,0,1,0,1,0,1,1,1,1,1,1,1,1,3,1,12,8,1,
+        1,1,0,0,2,0,2,0,0,12,0,4,1,0,0,0,2,11,1,0,0,0,4,5,3,2,1,0,5,6,5,
+        0,0,1,6,1,1,0,0,0,7,8,5,5,0,0,8,9,5,1,0,0,9,12,3,2,1,0,10,12,5,5,
+        0,0,11,7,1,0,0,0,11,10,1,0,0,0,12,3,1,0,0,0,1,11
     ]
 
 class BKOOLParser ( Parser ):
@@ -32,27 +26,22 @@ class BKOOLParser ( Parser ):
 
     sharedContextCache = PredictionContextCache()
 
-    literalNames = [ "<INVALID>", "';'", "','", "'int'", "'float'" ]
+    literalNames = [ "<INVALID>", "','", "'int'", "'float'" ]
 
-    symbolicNames = [ "<INVALID>", "<INVALID>", "<INVALID>", "INTTYPE", 
-                      "FLOATTYPE", "ID" ]
+    symbolicNames = [ "<INVALID>", "<INVALID>", "INTTYPE", "FLOATTYPE", 
+                      "ID", "SEP" ]
 
     RULE_program = 0
-    RULE_vardecls = 1
-    RULE_vardecltail = 2
-    RULE_vardecl = 3
-    RULE_mptype = 4
-    RULE_ids = 5
+    RULE_ids = 1
 
-    ruleNames =  [ "program", "vardecls", "vardecltail", "vardecl", "mptype", 
-                   "ids" ]
+    ruleNames =  [ "program", "ids" ]
 
     EOF = Token.EOF
     T__0=1
-    T__1=2
-    INTTYPE=3
-    FLOATTYPE=4
-    ID=5
+    INTTYPE=2
+    FLOATTYPE=3
+    ID=4
+    SEP=5
 
     def __init__(self, input:TokenStream, output:TextIO = sys.stdout):
         super().__init__(input, output)
@@ -70,8 +59,8 @@ class BKOOLParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def vardecls(self):
-            return self.getTypedRuleContext(BKOOLParser.VardeclsContext,0)
+        def ids(self):
+            return self.getTypedRuleContext(BKOOLParser.IdsContext,0)
 
 
         def EOF(self):
@@ -89,186 +78,10 @@ class BKOOLParser ( Parser ):
         self.enterRule(localctx, 0, self.RULE_program)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 12
-            self.vardecls()
-            self.state = 13
-            self.match(BKOOLParser.EOF)
-        except RecognitionException as re:
-            localctx.exception = re
-            self._errHandler.reportError(self, re)
-            self._errHandler.recover(self, re)
-        finally:
-            self.exitRule()
-        return localctx
-
-
-    class VardeclsContext(ParserRuleContext):
-        __slots__ = 'parser'
-
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
-            super().__init__(parent, invokingState)
-            self.parser = parser
-
-        def vardecl(self):
-            return self.getTypedRuleContext(BKOOLParser.VardeclContext,0)
-
-
-        def vardecltail(self):
-            return self.getTypedRuleContext(BKOOLParser.VardecltailContext,0)
-
-
-        def getRuleIndex(self):
-            return BKOOLParser.RULE_vardecls
-
-
-
-
-    def vardecls(self):
-
-        localctx = BKOOLParser.VardeclsContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 2, self.RULE_vardecls)
-        try:
-            self.enterOuterAlt(localctx, 1)
-            self.state = 15
-            self.vardecl()
-            self.state = 16
-            self.vardecltail()
-        except RecognitionException as re:
-            localctx.exception = re
-            self._errHandler.reportError(self, re)
-            self._errHandler.recover(self, re)
-        finally:
-            self.exitRule()
-        return localctx
-
-
-    class VardecltailContext(ParserRuleContext):
-        __slots__ = 'parser'
-
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
-            super().__init__(parent, invokingState)
-            self.parser = parser
-
-        def vardecl(self):
-            return self.getTypedRuleContext(BKOOLParser.VardeclContext,0)
-
-
-        def vardecltail(self):
-            return self.getTypedRuleContext(BKOOLParser.VardecltailContext,0)
-
-
-        def getRuleIndex(self):
-            return BKOOLParser.RULE_vardecltail
-
-
-
-
-    def vardecltail(self):
-
-        localctx = BKOOLParser.VardecltailContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 4, self.RULE_vardecltail)
-        try:
-            self.state = 22
-            self._errHandler.sync(self)
-            token = self._input.LA(1)
-            if token in [3, 4]:
-                self.enterOuterAlt(localctx, 1)
-                self.state = 18
-                self.vardecl()
-                self.state = 19
-                self.vardecltail()
-                pass
-            elif token in [-1]:
-                self.enterOuterAlt(localctx, 2)
-
-                pass
-            else:
-                raise NoViableAltException(self)
-
-        except RecognitionException as re:
-            localctx.exception = re
-            self._errHandler.reportError(self, re)
-            self._errHandler.recover(self, re)
-        finally:
-            self.exitRule()
-        return localctx
-
-
-    class VardeclContext(ParserRuleContext):
-        __slots__ = 'parser'
-
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
-            super().__init__(parent, invokingState)
-            self.parser = parser
-
-        def mptype(self):
-            return self.getTypedRuleContext(BKOOLParser.MptypeContext,0)
-
-
-        def ids(self):
-            return self.getTypedRuleContext(BKOOLParser.IdsContext,0)
-
-
-        def getRuleIndex(self):
-            return BKOOLParser.RULE_vardecl
-
-
-
-
-    def vardecl(self):
-
-        localctx = BKOOLParser.VardeclContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 6, self.RULE_vardecl)
-        try:
-            self.enterOuterAlt(localctx, 1)
-            self.state = 24
-            self.mptype()
-            self.state = 25
+            self.state = 4
             self.ids()
-            self.state = 26
-            self.match(BKOOLParser.T__0)
-        except RecognitionException as re:
-            localctx.exception = re
-            self._errHandler.reportError(self, re)
-            self._errHandler.recover(self, re)
-        finally:
-            self.exitRule()
-        return localctx
-
-
-    class MptypeContext(ParserRuleContext):
-        __slots__ = 'parser'
-
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
-            super().__init__(parent, invokingState)
-            self.parser = parser
-
-        def INTTYPE(self):
-            return self.getToken(BKOOLParser.INTTYPE, 0)
-
-        def FLOATTYPE(self):
-            return self.getToken(BKOOLParser.FLOATTYPE, 0)
-
-        def getRuleIndex(self):
-            return BKOOLParser.RULE_mptype
-
-
-
-
-    def mptype(self):
-
-        localctx = BKOOLParser.MptypeContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 8, self.RULE_mptype)
-        self._la = 0 # Token type
-        try:
-            self.enterOuterAlt(localctx, 1)
-            self.state = 28
-            _la = self._input.LA(1)
-            if not(_la==3 or _la==4):
-                self._errHandler.recoverInline(self)
-            else:
-                self._errHandler.reportMatch(self)
-                self.consume()
+            self.state = 5
+            self.match(BKOOLParser.EOF)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -285,8 +98,8 @@ class BKOOLParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def ID(self):
-            return self.getToken(BKOOLParser.ID, 0)
+        def SEP(self):
+            return self.getToken(BKOOLParser.SEP, 0)
 
         def ids(self):
             return self.getTypedRuleContext(BKOOLParser.IdsContext,0)
@@ -301,25 +114,25 @@ class BKOOLParser ( Parser ):
     def ids(self):
 
         localctx = BKOOLParser.IdsContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 10, self.RULE_ids)
+        self.enterRule(localctx, 2, self.RULE_ids)
         try:
-            self.state = 34
+            self.state = 11
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,1,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,0,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 30
-                self.match(BKOOLParser.ID)
-                self.state = 31
-                self.match(BKOOLParser.T__1)
-                self.state = 32
+                self.state = 7
+                self.match(BKOOLParser.SEP)
+                self.state = 8
+                self.match(BKOOLParser.T__0)
+                self.state = 9
                 self.ids()
                 pass
 
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 33
-                self.match(BKOOLParser.ID)
+                self.state = 10
+                self.match(BKOOLParser.SEP)
                 pass
 
 

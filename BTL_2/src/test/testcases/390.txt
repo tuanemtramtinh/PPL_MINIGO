@@ -1,8 +1,15 @@
 
-        type khanhpear struct {
-            amount int;
-        }
-        func (a khanhpear) fruit(x int) int {
-            return a.amount + x;
+        func foo() {
+            for a.b.c.d.e.f.g.h.j[ID{b: ID{} }].d(){
+                for a.b.c.d.e.f.g.h.j[ID{b: ID{} }].d(){
+                    for a.b.c.d.e.f.g.h.j[ID{b: ID{} }].d(){
+                        for a.b.c.d.e.f.g.h.j[ID{b: ID{} }].d(){
+                            for a.b.c.d.e.f.g.h.j[ID{b: ID{} }].d(){
+                                a[1][2][3][4][5][6] := 1;
+                            }
+                        }
+                    }
+                }
+            }
         }
         

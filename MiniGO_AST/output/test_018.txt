@@ -1,2 +1,2 @@
-Program([VarDecl("tuananh",StringType(),MethCall(MethCall(MethCall(FuncCall("a",[ArrayLiteral([IntLiteral(2)],IntType(),[Id("a")])]),"b",[ArrayLiteral([IntLiteral(2)],IntType(),[Id("a")])]),"c",[ArrayLiteral([IntLiteral(2)],IntType(),[Id("a")])]),"d",[ArrayLiteral([IntLiteral(2)],IntType(),[Id("a")])]))
+Program([FuncDecl("votien",[],VoidType(),Block([Assign(Id("a"),BinaryOp("+", Id("a"), IntLiteral(1)))]))
 		])

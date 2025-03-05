@@ -1,22 +1,5 @@
 
-        func foo() {
-            for i < 5{
-                print(i)
-            }
-            for i < 5{
-                print(i)
-            }
-            for i < 5{
-                print(i)
-            }
-            for i < 5{
-                print(i)
-            }
-            for i < 5{
-                print(i)
-            }
-            for i < 5{
-                print(i)
-            }
-        }
-        
+            func votien() {
+                return [2] ID { {1}, {"2"}, {nil}, {struc{}} };
+                return "THANKS YOU, PPL1 ";
+            };

@@ -1,2 +1,2 @@
-Program([VarDecl("tuananh",Id("deptrai"),FieldAccess(StructLiteral("ID",[("name",StringLiteral("hello")),("name",StringLiteral("world"))]),"b"))
+Program([FuncDecl("votien",[],VoidType(),Block([VarDecl("a",IntType(), None),ConstDecl("a",None,NilLiteral())]))
 		])

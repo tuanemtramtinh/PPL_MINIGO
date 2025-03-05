@@ -1,1 +1,1 @@
-const tuananhdeptrai = [2][3][1] string {"tuan", "anh", ID{dep: "trai"}};
+const VoTien = foo( Votien {}, Votien {a: 1} ); 

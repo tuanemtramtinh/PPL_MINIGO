@@ -1,11 +1,5 @@
 
-        type khanhpear struct {
-            count int;
-        }
-        func (p khanhpear) fruit(n int) int {
-            for i := 1; i <= n; i := i * 2 {
-                p.count := p.count + i;
-            }
-            return p.count;
+        func foo() {
+            x.y.z.b.d.s.e.gv.as.sa.sfas.saga.asg.b(a[d(c[a(b[d(x)])])]);
         }
         

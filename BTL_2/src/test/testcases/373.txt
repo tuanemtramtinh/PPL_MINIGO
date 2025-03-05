@@ -1,3 +1,7 @@
 
-        const book = Book{title: "Programming 101", pages: 300, price: 29.99}
+        func foo() {
+            if (x > 10) {var b x;} else if (x == 10) { 
+                var z str;
+            } else if (x >= 20) { const b = 10; } else { var z ID;}
+        }
         

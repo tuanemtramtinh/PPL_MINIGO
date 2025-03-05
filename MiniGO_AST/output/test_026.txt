@@ -1,2 +1,2 @@
-Program([FuncDecl("tuananh",[],VoidType(),Block([VarDecl("b",IntType(), None),ConstDecl("PI",None,FloatLiteral(3.14))]))
+Program([ConstDecl("a",None,BinaryOp("-", BinaryOp("+", BooleanLiteral(True), BooleanLiteral(False)), BooleanLiteral(True)))
 		])

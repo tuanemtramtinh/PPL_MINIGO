@@ -1,10 +1,11 @@
 
-        
-        func fruit(a int, arr [ID]ID) {
-            for i := a + 2; i[1] * 2 < arr[3] + a; i -= arr[a % 2] * 3 {
-                return;
-                return i[2] + arr[a];
+        func checkLeapYear(x int) bool {
+            if (n % 4 == 0){
+                if (n % 100 == 0){
+                    return n % 400 == 0;
+                }
+                return true;
             }
+            return false;
         }
-
-    
+        

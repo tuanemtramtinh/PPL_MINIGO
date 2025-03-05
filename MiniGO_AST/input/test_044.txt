@@ -1,5 +1,2 @@
 
-        func tuananh(a int, c string, x, k [3][2][9][1]tuananh){
-            var deptrai [2][3][4]int;
-        }
-        
+            const a = 1 >= 2 + 3;

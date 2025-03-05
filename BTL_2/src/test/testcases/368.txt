@@ -1,3 +1,5 @@
 
-        var points = [2][2]float{{1.1, 2.2}, {3.3, 4.4}};
+        func lcm(a int, b int) int {
+            return (a * b) / gcd(a, b);
+        }
         

@@ -1,2 +1,2 @@
-Program([FuncDecl("foo",[],VoidType(),Block([VarDecl("result", None,StructLiteral("ID",[("a",StructLiteral("ID1",[("b",StructLiteral("ID2",[("c",StructLiteral("ID3",[("d",StructLiteral("ID4",[("e",StructLiteral("ID5",[("b",FuncCall("c",[FuncCall("d",[FuncCall("e",[ArrayCell(Id("arr"),[IntLiteral(1),IntLiteral(2),StructLiteral("ID6",[("v",StructLiteral("ID7",[]))])])])])]))]))]))]))]))]))]))]))
+Program([FuncDecl("foo",[],VoidType(),Block([VarDecl("a",ArrayType([IntLiteral(1)],IntType()),IntLiteral(1))]))
 		])

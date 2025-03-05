@@ -1,1 +1,1 @@
-const tuananhdeptrai = tuananh{dep: trai, hoc: bachkhoa};
+const VoTien = foo( a * (1+2) ); 

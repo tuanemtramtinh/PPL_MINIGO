@@ -1,8 +1,7 @@
 
-        type khanhpear struct {
-            count int;
-        }
-        func (c khanhpear) fruit() int {
-            return c.count * 10;
+        func foo() {
+            const a = 3.14e10;
+            const b = 3.14e10;
+            execute(foo(execute(foot())))
         }
         

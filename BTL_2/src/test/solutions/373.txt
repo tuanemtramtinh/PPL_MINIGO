@@ -1,1 +1,1 @@
-Program([ConstDecl(book,StructLiteral(Book,[(title,StringLiteral(Programming 101)),(pages,IntLiteral(300)),(price,FloatLiteral(29.99))]))])
+Program([FuncDecl(foo,[],VoidType,Block([If(BinaryOp(Id(x),>,IntLiteral(10)),Block([VarDecl(b,Id(x))]),If(BinaryOp(Id(x),==,IntLiteral(10)),Block([VarDecl(z,Id(str))]),If(BinaryOp(Id(x),>=,IntLiteral(20)),Block([ConstDecl(b,IntLiteral(10))]),Block([VarDecl(z,Id(ID))]))))]))])

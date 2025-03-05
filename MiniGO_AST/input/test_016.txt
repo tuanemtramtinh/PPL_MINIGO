@@ -1,1 +1,4 @@
-var tuananh deptrai = deptrai(ID{name: "hello", num: 6, hel: nil});
+
+            type Votien struct {
+                a int;
+            }

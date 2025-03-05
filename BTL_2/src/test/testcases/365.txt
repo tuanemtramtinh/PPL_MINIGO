@@ -1,3 +1,14 @@
 
-        const arr = [4]float{1.2, 3.4, 5.6, 7.8};
+        func nestedLoop() {
+            for i := 0; i < 5; i += 1 {
+                for j := 0; j < 5; j += 1 {
+                    if (i * j % 3 == 0) {
+                        continue;
+                    }
+                    if (i + j > 6) {
+                        break;
+                    }
+                }
+            }
+        }
         

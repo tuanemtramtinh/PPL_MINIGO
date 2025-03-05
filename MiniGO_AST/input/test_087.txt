@@ -1,16 +1,4 @@
 
-        func foo() {
-            for _, v := range ID{} {
-                aa := 1;
-                for _, v := range ID{} {
-                    aa := 1;
-                    for _, v := range ID{} {
-                        aa := 1;
-                        for _, v := range ID{} {
-                            aa := 1;
-                        }
-                    }
-                }
-            }
-        }
-        
+            func foo(){
+                a[2].b.c[2] := 1;
+            } 

@@ -1,9 +1,4 @@
 
-        func foo() {
-            a.b.c.d.e.f.g.h.j[ID{b: ID{}}].d();
-            for var i [3][2]int = a.b.c.d.e.f.g.h.j[ID{b: ID{}}].d(); i <= a.b.c.d.e.f.g.h.j[ID{b: ID{}}].d(); i += 1{
-                sum += i;
-            }
-            return sum;
-        }
-        
+            func foo(){
+                a.b := 1;
+            } 

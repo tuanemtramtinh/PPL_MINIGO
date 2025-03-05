@@ -1,3 +1,1 @@
-
-            func pear() int {return;}
-    
+const tuananhdeptrai = d || e && p || t && r || a && i;

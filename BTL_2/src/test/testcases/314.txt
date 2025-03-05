@@ -1,3 +1,1 @@
-
-            var khanhPear = a[pear1(1, 2) + a.b.c[2]][a.b.c.pear2(x,y,z)];
-    
+var tuananh [3][2] int = 6 > 3 + 5 - 1 * (2 + call(a.b.c.d()));

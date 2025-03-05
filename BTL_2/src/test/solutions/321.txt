@@ -1,1 +1,1 @@
-Program([FuncDecl(votien,[],VoidType,Block([Assign(Id(a),BinaryOp(Id(a),+,IntLiteral(1))),Assign(Id(b),BinaryOp(Id(b),-,Id(banana))),Assign(Id(c),BinaryOp(Id(c),*,BinaryOp(ArrayCell(Id(hihi),[IntLiteral(2)]),||,BinaryOp(Id(trump),*,IntLiteral(5))))),Assign(Id(d),ArrayCell(Id(hsr),[IntLiteral(2),IntLiteral(3),ArrayCell(Id(D),[Id(go),Id(go)])]))]))])
+Program([StructType(tuananh,[(a,IntType)],[])])

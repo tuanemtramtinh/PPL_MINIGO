@@ -1,2 +1,2 @@
-Program([VarDecl("tuananh",Id("deptrai"),FuncCall("deptrai",[StructLiteral("ID",[("name",StringLiteral("hello")),("num",IntLiteral(6)),("hel",NilLiteral())])]))
+Program([StructType("Votien",[("a",IntType())],[])
 		])

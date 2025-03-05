@@ -1,5 +1,2 @@
 
-        func tuananh(){
-            a[1][2].c.d.x.h[1][2].k := [3][2][4] tuananh {{{{{{{{{"tuananhdeptrai"}}}}}}}}};
-        }
-        
+            const a = ID{a: [1]int{1}};

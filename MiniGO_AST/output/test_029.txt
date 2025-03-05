@@ -1,2 +1,2 @@
-Program([FuncDecl("tuananh",[],VoidType(),Block([Continue(),Break(),Return(None)]))
+Program([ConstDecl("a",None,BinaryOp("-", IntLiteral(1), BinaryOp("%", IntLiteral(2), IntLiteral(3))))
 		])

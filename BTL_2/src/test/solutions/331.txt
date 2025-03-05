@@ -1,1 +1,1 @@
-Program([FuncDecl(fruit,[ParDecl(a,IntType),ParDecl(b,IntType)],VoidType,Block([If(Id(a),Block([Return()])),If(BinaryOp(Id(b),>=,Id(fruit)),Block([Return()])),If(BinaryOp(Id(game),<=,Id(heino)),Block([Return()])),If(BinaryOp(Id(damedane),==,UnaryOp(!,Id(MA))),Block([Return()])),If(Id(tuai),Block([Return(FuncCall(outgroup,[]))]),Block([Return(FuncCall(nauxoi,[]))]))]))])
+Program([FuncDecl(tuananh,[],VoidType,Block([MethodCall(Id(a),b,[])]))])

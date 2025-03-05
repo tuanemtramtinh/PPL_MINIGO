@@ -1,9 +1,5 @@
 
-        func printMatrix(rows int, cols int) {
-            for i := 0; i < rows; i += 1 {
-                for j := 0; j < cols; j += 1 {
-                    print(i * cols + j);
-                }
-            }
-        }
-        
+            func foo(){
+                break;
+                continue;
+            } 

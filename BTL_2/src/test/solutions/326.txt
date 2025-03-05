@@ -1,1 +1,1 @@
-Program([InterfaceType(gogogo,[Prototype(fruit,[],VoidType),Prototype(fruit,[IntType],IntType),Prototype(fruit,[IntType,FloatType],ArrayType(Id(ID),[IntLiteral(2)])),Prototype(fruit,[IntType],VoidType),Prototype(fruit,[IntType,IntType],VoidType),Prototype(fruit,[IntType,IntType,FloatType],VoidType)])])
+Program([FuncDecl(tuananh,[],VoidType,Block([VarDecl(b,IntType),ConstDecl(PI,FloatLiteral(3.14))]))])

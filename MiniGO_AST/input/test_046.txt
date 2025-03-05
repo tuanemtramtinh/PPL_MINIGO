@@ -1,15 +1,2 @@
 
-        func tuananh(a int, c string, x, k [3][2][9][1]tuananh){
-            for i:= 0; i < n; i += 1{
-                for i:= 0; i < n; i += 1{
-                    for i:= 0; i < n; i += 1{
-                        for i:= 0; i < n; i += 1{
-                            for i:= 0; i < n; i += 1{
-                                return a[1][2][3][4];
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        
+            const a = a[1 + 2];

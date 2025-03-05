@@ -1,2 +1,2 @@
-Program([ConstDecl("tuananhdeptrai",None,ArrayLiteral([IntLiteral(2),IntLiteral(3),IntLiteral(1)],StringType(),[StringLiteral("tuan"),StringLiteral("anh"),StructLiteral("ID",[("dep",StringLiteral("trai"))])]))
+Program([ConstDecl("VoTien",None,FuncCall("foo",[StructLiteral("Votien",[]),StructLiteral("Votien",[("a",IntLiteral(1))])]))
 		])

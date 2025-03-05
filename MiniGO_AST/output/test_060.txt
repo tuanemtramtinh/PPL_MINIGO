@@ -1,2 +1,2 @@
-Program([FuncDecl("mergeSort",[ParamDecl("arr",ArrayType([IntLiteral(10)],IntType())),ParamDecl("left",IntType()),ParamDecl("right",IntType())],VoidType(),Block([If(BinaryOp("<", Id("left"), Id("right")), Block([VarDecl("mid", None,BinaryOp("/", BinaryOp("+", Id("left"), Id("right")), IntLiteral(2))),FuncCall("mergeSort",[Id("arr"),Id("left"),Id("mid")]),FuncCall("mergeSort",[Id("arr"),BinaryOp("+", Id("mid"), IntLiteral(1)),Id("right")]),FuncCall("merge",[Id("arr"),Id("left"),Id("mid"),Id("right")])]), None)]))
+Program([StructType("Votien",[("a",IntType())],[])
 		])

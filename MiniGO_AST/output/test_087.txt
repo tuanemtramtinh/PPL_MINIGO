@@ -1,2 +1,2 @@
-Program([FuncDecl("foo",[],VoidType(),Block([ForEach(Id("_"),Id("v"),StructLiteral("ID",[]),Block([Assign(Id("aa"),IntLiteral(1)),ForEach(Id("_"),Id("v"),StructLiteral("ID",[]),Block([Assign(Id("aa"),IntLiteral(1)),ForEach(Id("_"),Id("v"),StructLiteral("ID",[]),Block([Assign(Id("aa"),IntLiteral(1)),ForEach(Id("_"),Id("v"),StructLiteral("ID",[]),Block([Assign(Id("aa"),IntLiteral(1))]))]))]))]))]))
+Program([FuncDecl("foo",[],VoidType(),Block([Assign(ArrayCell(FieldAccess(FieldAccess(ArrayCell(Id("a"),[IntLiteral(2)]),"b"),"c"),[IntLiteral(2)]),IntLiteral(1))]))
 		])

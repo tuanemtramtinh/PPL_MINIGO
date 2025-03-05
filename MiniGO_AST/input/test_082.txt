@@ -1,5 +1,4 @@
 
-        func foo(){
-            var result = calculateValue(computeFunction(a[getIndex(x.field.access())][3] + factorial(n - 1)), sumArray([3][2]int{1, 2, t, x, ID{age: true, b: true}, {{{{x, y, z}}}}}), Person{name: "John", age: calculateAge(birthDate) + yearOffset, address: Address{city: getCity(), zip: getZipFromDatabase(userID.value)}}.info);
-        }
-        
+            func foo(){
+                var a = 1.;
+            } 

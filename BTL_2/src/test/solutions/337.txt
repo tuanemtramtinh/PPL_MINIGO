@@ -1,1 +1,1 @@
-Program([FuncDecl(fruit,[ParDecl(x,IntType)],VoidType,Block([If(BinaryOp(Id(x),>,IntLiteral(10)),Block([Return(IntLiteral(100))]),If(BinaryOp(Id(x),>,IntLiteral(5)),Block([Return(IntLiteral(50))]),Block([Return(IntLiteral(0))])))]))])
+Program([FuncDecl(tuananh,[],VoidType,Block([If(IntLiteral(1),Block([Assign(Id(a),IntLiteral(1))]),Block([Assign(Id(a),UnaryOp(-,IntLiteral(1)))]))]))])

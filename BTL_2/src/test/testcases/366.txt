@@ -1,3 +1,16 @@
 
-        const matrix = [2][3]int{{1, 2, 3}, {4, 5, 6}};
+        type Address struct {
+            street string;
+            city string;
+        }
+        
+        type Person struct {
+            name string;
+            age int;
+            address Address;
+        }
+        
+        func (p Person) GetAddress() Address{
+            return p.address;
+        }
         

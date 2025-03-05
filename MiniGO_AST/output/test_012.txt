@@ -1,2 +1,4 @@
-Program([ConstDecl("tuananhdeptrai",None,FuncCall("call",[FieldAccess(FieldAccess(FieldAccess(Id("tuan"),"anh"),"dep"),"trai")]))
+Program([VarDecl("Votien", None,IntLiteral(1)),
+			VarDecl("Votien",IntType(), None),
+			VarDecl("Votine",IntType(),IntLiteral(1))
 		])

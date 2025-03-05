@@ -1,42 +1,7 @@
 
-        func complexLoopPatterns(n int, m int) int {
-            var result = 0;
-            for i := 0; i < n; i += 1 {
-                for j := 0; j < m; j += 1 {
-                    if ((i + j) % 3 == 0 && i * j % 4 == 0) {
-                        continue;
-                    }
-                    
-                    for k := 0; k < i + j; k += 1 {
-                        if (k % 2 == 0) {
-                            if (k % 3 == 0) {
-                                continue;
-                            }
-                        } else {
-                            if (k % 5 == 0) {
-                                break;
-                            }
-                        }
-                        
-                        result += i * j * k;
-                        
-                        if (result > 1000) {
-                            for l := 0; l < k; l += 1 {
-                                if (l % 7 == 0) {
-                                    result -= l;
-                                    if (result < 500) {
-                                        break;
-                                    }
-                                }
-                            }
-                            
-                            if (result > 2000) {
-                                return result % 1000;
-                            }
-                        }
-                    }
-                }
-            }
-            return result;
-        }
-        
+            var a = 1;
+            const b = 2;
+            type a struct{a float;}
+            type b interface {foo();} 
+            func foo(){return;}
+            func  (Cat c) foo() [2]int {return;}

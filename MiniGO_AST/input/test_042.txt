@@ -1,5 +1,2 @@
 
-        func tuananh(a int, c string, x, k [3][2][9][1]tuananh){
-            const a = d() + a() + c() + z(1, 2.);
-        }
-        
+            const a = 1 && 2 || 3 >= 4 + 5 * -6;

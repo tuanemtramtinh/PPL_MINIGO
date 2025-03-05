@@ -1,8 +1,6 @@
 
-        func lofiiiii(a int, b string) {
-            a["s"][foo()] := a[2][2][3];
-            a[2] := a[3][4];
-            b.c.a[2] := b.c.a[2];
-            b.c.a[2][3] := b.c.a[2][3];
+        type tuananh interface {
+            Add (x int, y float, c string);
+            Sub (x, y int);
         }
-    
+        

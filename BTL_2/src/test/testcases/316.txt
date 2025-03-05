@@ -1,6 +1,1 @@
-
-            type PearLe interface {
-                Go(x, y int) float;
-                Stop();
-            }
-    
+var tuananh deptrai = deptrai(ID{name: "hello", num: 6, hel: nil});

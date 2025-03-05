@@ -1,7 +1,2 @@
 
-        func tuananh(a int, c string, x, k [3][2][9][1]tuananh){
-            for ID{b: true, k: true}.z {
-                return;
-            }
-        }
-        
+            const a = a.b.c.d.e;

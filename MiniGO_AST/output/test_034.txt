@@ -1,2 +1,2 @@
-Program([FuncDecl("tuananh",[],VoidType(),Block([Assign(FieldAccess(ArrayCell(FieldAccess(FieldAccess(FieldAccess(FieldAccess(ArrayCell(Id("a"),[IntLiteral(1),IntLiteral(2)]),"c"),"d"),"x"),"h"),[IntLiteral(1),IntLiteral(2)]),"k"),ArrayLiteral([IntLiteral(3),IntLiteral(2),IntLiteral(4)],Id("tuananh"),[[[[[[[[[StringLiteral("tuananhdeptrai")]]]]]]]]]))]))
+Program([ConstDecl("a",None,StructLiteral("ID",[("a",ArrayLiteral([IntLiteral(1)],IntType(),[IntLiteral(1)]))]))
 		])

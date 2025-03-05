@@ -1,2 +1,2 @@
-Program([FuncDecl("printMatrix",[ParamDecl("rows",IntType()),ParamDecl("cols",IntType())],VoidType(),Block([ForStep(Assign(Id("i"),IntLiteral(0)),BinaryOp("<", Id("i"), Id("rows")),Assign(Id("i"),BinaryOp("+", Id("i"), IntLiteral(1))),Block([ForStep(Assign(Id("j"),IntLiteral(0)),BinaryOp("<", Id("j"), Id("cols")),Assign(Id("j"),BinaryOp("+", Id("j"), IntLiteral(1))),Block([FuncCall("print",[BinaryOp("+", BinaryOp("*", Id("i"), Id("cols")), Id("j"))])]))]))]))
+Program([FuncDecl("foo",[],VoidType(),Block([Break(),Continue()]))
 		])

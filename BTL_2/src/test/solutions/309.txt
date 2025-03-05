@@ -1,1 +1,1 @@
-Program([ConstDecl(pear,FuncCall(fruit,[ArrayLiteral([IntLiteral(2),IntLiteral(5)],StringType,[IntLiteral(2),[IntLiteral(1),IntLiteral(3)],[[IntLiteral(5),FloatLiteral(5.11)],IntLiteral(1),FloatLiteral(3.5)]])]))])
+Program([ConstDecl(tuananhdeptrai,StructLiteral(tuananh,[(dep,Id(trai)),(hoc,Id(bachkhoa))]))])

@@ -1,5 +1,1 @@
-
-            func fruit(a int, b string){
-                var hello = [2][3]int{{2, 3},{{"string"}}};
-            }
-    
+var tuananh string;

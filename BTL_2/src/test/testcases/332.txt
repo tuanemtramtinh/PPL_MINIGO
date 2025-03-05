@@ -1,6 +1,5 @@
 
-        func fruit (a, b in, k float) {
-            if (1){return a;} else if (2){return b[2];} else if (3){return c - d;} else {break;}
-            if (1){return true;} else if (2){return false;} else if (3){continue;}
+        func tuananh(){
+            a[1][2][3].c.d.s.c.e(b(d(h())));
         }
-    
+        

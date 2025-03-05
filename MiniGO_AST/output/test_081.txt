@@ -1,2 +1,2 @@
-Program([FuncDecl("foo",[],VoidType(),Block([ConstDecl("a",None,BinaryOp("+", BinaryOp("+", ArrayCell(Id("arr"),[IntLiteral(1),IntLiteral(2),IntLiteral(3),IntLiteral(4),IntLiteral(5)]), StructLiteral("ID",[])), ArrayLiteral([IntLiteral(3),IntLiteral(2)],IntType(),[[IntLiteral(1),IntLiteral(2),IntLiteral(3)],[IntLiteral(1),IntLiteral(2),IntLiteral(3)],[[[IntLiteral(1),IntLiteral(2),IntLiteral(3)]]]])))]))
+Program([FuncDecl("foo",[],VoidType(),Block([ConstDecl("a",None,FloatLiteral(1.))]))
 		])

@@ -1,1 +1,1 @@
-const tuananhdeptrai = 1 + 2;
+const VoTien = foo( 1 ); 

@@ -1,2 +1,2 @@
-Program([FuncDecl("foo",[],VoidType(),Block([MethCall(FieldAccess(FieldAccess(FieldAccess(FieldAccess(FieldAccess(FieldAccess(FieldAccess(FieldAccess(FieldAccess(FieldAccess(FieldAccess(FieldAccess(Id("x"),"y"),"z"),"b"),"d"),"s"),"e"),"gv"),"as"),"sa"),"sfas"),"saga"),"asg"),"b",[ArrayCell(Id("a"),[FuncCall("d",[ArrayCell(Id("c"),[FuncCall("a",[ArrayCell(Id("b"),[FuncCall("d",[Id("x")])])])])])])])]))
+Program([FuncDecl("votien",[],VoidType(),Block([ForEach(Id("index"),Id("value"),ArrayLiteral([IntLiteral(2)],IntType(),[IntLiteral(1),IntLiteral(2)]),Block([Return(None),Return(IntLiteral(1))]))]))
 		])

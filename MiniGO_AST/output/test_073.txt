@@ -1,2 +1,2 @@
-Program([FuncDecl("foo",[],VoidType(),Block([If(BinaryOp(">", Id("x"), IntLiteral(10)), Block([VarDecl("b",Id("x"), None)]), If(BinaryOp("==", Id("x"), IntLiteral(10)), Block([VarDecl("z",Id("str"), None)]), If(BinaryOp(">=", Id("x"), IntLiteral(20)), Block([ConstDecl("b",None,IntLiteral(10))]), Block([VarDecl("z",Id("ID"), None)]))))]))
+Program([FuncDecl("foo",[ParamDecl("a",IntType()),ParamDecl("b",ArrayType([IntLiteral(1)],IntType()))],VoidType(),Block([Return(None)]))
 		])

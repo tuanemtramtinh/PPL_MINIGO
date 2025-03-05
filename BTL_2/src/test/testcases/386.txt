@@ -1,8 +1,23 @@
 
-        func fruit(name string) string {
-            continue;
-            return name;
-            break;
-            return banana();
+        func foo() {
+            a.b.c.d.e.f.g.h.j[ID{b: ID{} }].d();
+        }
+        func foo() {
+            a.b.c.d.e.f.g.h.j[ID{b: ID{} }].d();
+        }
+        func foo() {
+            a.b.c.d.e.f.g.h.j[ID{b: ID{} }].d();
+        }
+        func foo() {
+            a.b.c.d.e.f.g.h.j[ID{b: ID{} }].d();
+        }
+        func foo() {
+            a.b.c.d.e.f.g.h.j[ID{b: ID{} }].d();
+        }
+        func foo() {
+            a.b.c.d.e.f.g.h.j[ID{b: ID{} }].d();
+        }
+        func foo() {
+            a.b.c.d.e.f.g.h.j[ID{b: ID{} }].d();
         }
         

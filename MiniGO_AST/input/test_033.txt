@@ -1,10 +1,2 @@
 
-        func tuananh(){
-            a := 1;
-            a += 1;
-            a -= 1;
-            a *= 1;
-            a /= 1;
-            a %= 1;
-        }
-        
+            const a = ID{a: 1, b: true};

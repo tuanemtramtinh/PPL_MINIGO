@@ -1,16 +1,4 @@
 
-        type Address struct {
-            street string;
-            city string;
-        }
-        
-        type Person struct {
-            name string;
-            age int;
-            address Address;
-        }
-        
-        func (p Person) GetAddress() Address{
-            return p.address;
-        }
-        
+            type Votien interface {
+                Add(a int, b int) ;
+            }

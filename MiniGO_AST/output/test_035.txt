@@ -1,2 +1,2 @@
-Program([FuncDecl("tuananh",[],VoidType(),Block([FuncCall("c",[FuncCall("d",[FuncCall("e",[FuncCall("h",[FuncCall("k",[FuncCall("l",[Id("m")])])])])]),BinaryOp("+", BinaryOp("+", BinaryOp("+", IntLiteral(5), IntLiteral(5)), IntLiteral(5)), IntLiteral(5)),MethCall(FieldAccess(FieldAccess(FieldAccess(Id("x"),"d"),"d"),"e"),"t",[ArrayLiteral([IntLiteral(3),IntLiteral(2)],StringType(),[IntLiteral(1),IntLiteral(2),IntLiteral(3)])])])]))
+Program([ConstDecl("a",None,StructLiteral("ID",[("b",BooleanLiteral(True))]))
 		])

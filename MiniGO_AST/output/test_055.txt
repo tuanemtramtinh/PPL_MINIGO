@@ -1,2 +1,2 @@
-Program([FuncDecl("isPalindrome",[ParamDecl("s",StringType())],Id("bool"),Block([VarDecl("i", None,IntLiteral(0)),VarDecl("j", None,BinaryOp("-", FuncCall("len",[Id("s")]), IntLiteral(1))),ForBasic(BinaryOp("<", Id("i"), Id("j")),Block([If(BinaryOp("!=", ArrayCell(Id("s"),[Id("i")]), ArrayCell(Id("s"),[Id("j")])), Block([Return(BooleanLiteral(False))]), None),Assign(Id("i"),BinaryOp("+", Id("i"), IntLiteral(1))),Assign(Id("j"),BinaryOp("-", Id("j"), IntLiteral(1)))])),Return(BooleanLiteral(True))]))
+Program([ConstDecl("a",None,ArrayCell(FuncCall("foo",[]),[IntLiteral(2)]))
 		])

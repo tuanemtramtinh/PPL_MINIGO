@@ -1,3 +1,1 @@
-
-            const pear = pear() + peach[2][a.b[2]] + 5*and(u || v);
-    
+const tuananhdeptrai = "tuananh";

@@ -1,2 +1,2 @@
-Program([VarDecl("tuananh",ArrayType([IntLiteral(3),IntLiteral(2)],IntType()),BinaryOp(">", IntLiteral(6), BinaryOp("-", BinaryOp("+", IntLiteral(3), IntLiteral(5)), BinaryOp("*", IntLiteral(1), BinaryOp("+", IntLiteral(2), FuncCall("call",[MethCall(FieldAccess(FieldAccess(Id("a"),"b"),"c"),"d",[])]))))))
+Program([MethodDecl("Votien",Id("v"),FuncDecl("foo",[ParamDecl("Votien",IntType())],VoidType(),Block([Return(None)])))
 		])

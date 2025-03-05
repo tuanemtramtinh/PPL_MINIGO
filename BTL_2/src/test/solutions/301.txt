@@ -1,1 +1,1 @@
-Program([ConstDecl(khanh_pear,BooleanLiteral(true))])
+Program([ConstDecl(tuananhdeptrai,BinaryOp(IntLiteral(1),+,IntLiteral(2)))])

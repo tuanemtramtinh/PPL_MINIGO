@@ -1,5 +1,2 @@
 
-        func tuananh(){
-            a.b();
-        }
-        
+            const a = [1]ID{Votien{}};

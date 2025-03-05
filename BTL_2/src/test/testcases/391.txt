@@ -1,8 +1,9 @@
 
-        type khanhpear struct {
-            weight float;
-        }
-        func (w khanhpear) fruit(y float) float {
-            return w.weight - y;
+        func printMatrix(rows int, cols int) {
+            for i := 0; i < rows; i += 1 {
+                for j := 0; j < cols; j += 1 {
+                    print(i * cols + j);
+                }
+            }
         }
         

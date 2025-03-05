@@ -1,5 +1,2 @@
 
-        func foo(){
-            const ppl = arr[arr[arr[arr[arr[arr[arr[arr[arr[arr[arr[foo(foo(foo(foo(foo(foo(foo(arr[arr[arr[arr[arr[foo() + 2 - 5 == 1 > 2]]]]])))))))]]]]]]]]]]]
-        } 
-        
+            func  (Cat c) foo(a int, b [1]int) {return;}

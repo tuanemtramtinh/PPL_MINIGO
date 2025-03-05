@@ -1,3 +1,14 @@
 
-        var car = Car{brand: "Toyota", year: 2022, electric: false}
+        func foo(){
+            execute("hello");
+            execute1(execute("hello"));
+            execute2(execute1(execute("hello")));
+            execute3(execute2(execute1(execute("hello"))));
+            execute4(execute3(execute2(execute1(execute("hello")))))
+            execute5(execute4(execute3(execute2(execute1(execute("hello"))))))
+            execute6(execute5(execute4(execute3(execute2(execute1(execute("hello")))))))
+            execute7(execute6(execute5(execute4(execute3(execute2(execute1(execute("hello"))))))))
+            execute8(execute7(execute6(execute5(execute4(execute3(execute2(execute1(execute("hello")))))))))
+            execute9(execute8(execute7(execute6(execute5(execute4(execute3(execute2(execute1(execute("hello"))))))))))
+        } 
         

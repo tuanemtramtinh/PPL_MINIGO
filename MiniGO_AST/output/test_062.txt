@@ -1,2 +1,2 @@
-Program([FuncDecl("isPerfectNumber",[ParamDecl("n",IntType())],Id("bool"),Block([VarDecl("sum", None,IntLiteral(1)),ForStep(Assign(Id("i"),IntLiteral(2)),BinaryOp("<=", BinaryOp("*", Id("i"), Id("i")), Id("n")),Assign(Id("i"),BinaryOp("+", Id("i"), IntLiteral(1))),Block([If(BinaryOp("==", BinaryOp("%", Id("n"), Id("i")), IntLiteral(0)), Block([Assign(Id("sum"),BinaryOp("+", Id("sum"), Id("i"))),If(BinaryOp("!=", Id("i"), BinaryOp("/", Id("n"), Id("i"))), Block([Assign(Id("sum"),BinaryOp("+", Id("sum"), BinaryOp("/", Id("n"), Id("i"))))]), None)]), None)])),Return(BinaryOp("==", Id("sum"), Id("n")))]))
+Program([StructType("Votien",[("a",IntType()),("b",BoolType())],[])
 		])

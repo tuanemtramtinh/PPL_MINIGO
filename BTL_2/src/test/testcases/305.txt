@@ -1,3 +1,1 @@
-
-            const pear = Hihi[2][3].haha.huhu();
-    
+const tuananhdeptrai = 2 + (3 - 5) > 3;

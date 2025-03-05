@@ -1,2 +1,2 @@
-Program([FuncDecl("tuananh",[ParamDecl("a",IntType()),ParamDecl("c",StringType()),ParamDecl("x",ArrayType([IntLiteral(3),IntLiteral(2),IntLiteral(9),IntLiteral(1)],Id("tuananh"))),ParamDecl("k",ArrayType([IntLiteral(3),IntLiteral(2),IntLiteral(9),IntLiteral(1)],Id("tuananh")))],VoidType(),Block([VarDecl("deptrai",ArrayType([IntLiteral(2),IntLiteral(3),IntLiteral(4)],IntType()), None)]))
+Program([ConstDecl("a",None,BinaryOp(">=", IntLiteral(1), BinaryOp("+", IntLiteral(2), IntLiteral(3))))
 		])

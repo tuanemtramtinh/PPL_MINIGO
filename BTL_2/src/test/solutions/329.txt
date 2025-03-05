@@ -1,1 +1,1 @@
-Program([FuncDecl(fruit,[],VoidType,Block([If(Id(a),Block([Return()]),Block([Continue(),Return(FuncCall(fruit,[IntLiteral(2),IntLiteral(3),StringLiteral(true),FloatLiteral(3.45e-11)]))]))]))])
+Program([FuncDecl(tuananh,[],VoidType,Block([Continue(),Break(),Return()]))])

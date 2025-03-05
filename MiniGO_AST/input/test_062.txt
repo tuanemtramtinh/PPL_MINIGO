@@ -1,14 +1,6 @@
 
-        func isPerfectNumber(n int) bool {
-            var sum = 1;
-            for i := 2; i * i <= n; i += 1 {
-                if (n % i == 0) {
-                    sum += i;
-                    if (i != n / i) {
-                        sum += n / i;
-                    }
-                }
+            type Votien struct {
+                a  int;
+                b  boolean;
+                
             }
-            return sum == n;
-        }
-        

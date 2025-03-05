@@ -1,1 +1,1 @@
-Program([ConstDecl(pear,BinaryOp(BinaryOp(FuncCall(pear,[]),+,ArrayCell(Id(peach),[IntLiteral(2),ArrayCell(FieldAccess(Id(a),b),[IntLiteral(2)])])),+,BinaryOp(IntLiteral(5),*,FuncCall(and,[BinaryOp(Id(u),||,Id(v))]))))])
+Program([ConstDecl(tuananhdeptrai,StringLiteral("tuananh"))])

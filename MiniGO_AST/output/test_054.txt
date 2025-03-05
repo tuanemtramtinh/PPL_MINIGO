@@ -1,2 +1,2 @@
-Program([FuncDecl("foo",[],VoidType(),Block([VarDecl("arr", None,ArrayLiteral([IntLiteral(5),IntLiteral(5)],IntType(),[[IntLiteral(1),IntLiteral(2),IntLiteral(3),IntLiteral(4),IntLiteral(5)],[IntLiteral(6),IntLiteral(7),IntLiteral(8),IntLiteral(9),IntLiteral(10)],[IntLiteral(11),IntLiteral(12),IntLiteral(13),IntLiteral(14),IntLiteral(15)],[IntLiteral(16),IntLiteral(17),IntLiteral(18),IntLiteral(19),IntLiteral(20)],[IntLiteral(21),IntLiteral(22),IntLiteral(23),IntLiteral(24),IntLiteral(25)]]))]))
+Program([ConstDecl("a",None,BinaryOp("+", FuncCall("f",[]), FuncCall("f",[BinaryOp("+", IntLiteral(1), IntLiteral(2)),FloatLiteral(3.)])))
 		])

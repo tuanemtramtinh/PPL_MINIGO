@@ -1,2 +1,2 @@
-Program([FuncDecl("foo",[],VoidType(),Block([ConstDecl("a",None,FloatLiteral(31400000000.0)),ConstDecl("b",None,FloatLiteral(31400000000.0)),FuncCall("execute",[FuncCall("foo",[FuncCall("execute",[FuncCall("foot",[])])])])]))
+Program([FuncDecl("foo",[],VoidType(),Block([Return(None),Return(BinaryOp("+", FuncCall("foo",[]), IntLiteral(2)))]))
 		])

@@ -1,11 +1,7 @@
 
-        
-        func fruit(a int, b int, c int) {
-            if ((a + b) * c > 20) { 
-                return a - b; 
-            }else if ((b - c) / 2 < 5) {
-              return c; 
-            }else { return a * b * c; }
+        func tuananh(a int, c string, x, k [3][2][9][1]tuananh){
+            for ID{b: true, k: true}.z {
+                return;
+            }
         }
-
-    
+        

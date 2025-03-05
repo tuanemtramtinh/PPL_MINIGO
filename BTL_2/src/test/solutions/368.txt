@@ -1,1 +1,1 @@
-Program([VarDecl(points,ArrayLiteral([IntLiteral(2),IntLiteral(2)],FloatType,[[FloatLiteral(1.1),FloatLiteral(2.2)],[FloatLiteral(3.3),FloatLiteral(4.4)]]))])
+Program([FuncDecl(lcm,[ParDecl(a,IntType),ParDecl(b,IntType)],IntType,Block([Return(BinaryOp(BinaryOp(Id(a),*,Id(b)),/,FuncCall(gcd,[Id(a),Id(b)])))]))])

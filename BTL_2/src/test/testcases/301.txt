@@ -1,3 +1,1 @@
-
-            const khanh_pear = true;
-    
+const tuananhdeptrai = 1 + 2;

@@ -1,9 +1,8 @@
 
-        type tuananh struct {
-            a int;
-            b string;
-            c float;
-            d [3][2]int;
-            e tuanem;
-        }
-        
+            func votien() {
+                if(1) {
+                    a := 1;
+                } else {
+                    a := 1;
+                }
+            }

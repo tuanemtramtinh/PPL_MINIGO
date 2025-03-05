@@ -1,1 +1,3 @@
-var tuananh SAIDEPCHIEU = call(tuan.anh.dep.trai);
+
+            func foo() int {return;}
+            func foo(a int, b int) {return;}

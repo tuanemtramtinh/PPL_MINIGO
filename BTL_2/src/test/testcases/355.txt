@@ -1,10 +1,14 @@
 
-        
-        func fruit(arr [10]ID, x int) {
-            for arr[x * 2 + 1] < (x + 5) * 3 {
-                return;
-                return arr[x - 1];
+        func isPalindrome(s string) bool {
+            var i = 0;
+            var j = len(s) - 1;
+            for i < j {
+                if (s[i] != s[j]) {
+                    return false;
+                }
+                i += 1;
+                j -= 1;
             }
+            return true;
         }
-
-    
+        

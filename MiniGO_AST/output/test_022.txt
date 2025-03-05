@@ -1,2 +1,2 @@
-Program([StructType("tuananh",[("a",IntType()),("b",StringType()),("c",FloatType()),("d",ArrayType([IntLiteral(3),IntLiteral(2)],IntType())),("e",Id("tuanem"))],[])
+Program([FuncDecl("votien",[],VoidType(),Block([If(IntLiteral(1), Block([Assign(Id("a"),IntLiteral(1))]), Block([Assign(Id("a"),IntLiteral(1))]))]))
 		])

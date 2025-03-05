@@ -1,38 +1,7 @@
 
-        func binarySearch(arr [10]int, low int, high int, x int) int{
-            if (high >= low) {
-                var mid = low + (high - low) / 2;
-                
-                if (arr[mid] == x) {
-                    return mid;
-                }
-                
-                if (arr[mid] > x){
-                    return binarySearch(arr, low, mid - 1, x);
-                }
-                
-                return binarySearch(arr, mid + 1, high, x);
-            }   
-            
-            return -1;
-        }
-        func quickSort(arr [10]int, left int, right int) {
-            if (left >= right) {return;}
-            var pivot = arr[(left + right) / 2];
-            var i = left;
-            var j = right;
-            for i <= j {
-                for arr[i] < pivot {i += 1;}
-                for arr[j] > pivot {j -= 1;}
-                if (i <= j) {
-                    var temp = arr[i];
-                    arr[i] := arr[j];
-                    arr[j] := temp;
-                    i += 1;
-                    j -= 1;
-                }
-            }
-            quickSort(arr, left, j);
-            quickSort(arr, i, right);
-        }
-        
+            func foo(){
+                foo();
+                foo(foo(), 2);
+                a.foo();
+                a[2].c.foo(foo(), 2);
+            } 

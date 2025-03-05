@@ -1,7 +1,14 @@
 
-        
-        func fruit(a ID, b ID, arr [5][kaka]ID) {
-            if (a.value + b.value > 50) { return a; }else if (arr[2].value < 10) { return arr[2]; }else { return b.b.fruit(); }
+        func tuananh(){
+            const x = [2][3][4]int{1, 2, 3}
         }
-
-    
+        func tuananh(){
+            const x = [2][3][4]int{1, 2, 3}
+        }
+        func tuananh(){
+            const x = [2][3][4]int{1, 2, 3}
+        }
+        func tuananh(){
+            const x = [2][3][4]int{1, 2, 3}
+        }
+        

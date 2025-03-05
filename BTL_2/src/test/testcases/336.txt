@@ -1,9 +1,8 @@
 
-        
-        func fruit(x int) {
-            if (x > 0) { 
-                if (x % 2 == 0) { return x * 2; }else { return x + 1; }
-            }else { return 0; }
+        func tuananh(){
+            if (1) {
+                return x.z.z;
+            }
+            return x.d(1, 2, 3);
         }
-
-    
+        

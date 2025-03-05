@@ -1,1 +1,1 @@
-Program([VarDecl(colors,Id(COLOR),ArrayLiteral([IntLiteral(3)],StringType,[StringLiteral(red),StringLiteral(green),StringLiteral(blue)]))])
+Program([FuncDecl(gcd,[ParDecl(a,IntType),ParDecl(b,IntType)],IntType,Block([If(BinaryOp(Id(b),==,IntLiteral(0)),Block([Return(Id(a))])),Return(FuncCall(gcd,[Id(b),BinaryOp(Id(a),%,Id(b))]))]))])

@@ -1,2 +1,2 @@
-Program([FuncDecl("sumDigits",[ParamDecl("n",IntType())],IntType(),Block([VarDecl("sum", None,IntLiteral(0)),ForBasic(BinaryOp(">", Id("n"), IntLiteral(0)),Block([Assign(Id("sum"),BinaryOp("+", Id("sum"), BinaryOp("%", Id("n"), IntLiteral(10)))),Assign(Id("n"),BinaryOp("/", Id("n"), IntLiteral(10)))])),Return(Id("sum"))]))
+Program([VarDecl("a", None,IntLiteral(1))
 		])

@@ -1,9 +1,7 @@
 
-        
-        func fruit(arr [5][2]ID, index int) {
-            if (arr[index].value > 0) { return arr[index]; 
-            }else if (arr[index - 1].value < 0) { return arr[index - 1]; 
-            }else { return arr[0]; }
+        func tuananh(){
+            for -a(b(d(e(f(g()))))).c[1] {
+                return 5 * 5 + 5 - 1 == 8;
+            }
         }
-
         

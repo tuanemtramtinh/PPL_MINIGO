@@ -1,8 +1,5 @@
 
-        
-        func fruit(x int, y int) {
-            if ((x * y) % 2 == 0) { return x - y; }else if ((x + y) / 2 > 5) { return x + y; 
-            }else { return x * y; }
+        func tuananh(a int, c string, x, k [3][2][9][1]tuananh){
+            const a = !-!2;
         }
-
-    
+        

@@ -1,8 +1,2 @@
 
-        func tuananh(){
-            if (1) {
-                return x.z.z;
-            }
-            return x.d(1, 2, 3);
-        }
-        
+            const a = 0 && 1 && 2;

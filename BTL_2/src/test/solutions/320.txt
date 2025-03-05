@@ -1,1 +1,1 @@
-Program([FuncDecl(fruit,[ParDecl(a,IntType),ParDecl(b,StringType)],VoidType,Block([VarDecl(hello,ArrayLiteral([IntLiteral(2),IntLiteral(3)],IntType,[[IntLiteral(2),IntLiteral(3)],[[StringLiteral(string)]]]))]))])
+Program([VarDecl(tuananh,StringType)])

@@ -1,9 +1,8 @@
 T__0=1
-T__1=2
-INTTYPE=3
-FLOATTYPE=4
-ID=5
-';'=1
-','=2
-'int'=3
-'float'=4
+INTTYPE=2
+FLOATTYPE=3
+ID=4
+SEP=5
+','=1
+'int'=2
+'float'=3

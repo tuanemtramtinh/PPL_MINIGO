@@ -1,2 +1,2 @@
-Program([FuncDecl("tuananh",[ParamDecl("a",IntType()),ParamDecl("c",IntType()),ParamDecl("d",IntType())],VoidType(),Block([ForStep(Assign(Id("i"),IntLiteral(0)),BinaryOp("<", Id("i"), IntLiteral(10)),Assign(Id("i"),BinaryOp("+", Id("i"), IntLiteral(1))),Block([ForStep(Assign(Id("j"),IntLiteral(0)),BinaryOp("<", Id("j"), IntLiteral(10)),Assign(Id("j"),BinaryOp("+", Id("j"), IntLiteral(1))),Block([ForStep(Assign(Id("k"),IntLiteral(0)),BinaryOp("<", Id("k"), IntLiteral(10)),Assign(Id("k"),BinaryOp("+", Id("k"), IntLiteral(1))),Block([FuncCall("print",[Id("i"),Id("j"),Id("k")])]))]))]))]))
+Program([ConstDecl("a",None,BinaryOp("*", Id("a"), BinaryOp("-", NilLiteral(), StringLiteral(""a""))))
 		])

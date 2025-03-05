@@ -1,5 +1,7 @@
 
-            func fruit () {
-                if (a) {return;}
-            }
-    
+        func tuananh(){
+            continue;
+            break;
+            return;
+        }
+        
