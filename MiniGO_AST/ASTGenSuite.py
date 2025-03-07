@@ -1470,3 +1470,43 @@ class ASTGenSuite(unittest.TestCase):
         expect = Program([ConstDecl("VoTien",None,FuncCall("foo",[ArrayCell(Id("a"),[IntLiteral("0b1"),IntLiteral(3)])]))
         ])
         self.assertTrue(TestAST.test(input, str(expect), inspect.stack()[0].function))
+        
+    def test_152(self):
+        """test_037"""
+        input = """func main() {        
+            for i < 10 {
+                var x int = 10.0;
+            }
+
+            for 1 == 1 {
+                var x int = 10.0;
+            }
+        }
+        """
+        expect = str(Program([
+            FuncDecl("main", [], VoidType(), Block([
+                ForBasic(BinaryOp("<", Id("i"), IntLiteral(10)), Block([VarDecl("x", IntType(), FloatLiteral(10.0))])),
+                ForBasic(BinaryOp("==", IntLiteral(1), IntLiteral(1)), Block([VarDecl("x", IntType(), FloatLiteral(10.0))]))
+            ]))                
+        ]))
+        self.assertTrue(TestAST.test(input, expect, inspect.stack()[0].function))
+        
+    def test_153(self):
+        """test_043"""        
+        input = """func Add(x int, y int) {
+            for idx, value := range arr[100].t(abc)[1][2][3][4].x.y[5].z {
+                const MOD = 2004;
+            }
+
+            for idx, value := range getArr() {
+                const MOD = 2004;
+            }
+        };
+        """
+        expect = str(Program([
+            FuncDecl("Add", [ParamDecl("x", IntType()), ParamDecl("y", IntType())], VoidType(), Block([
+                ForEach(Id("idx"), Id("value"), FieldAccess(ArrayCell(FieldAccess(FieldAccess(ArrayCell(MethCall(ArrayCell(Id("arr"), [IntLiteral(100)]), "t", [Id("abc")]), [IntLiteral(1), IntLiteral(2), IntLiteral(3), IntLiteral(4)]), "x"), "y"), [IntLiteral(5)]), "z"), Block([ConstDecl("MOD", None, IntLiteral(2004))])),
+                ForEach(Id("idx"), Id("value"), FuncCall("getArr", []), Block([ConstDecl("MOD", None, IntLiteral(2004))]))
+            ]))
+        ]))
+        self.assertTrue(TestAST.test(input, expect, inspect.stack()[0].function))

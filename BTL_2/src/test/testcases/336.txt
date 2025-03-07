@@ -1,8 +1,6 @@
 
-        func tuananh(){
-            if (1) {
-                return x.z.z;
-            }
-            return x.d(1, 2, 3);
-        }
+                func (p Person) Greet() string {
+                    if (1) {return;
+                    }else if (1) {}
+                };  
         

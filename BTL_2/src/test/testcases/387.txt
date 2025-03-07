@@ -1,16 +1,5 @@
 
-        func foo() {
-            for _, v := range ID{} {
-                aa := 1;
-                for _, v := range ID{} {
-                    aa := 1;
-                    for _, v := range ID{} {
-                        aa := 1;
-                        for _, v := range ID{} {
-                            aa := 1;
-                        }
-                    }
-                }
-            }
-        }
+            var people = [2]Person {
+                Person { name:"Eve", age:28, scores: [3]float {80.0,85.0,90.0} },
+                Person { name:"Frank", age:33, scores: [3]float {75.0,80.0,82.0} }};
         

@@ -1,13 +1,9 @@
 
-        func tuananh(){
-            if (1) {
-                return 1;
-            } else if (1) {
-                a := 2;
-                return 2;
-            } else {
-                return 3;
-                d := 5;
-            }
-        }
+                func (p Person) Greet() string {
+                    return true;
+                    return false;
+                    return;
+                    return nil;
+                    return Greet();
+                };  
         

@@ -1,6 +1,8 @@
 
-        func tuananh(arr [10]int) {
-            arr[2 + 3 * (4 - 1)] := arr[1] + arr[2 * 3] / 2;
-            arr[arr[3] % 5] := arr[arr[4]] + 10;
-        }
+            func icuLoop() int {
+                for i := 0; i < 5; i := i + 1 {
+                    print(i);
+                }
+                return 0;
+            };
         

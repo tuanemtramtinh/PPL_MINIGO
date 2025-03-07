@@ -1,1 +1,1 @@
-Program([FuncDecl(isPalindrome,[ParDecl(s,StringType)],Id(bool),Block([VarDecl(i,IntLiteral(0)),VarDecl(j,BinaryOp(FuncCall(len,[Id(s)]),-,IntLiteral(1))),For(BinaryOp(Id(i),<,Id(j)),Block([If(BinaryOp(ArrayCell(Id(s),[Id(i)]),!=,ArrayCell(Id(s),[Id(j)])),Block([Return(BooleanLiteral(false))])),Assign(Id(i),BinaryOp(Id(i),+,IntLiteral(1))),Assign(Id(j),BinaryOp(Id(j),-,IntLiteral(1)))])),Return(BooleanLiteral(true))]))])
+Program([StructType(Person,[(name,StringType),(age,IntType),(scores,ArrayType(FloatType,[IntLiteral(3)]))],[])])

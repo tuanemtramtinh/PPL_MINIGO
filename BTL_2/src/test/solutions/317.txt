@@ -1,1 +1,1 @@
-Program([VarDecl(tuananh,Id(deptrai),FieldAccess(StructLiteral(ID,[(name,StringLiteral("hello")),(name,StringLiteral("world"))]),b))])
+Program([ConstDecl(TrieuMan,BinaryOp(BinaryOp(BinaryOp(IntLiteral(1),+,IntLiteral(2)),-,BinaryOp(IntLiteral(7),/,IntLiteral(6))),+,FieldAccess(FieldAccess(FieldAccess(Id(a),a),a),a)))])

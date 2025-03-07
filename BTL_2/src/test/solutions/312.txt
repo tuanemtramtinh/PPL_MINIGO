@@ -1,1 +1,1 @@
-Program([ConstDecl(tuananhdeptrai,FuncCall(call,[FieldAccess(FieldAccess(FieldAccess(Id(tuan),anh),dep),trai)]))])
+Program([ConstDecl(TrieuMan,StructLiteral(a,[(b,IntLiteral(1)),(c,IntLiteral(2))]))])

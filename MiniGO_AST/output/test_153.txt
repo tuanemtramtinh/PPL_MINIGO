@@ -1,0 +1,2 @@
+Program([FuncDecl("Add",[ParamDecl("x",IntType()),ParamDecl("y",IntType())],VoidType(),Block([ForEach(Id("idx"),Id("value"),FieldAccess(ArrayCell(FieldAccess(FieldAccess(ArrayCell(MethCall(ArrayCell(Id("arr"),[IntLiteral(100)]),"t",[Id("abc")]),[IntLiteral(1),IntLiteral(2),IntLiteral(3),IntLiteral(4)]),"x"),"y"),[IntLiteral(5)]),"z"),Block([ConstDecl("MOD",None,IntLiteral(2004))])),ForEach(Id("idx"),Id("value"),FuncCall("getArr",[]),Block([ConstDecl("MOD",None,IntLiteral(2004))]))]))
+		])

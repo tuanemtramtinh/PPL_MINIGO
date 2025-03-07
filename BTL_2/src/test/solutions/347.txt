@@ -1,1 +1,1 @@
-Program([FuncDecl(tuananh,[ParDecl(a,IntType),ParDecl(c,StringType),ParDecl(x,ArrayType(Id(tuananh),[IntLiteral(3),IntLiteral(2),IntLiteral(9),IntLiteral(1)])),ParDecl(k,ArrayType(Id(tuananh),[IntLiteral(3),IntLiteral(2),IntLiteral(9),IntLiteral(1)]))],VoidType,Block([For(FieldAccess(StructLiteral(ID,[(b,BooleanLiteral(true)),(k,BooleanLiteral(true))]),z),Block([Return()]))]))])
+Program([InterfaceType(trieuMan,[Prototype(Add,[IntType,IntType,IntType],ArrayType(StringType,[IntLiteral(2)])),Prototype(Subtract,[IntType,IntType],IntType)])])

@@ -1,1 +1,1 @@
-Program([ConstDecl(tuananhdeptrai,ArrayLiteral([IntLiteral(2),IntLiteral(3),IntLiteral(1)],StringType,[StringLiteral("tuan"),StringLiteral("anh"),StructLiteral(ID,[(dep,StringLiteral("trai"))])]))])
+Program([ConstDecl(TrieuMan,ArrayCell(Id(a),[ArrayCell(Id(b),[ArrayCell(Id(c),[ArrayCell(Id(d),[ArrayCell(Id(e),[ArrayCell(Id(f),[ArrayCell(Id(g),[Id(h)])])])])])])]))])

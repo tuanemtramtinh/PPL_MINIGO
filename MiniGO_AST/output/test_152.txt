@@ -1,0 +1,2 @@
+Program([FuncDecl("main",[],VoidType(),Block([ForBasic(BinaryOp("<", Id("i"), IntLiteral(10)),Block([VarDecl("x",IntType(),FloatLiteral(10.0))])),ForBasic(BinaryOp("==", IntLiteral(1), IntLiteral(1)),Block([VarDecl("x",IntType(),FloatLiteral(10.0))]))]))
+		])

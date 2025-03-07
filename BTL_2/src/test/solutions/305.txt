@@ -1,1 +1,1 @@
-Program([ConstDecl(tuananhdeptrai,BinaryOp(BinaryOp(IntLiteral(2),+,BinaryOp(IntLiteral(3),-,IntLiteral(5))),>,IntLiteral(3)))])
+Program([ConstDecl(TrieuMan,BinaryOp(IntLiteral(1),+,BinaryOp(BinaryOp(IntLiteral(2),*,IntLiteral(3)),/,IntLiteral(4))))])

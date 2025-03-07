@@ -1,5 +1,12 @@
 
-        func foo() {
-            a.b.c.d.e.f.g.h.g[1][2][3][4][5] := ID { a: ID1{ b: ID2{ c: ID3 { d: ID4 { e: ID5 { b: c(d(e(arr[1][2][ID6{ v: ID7{} }]))) } } } } } }
-        }
+            func nestedIf() int {
+                for i := 0; i < 3; i := i + 1 {
+                    if (i == 1) {
+                        return 100;
+                    } else {
+                        continue;
+                    }
+                }
+                return 0;
+            };
         

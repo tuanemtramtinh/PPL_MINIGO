@@ -1,7 +1,7 @@
 
-        func tuananh(){
-            for -a(b(d(e(f(g()))))).c[1] {
-                return 5 * 5 + 5 - 1 == 8;
-            }
-        }
-        
+            var a = 1;
+            const b = 2;
+            type a struct{a float;}
+            type b interface {foo();} 
+            func foo(){return;}
+            func  (Cat c) foo() [2]int {return;}

@@ -1,0 +1,1 @@
+Program([FuncDecl(fibonacci,[ParDecl(n,IntType)],IntType,Block([If(BinaryOp(Id(n),==,IntLiteral(0)),Block([Return(IntLiteral(0))])),If(BinaryOp(Id(n),==,IntLiteral(1)),Block([Return(IntLiteral(1))])),Return(BinaryOp(FuncCall(fibonacci,[BinaryOp(Id(n),-,IntLiteral(1))]),+,FuncCall(fibonacci,[BinaryOp(Id(n),-,IntLiteral(2))])))]))])

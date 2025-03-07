@@ -1,1 +1,1 @@
-Program([VarDecl(tuananh,Id(deptrai),FuncCall(deptrai,[StructLiteral(ID,[(name,StringLiteral("hello")),(num,IntLiteral(6)),(hel,Nil)])]))])
+Program([ConstDecl(TrieuMan,ArrayLiteral([IntLiteral(2),IntLiteral(4),Id(a),Id(BDH)],Id(TrieuMan),[IntLiteral(0x123),Nil,BooleanLiteral(true),IntLiteral(3438593),FloatLiteral(3.44)]))])

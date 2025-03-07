@@ -1,1 +1,1 @@
-Program([VarDecl(tuananh,ArrayType(IntType,[IntLiteral(3),IntLiteral(2)]),BinaryOp(IntLiteral(6),>,BinaryOp(BinaryOp(IntLiteral(3),+,IntLiteral(5)),-,BinaryOp(IntLiteral(1),*,BinaryOp(IntLiteral(2),+,FuncCall(call,[MethodCall(FieldAccess(FieldAccess(Id(a),b),c),d,[])]))))))])
+Program([ConstDecl(TrieuMan,FuncCall(ID,[Id(a),Id(b),Id(d),Id(a),Id(b),Id(d),Id(a),Id(b),Id(d),Id(a),Id(b),Id(d),Id(a),Id(b),Id(d),Id(a),Id(b),Id(d)]))])

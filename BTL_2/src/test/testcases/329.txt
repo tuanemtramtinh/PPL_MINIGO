@@ -1,7 +1,16 @@
 
-        func tuananh(){
-            continue;
-            break;
-            return;
-        }
+            func TrieuMan(a,b,c int, d,e,f int){
+                for index, value := range array {
+                    print("Range loop: index = ", item);
+                    
+                    for j := 0; j < 3; j += j + 1 {
+                        print("Nested ICU loop inside range, j = ");
+                        if (j == 1) {
+                            print("Value of j is 1");
+                        }
+                    }
+                    
+                    print("End of one range iteration");
+                }
+            }
         

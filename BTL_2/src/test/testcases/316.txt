@@ -1,1 +1,1 @@
-var tuananh deptrai = deptrai(ID{name: "hello", num: 6, hel: nil});
+const TrieuMan = [2][4][a][BDH]TrieuMan{0x123, nil, true, 3438593, 3.44};

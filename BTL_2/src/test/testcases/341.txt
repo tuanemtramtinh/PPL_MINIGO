@@ -1,5 +1,5 @@
 
-        func tuananh(a int, c string, x, k [3][2][9][1]tuananh){
-            const a = !-!2;
-        }
+                func (p Person) Greet() string {
+                    var a [2][3][2][3][2][3][2][3][2][3][2][3][2][3][2][3][2][3][2][3][2][3][2][3][2][3]int;
+                };  
         

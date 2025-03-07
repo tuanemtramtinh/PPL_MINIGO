@@ -1,9 +1,11 @@
 
-        type tuananh interface {
-            Add (x int, y float, c string);
-            Sub (x, y int);
-            Mul (x, y, z float, d string) string;
-            Div () [3][2]int;
-            test () hack; 
-        }
+            func abc() {
+                x := 1;
+                y := 2;
+                z := x + y;
+            }
+            func main() {
+                abc();
+                println(z);
+            }
         

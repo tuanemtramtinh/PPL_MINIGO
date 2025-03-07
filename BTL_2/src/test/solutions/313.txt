@@ -1,1 +1,1 @@
-Program([VarDecl(tuananh,Id(SAIDEPCHIEU),FuncCall(call,[FieldAccess(FieldAccess(FieldAccess(Id(tuan),anh),dep),trai)]))])
+Program([ConstDecl(TrieuMan,ArrayCell(Id(a),[StructLiteral(b,[(c,IntLiteral(1)),(d,IntLiteral(2))])]))])

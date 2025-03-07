@@ -1,7 +1,14 @@
 
-        func tuananh(){
-            continue;
-            break;
-            return;
-        }
+            func Add() {
+                for i := 0; i < 10; i += i + 1 {
+                    print("ICU loop, iteration: " + i);
+                    if (i % 2 == 0) {
+                        print("Even number: " + i);
+                    } else {
+                        print("Odd number: " + i);
+                    }
+                    // Additional processing or updates can be added here
+                    print("End of iteration " + i);
+                }
+            }
         

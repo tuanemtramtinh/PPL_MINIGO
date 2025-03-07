@@ -1,0 +1,10 @@
+func Add(x int, y int) {
+            for idx, value := range arr[100].t(abc)[1][2][3][4].x.y[5].z {
+                const MOD = 2004;
+            }
+
+            for idx, value := range getArr() {
+                const MOD = 2004;
+            }
+        };
+        

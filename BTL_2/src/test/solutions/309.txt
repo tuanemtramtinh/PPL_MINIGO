@@ -1,1 +1,1 @@
-Program([ConstDecl(tuananhdeptrai,StructLiteral(tuananh,[(dep,Id(trai)),(hoc,Id(bachkhoa))]))])
+Program([ConstDecl(TrieuMan,FieldAccess(ArrayCell(FieldAccess(MethodCall(MethodCall(Id(a),b,[]),c,[IntLiteral(1),IntLiteral(2)]),d),[IntLiteral(3),IntLiteral(4),IntLiteral(5)]),e))])

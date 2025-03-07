@@ -1,1 +1,3 @@
-var tuananh string = call(a(b(c(d(e())))));
+func main() {
+            return ;
+        };

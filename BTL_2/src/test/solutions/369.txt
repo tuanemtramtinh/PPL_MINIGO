@@ -1,1 +1,1 @@
-Program([FuncDecl(nthFibonacci,[ParDecl(n,IntType)],IntType,Block([VarDecl(a,IntLiteral(0)),VarDecl(b,IntLiteral(1)),For(Assign(Id(i),IntLiteral(2)),BinaryOp(Id(i),<=,Id(n)),Assign(Id(i),BinaryOp(Id(i),+,IntLiteral(1))),Block([VarDecl(temp,BinaryOp(Id(a),+,Id(b))),Assign(Id(a),Id(b)),Assign(Id(b),Id(temp))])),Return(Id(b))]))])
+Program([FuncDecl(add,[ParDecl(a,IntType),ParDecl(b,IntType)],IntType,Block([Return(BinaryOp(Id(a),+,Id(b)))]))])

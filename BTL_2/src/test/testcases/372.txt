@@ -1,14 +1,1 @@
-
-        func primeCheck(n int) bool{
-            if (n < 2) {
-                return false;
-            }
-            
-            for i := 0; i < n; i += 1 {
-                if (n % i == 0) {
-                    return false;
-                }
-            }   
-            
-            return true;
-        };
+var arr = [4]int { 10, 20, 30, 40 };

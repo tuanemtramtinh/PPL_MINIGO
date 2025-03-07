@@ -1,5 +1,3 @@
 
-        func tuananh(a int, c string, x, k [3][2][9][1]tuananh){
-            const a = !-!2;
-        }
-        
+            var messyArr = [3][2]int{{100 ,200},{300,400},{500,600}};
+            

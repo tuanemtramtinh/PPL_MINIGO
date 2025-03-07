@@ -1,5 +1,13 @@
 
-        func tuananh(){
-            a[1][2][3].c.d.s.c.e(b(d(h())));
-        }
+            func abc() {
+                if (x > 10) {} 
+                if (x > 10) {
+                    
+                } else if (x == 10) {
+                    var z str;
+                } else {
+                    var z ID;
+                }
+            }
+
         

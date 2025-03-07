@@ -1,1 +1,1 @@
-const tuananhdeptrai = [3] int {1, 2, 3};
+const TrieuMan = foo( a[2][3][4][3] );

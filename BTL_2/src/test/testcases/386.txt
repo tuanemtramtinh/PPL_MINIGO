@@ -1,23 +1,6 @@
 
-        func foo() {
-            a.b.c.d.e.f.g.h.j[ID{b: ID{} }].d();
-        }
-        func foo() {
-            a.b.c.d.e.f.g.h.j[ID{b: ID{} }].d();
-        }
-        func foo() {
-            a.b.c.d.e.f.g.h.j[ID{b: ID{} }].d();
-        }
-        func foo() {
-            a.b.c.d.e.f.g.h.j[ID{b: ID{} }].d();
-        }
-        func foo() {
-            a.b.c.d.e.f.g.h.j[ID{b: ID{} }].d();
-        }
-        func foo() {
-            a.b.c.d.e.f.g.h.j[ID{b: ID{} }].d();
-        }
-        func foo() {
-            a.b.c.d.e.f.g.h.j[ID{b: ID{} }].d();
-        }
+            func update() {
+                obj.field := 10;
+                return;
+            };
         

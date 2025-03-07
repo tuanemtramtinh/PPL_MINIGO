@@ -1,1 +1,1 @@
-Program([FuncDecl(foo,[],VoidType,Block([If(BinaryOp(Id(x),>,IntLiteral(10)),Block([VarDecl(b,Id(x))]),If(BinaryOp(Id(x),==,IntLiteral(10)),Block([VarDecl(z,Id(str))]),If(BinaryOp(Id(x),>=,IntLiteral(20)),Block([ConstDecl(b,IntLiteral(10))]),Block([VarDecl(z,Id(ID))]))))]))])
+Program([VarDecl(matrix,ArrayLiteral([IntLiteral(2),IntLiteral(2)],IntType,[[IntLiteral(1),IntLiteral(2)],[IntLiteral(3),IntLiteral(4)]]))])

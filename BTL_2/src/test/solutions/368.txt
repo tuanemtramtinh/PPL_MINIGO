@@ -1,1 +1,1 @@
-Program([FuncDecl(lcm,[ParDecl(a,IntType),ParDecl(b,IntType)],IntType,Block([Return(BinaryOp(BinaryOp(Id(a),*,Id(b)),/,FuncCall(gcd,[Id(a),Id(b)])))]))])
+Program([FuncDecl(bar,[ParDecl(x,IntType)],IntType,Block([Return(Id(x))]))])

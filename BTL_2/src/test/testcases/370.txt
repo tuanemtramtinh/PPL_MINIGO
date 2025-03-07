@@ -1,18 +1,5 @@
 
-        func binarySearch(arr [10]int, low int, high int, x int) int{
-            if (high >= low) {
-                var mid = low + (high - low) / 2;
-                
-                if (arr[mid] == x) {
-                    return mid;
-                }
-                
-                if (arr[mid] > x){
-                    return binarySearch(arr, low, mid - 1, x);
-                }
-                
-                return binarySearch(arr, mid + 1, high, x);
-            }   
-            
-            return -1;
-        };
+            func createArray() [3]int {
+                return [3]int { 1, 2, 3 };
+            };
+        

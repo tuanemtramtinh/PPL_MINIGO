@@ -1,1 +1,1 @@
-var tuananh SAIDEPCHIEU = call(tuan.anh.dep.trai);
+const TrieuMan = a[b{c:1, d:2}];

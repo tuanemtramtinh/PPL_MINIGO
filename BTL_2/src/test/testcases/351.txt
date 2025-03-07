@@ -1,13 +1,7 @@
 
-        func isPalindrome(s string, left int, right int) bool {
-          if (left >= right) {
-              return true
-          }  
-          
-          if (s[left] != s[right]) {
-              return false
-          }
-          
-          return isPalindrome(s, left + 1, right - 1)
-        };
-        
+            type Student struct {
+                name string;
+                age int;
+                marks [3][3][3]float64;
+            }
+            

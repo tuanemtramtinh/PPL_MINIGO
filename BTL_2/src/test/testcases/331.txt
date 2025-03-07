@@ -1,5 +1,8 @@
 
-        func tuananh(){
-            a.b();
-        }
+            func updateRecord(a,c,d int,e float) {
+                record.field := 100;
+                record["key"] += 50;
+                return;
+            };
+
         

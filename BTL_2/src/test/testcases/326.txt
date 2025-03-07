@@ -1,6 +1,7 @@
 
-        func tuananh(){
-            var b int;
-            const PI = 3.14;
-        }
+            func Add() {
+                for var i = 0; i < 10; i += 1 {
+                    // loop body
+                }
+            }
         

@@ -1,5 +1,11 @@
 
-        func tuananh(a int, c string, x, k [3][2][9][1]tuananh){
-            const a = d() + a() + c() + z(1, 2.);
-        }
+                type Calculator interface {
+                                            
+                    Add(x, y int) int;
+                    Subtract(a, b float, c int) [3]ID;
+                    Reset()
+                                            
+                    SayHello(name string);
+                                            
+                }                                                                      
         

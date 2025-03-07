@@ -1,1 +1,1 @@
-Program([VarDecl(tuananh,StringType,FuncCall(call,[FuncCall(a,[]),FuncCall(b,[]),MethodCall(FieldAccess(FieldAccess(Id(a),v),c),b,[]),BinaryOp(BinaryOp(BinaryOp(IntLiteral(5),+,IntLiteral(3)),-,IntLiteral(1)),-,IntLiteral(5))]))])
+Program([ConstDecl(TrieuMan,ArrayCell(Id(a),[ArrayCell(Id(b),[ArrayCell(Id(c),[ArrayCell(Id(d),[ArrayCell(Id(e),[ArrayCell(Id(f),[ArrayCell(Id(g),[Id(h)])])])])])]),FuncCall(ID,[Id(a),Id(b),Id(d),Id(a),Id(b),Id(d),Id(a),Id(b),Id(d),Id(a),Id(b),Id(d),Id(a),Id(b),Id(d),Id(a),Id(b),Id(d)])]))])

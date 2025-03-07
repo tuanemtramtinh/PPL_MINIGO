@@ -1,7 +1,1 @@
-
-        func foo() {
-            const a = 3.14e10;
-            const b = 3.14e10;
-            execute(foo(execute(foot())))
-        }
-        
+var arr = getArray();

@@ -1,1 +1,1 @@
-Program([FuncDecl(tuananh,[],VoidType,Block([VarDecl(b,IntType),ConstDecl(PI,FloatLiteral(3.14))]))])
+Program([FuncDecl(Add,[],VoidType,Block([For(VarDecl(i,IntLiteral(0)),BinaryOp(Id(i),<,IntLiteral(10)),Assign(Id(i),BinaryOp(Id(i),+,IntLiteral(1))),Block([]))]))])

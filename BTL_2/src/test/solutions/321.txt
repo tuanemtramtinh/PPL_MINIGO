@@ -1,1 +1,1 @@
-Program([StructType(tuananh,[(a,IntType)],[])])
+Program([FuncDecl(abc,[],VoidType,Block([Assign(Id(x),BinaryOp(FuncCall(foo,[]),+,BinaryOp(IntLiteral(3),/,IntLiteral(4)))),Assign(ArrayCell(FieldAccess(Id(x),c),[IntLiteral(2),IntLiteral(4)]),BinaryOp(IntLiteral(1),+,IntLiteral(2)))]))])

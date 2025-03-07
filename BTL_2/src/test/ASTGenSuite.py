@@ -3,50 +3,6 @@ from TestUtils import TestAST
 from AST import *
 
 class ASTGenSuite(unittest.TestCase):
-    # def test_simple_program(self):
-    #     """Simple program: int main() {} """
-    #     input = """func main() {};"""
-    #     expect = str(Program([FuncDecl("main",[],VoidType(),Block([]))]))
-    #     self.assertTrue(TestAST.checkASTGen(input,expect,300))
-
-    # def test_more_complex_program(self):
-    #     """More complex program"""
-    #     input = """var x int ;"""
-    #     expect = str(Program([VarDecl("x",IntType(),None)]))
-    #     self.assertTrue(TestAST.checkASTGen(input,expect,301))
-    
-    # def test_call_without_parameter(self):
-    #     """More complex program"""
-    #     input = """func main () {}; var x int ;"""
-    #     expect = str(Program([FuncDecl("main",[],VoidType(),Block([])),VarDecl("x",IntType(),None)]))
-    #     self.assertTrue(TestAST.checkASTGen(input,expect,302))
-        
-    # def test_1(self):
-    #     """More complex program"""
-    #     input = """
-    #     func foo(){
-    #         if(1) {
-    #             return 1;
-    #         }else if(2) {
-    #             return 2;
-    #         } else if(3) {
-    #             return 3;
-    #         } else if(4) {
-    #             return 4;
-    #         } 
-    #     } 
-    #     """
-    #     expect = str(Program([FuncDecl("foo",[],VoidType(),Block([If(IntLiteral(1), Block([Return(IntLiteral(1))]), If(IntLiteral(2), Block([Return(IntLiteral(2))]), If(IntLiteral(3), Block([Return(IntLiteral(3))]), If(IntLiteral(4), Block([Return(IntLiteral(4))]), None))))]))
-	# 	]))
-    #     self.assertTrue(TestAST.checkASTGen(input,expect,303))
-   
-    # def test_2(self):
-    #     """More complex program"""
-    #     input = """
-    #     const a = "tuananh";g
-    #     """
-    #     expect = str(Program([ConstDecl("", None, "")]))
-    #     self.assertTrue(TestAST.checkASTGen(input,expect,303))
     def test_001(self):
         input = """const tuananhdeptrai = 1 + 2;"""
         expect = str(Program([ConstDecl("tuananhdeptrai",None, BinaryOp("+", IntLiteral(1), IntLiteral(2)))]))
@@ -968,16 +924,6 @@ class ASTGenSuite(unittest.TestCase):
 		]))
         self.assertTrue(TestAST.checkASTGen(input, expect, 377))
         
-    # def test_078(self):
-    #     input = """
-    #     func foo(){
-    #         const ppl = arr[arr[arr[arr[arr[arr[arr[arr[arr[arr[arr[foo(foo(foo(foo(foo(foo(foo(arr[arr[arr[arr[arr[foo() + 2 - 5 == 1 > 2]]]]])))))))]]]]]]]]]]]
-    #     } 
-    #     """
-    #     expect = str(Program([FuncDecl("foo",[],VoidType(),Block([ConstDecl("ppl",None,ArrayCell(Id("arr"),[ArrayCell(Id("arr"),[ArrayCell(Id("arr"),[ArrayCell(Id("arr"),[ArrayCell(Id("arr"),[ArrayCell(Id("arr"),[ArrayCell(Id("arr"),[ArrayCell(Id("arr"),[ArrayCell(Id("arr"),[ArrayCell(Id("arr"),[ArrayCell(Id("arr"),[FuncCall("foo",[FuncCall("foo",[FuncCall("foo",[FuncCall("foo",[FuncCall("foo",[FuncCall("foo",[FuncCall("foo",[ArrayCell(Id("arr"),[ArrayCell(Id("arr"),[ArrayCell(Id("arr"),[ArrayCell(Id("arr"),[ArrayCell(Id("arr"),[BinaryOp(">", BinaryOp("==", BinaryOp("-", BinaryOp("+", FuncCall("foo",[]), IntLiteral(2)), IntLiteral(5)), IntLiteral(1)), IntLiteral(2))])])])])])])])])])])])])])])])])])])])])])])]))]))
-	# 	]))
-    #     self.assertTrue(TestAST.checkASTGen(input, expect, 378))
-        
     def test_078(self):
         input = """
         func hi(a int, b int, c int, d int, e int) int {
@@ -1455,3 +1401,17 @@ class ASTGenSuite(unittest.TestCase):
         expect = str(Program([FuncDecl("foo",[],VoidType(),Block([ForBasic(BinaryOp("<", Id("i"), IntLiteral(5)),Block([FuncCall("print",[Id("i")])])),ForBasic(BinaryOp("<", Id("i"), IntLiteral(5)),Block([FuncCall("print",[Id("i")])])),ForBasic(BinaryOp("<", Id("i"), IntLiteral(5)),Block([FuncCall("print",[Id("i")])])),ForBasic(BinaryOp("<", Id("i"), IntLiteral(5)),Block([FuncCall("print",[Id("i")])])),ForBasic(BinaryOp("<", Id("i"), IntLiteral(5)),Block([FuncCall("print",[Id("i")])])),ForBasic(BinaryOp("<", Id("i"), IntLiteral(5)),Block([FuncCall("print",[Id("i")])]))]))
 		]))
         self.assertTrue(TestAST.checkASTGen(input, expect, 400))
+
+    def test_101(self):
+        input = """
+            func fruit () {
+                if (a) {return;
+                } else{
+                    continue;
+                    return fruit(2,3,\"true\",3.45e-11);
+                }
+            }
+        """
+        expect = str(Program([FuncDecl("fruit",[],VoidType(),Block([If(Id("a"), Block([Return(None)]), Block([Continue(),Return(FuncCall("fruit",[IntLiteral(2),IntLiteral(3),StringLiteral("\"true\""),FloatLiteral("3.45e-11")]))]))]))
+		]))
+        self.assertTrue(TestAST.checkASTGen(input,expect,401))

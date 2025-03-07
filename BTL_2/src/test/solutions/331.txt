@@ -1,1 +1,1 @@
-Program([FuncDecl(tuananh,[],VoidType,Block([MethodCall(Id(a),b,[])]))])
+Program([FuncDecl(updateRecord,[ParDecl(a,IntType),ParDecl(c,IntType),ParDecl(d,IntType),ParDecl(e,FloatType)],VoidType,Block([Assign(FieldAccess(Id(record),field),IntLiteral(100)),Assign(ArrayCell(Id(record),[StringLiteral("key")]),BinaryOp(ArrayCell(Id(record),[StringLiteral("key")]),+,IntLiteral(50))),Return()]))])

@@ -1,1 +1,1 @@
-Program([FuncDecl(tuananh,[],VoidType,Block([If(IntLiteral(1),Block([Return(IntLiteral(1))]),If(IntLiteral(1),Block([Assign(Id(a),IntLiteral(2)),Return(IntLiteral(2))]),Block([Return(IntLiteral(3)),Assign(Id(d),IntLiteral(5))])))]))])
+Program([MethodDecl(p,Id(Person),FuncDecl(Greet,[],StringType,Block([Return(BooleanLiteral(true)),Return(BooleanLiteral(false)),Return(),Return(Nil),Return(FuncCall(Greet,[]))])))])

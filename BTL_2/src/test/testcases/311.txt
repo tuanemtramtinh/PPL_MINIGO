@@ -1,1 +1,1 @@
-const tuananhdeptrai = d || e && p || t && r || a && i;
+const TrieuMan = a{};

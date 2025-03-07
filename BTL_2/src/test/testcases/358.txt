@@ -1,11 +1,5 @@
 
-        func checkLeapYear(x int) bool {
-            if (n % 4 == 0){
-                if (n % 100 == 0){
-                    return n % 400 == 0;
-                }
-                return true;
-            }
-            return false;
-        }
-        
+            var holder DataHolder = DataHolder {
+                values: [4]int { 10,20,30,40 },
+                labels: [4]string { "one","two","three","four" }};
+            

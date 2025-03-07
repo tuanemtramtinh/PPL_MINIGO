@@ -1,5 +1,6 @@
 
-        func foo(){
-            var result = ID { a: ID1{ b: ID2{ c: ID3 { d: ID4 { e: ID5 { b: c(d(e(arr[1][2][ID6{ v: ID7{} }]))) } } } } } };
-        }
+            func constantTest() int {
+                const pi = 314;
+                return pi;
+            };
         

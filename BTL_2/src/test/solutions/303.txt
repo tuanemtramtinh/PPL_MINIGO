@@ -1,1 +1,1 @@
-Program([ConstDecl(tuananhdeptrai,FuncCall(tuananh,[]))])
+Program([ConstDecl(TrieuMan,FuncCall(foo,[IntLiteral(1)]))])

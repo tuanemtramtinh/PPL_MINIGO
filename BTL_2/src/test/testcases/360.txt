@@ -1,10 +1,5 @@
 
-        func mergeSort(arr [10]int, left int, right int) {
-            if (left < right) {
-                var mid = (left + right) / 2;
-                mergeSort(arr, left, mid);
-                mergeSort(arr, mid + 1, right);
-                merge(arr, left, mid, right);
-            }
-        }
-        
+            var holder DataHolder = DataHolder {
+                values: [4]int { 10,20,30,40 },
+                labels: [4]string { "one","two","three","four" }};
+            

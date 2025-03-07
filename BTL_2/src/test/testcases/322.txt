@@ -1,9 +1,12 @@
 
-        type tuananh struct {
-            a int;
-            b string;
-            c float;
-            d [3][2]int;
-            e tuanem;
-        }
+            func abc() {
+                if (x > 10) {} 
+                if (x > 10) {
+                    
+                } else if (x == 10) {
+                    var z str;
+                } else {
+                    var z ID;
+                }
+            }
         

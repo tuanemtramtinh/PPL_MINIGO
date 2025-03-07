@@ -1,1 +1,1 @@
-Program([ConstDecl(tuananhdeptrai,MethodCall(Id(tuananh),deptrai,[]))])
+Program([ConstDecl(TrieuMan,FuncCall(TrieuMan,[FuncCall(a,[FuncCall(b,[FuncCall(c,[FuncCall(d,[FuncCall(e,[FuncCall(f,[FuncCall(g,[FuncCall(t,[])])])])])])])])]))])

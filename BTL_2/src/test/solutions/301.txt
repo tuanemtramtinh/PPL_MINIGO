@@ -1,1 +1,1 @@
-Program([ConstDecl(tuananhdeptrai,BinaryOp(IntLiteral(1),+,IntLiteral(2)))])
+Program([VarDecl(x,IntType)])

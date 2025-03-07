@@ -1,5 +1,7 @@
 
-        func tuananh(a int, c string, x, k [3][2][9][1]tuananh){
-            const deptari = a(b(c(d(e(f(g(h())))))))[3][2][9][1][3][2][9][1];
-        }
+                type ID interface {
+                                            
+                    GetID() int;
+                                            
+                }                                                                      
         

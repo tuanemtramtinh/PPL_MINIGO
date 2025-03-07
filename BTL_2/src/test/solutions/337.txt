@@ -1,1 +1,1 @@
-Program([FuncDecl(tuananh,[],VoidType,Block([If(IntLiteral(1),Block([Assign(Id(a),IntLiteral(1))]),Block([Assign(Id(a),UnaryOp(-,IntLiteral(1)))]))]))])
+Program([MethodDecl(p,Id(Person),FuncDecl(Greet,[],StringType,Block([For(Assign(Id(i),IntLiteral(0)),BinaryOp(Id(i),<,IntLiteral(10)),Assign(Id(i),BinaryOp(Id(i),+,IntLiteral(1))),Block([Return()])),For(Assign(Id(i),IntLiteral(0)),BinaryOp(Id(i),<,IntLiteral(10)),Assign(Id(i),BinaryOp(Id(i),+,IntLiteral(1))),Block([Return()]))])))])

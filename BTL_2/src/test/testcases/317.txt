@@ -1,1 +1,1 @@
-var tuananh deptrai = ID{name: "hello", name: "world"}.b;
+const TrieuMan = 1 + 2 - 7 / 6 + a.a.a.a;

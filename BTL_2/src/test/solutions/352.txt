@@ -1,1 +1,1 @@
-Program([FuncDecl(Factorial,[ParDecl(n,IntType)],IntType,Block([If(BinaryOp(Id(n),==,IntLiteral(0)),Block([Return(IntLiteral(1))])),Return(FuncCall(isPalindrome,[Id(s),BinaryOp(Id(left),+,IntLiteral(1)),BinaryOp(Id(right),-,IntLiteral(1))]))]))])
+Program([StructType(Student,[(name,StringType),(age,IntType),(marks,BoolType),(friends,ArrayType(Id(Student),[Id(tri)]))],[])])

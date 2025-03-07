@@ -1,1 +1,1 @@
-Program([FuncDecl(foo,[],VoidType,Block([MethodCall(ArrayCell(FieldAccess(FieldAccess(FieldAccess(FieldAccess(FieldAccess(FieldAccess(FieldAccess(FieldAccess(Id(a),b),c),d),e),f),g),h),j),[StructLiteral(ID,[(b,StructLiteral(ID,[]))])]),d,[])]))])
+Program([VarDecl(names,ArrayLiteral([IntLiteral(2),IntLiteral(2)],StringType,[[StringLiteral("Alice"),StringLiteral("Bob")],[StringLiteral("Charlie"),StringLiteral("Dana")]]))])

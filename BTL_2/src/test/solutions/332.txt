@@ -1,1 +1,1 @@
-Program([FuncDecl(tuananh,[],VoidType,Block([MethodCall(FieldAccess(FieldAccess(FieldAccess(FieldAccess(ArrayCell(Id(a),[IntLiteral(1),IntLiteral(2),IntLiteral(3)]),c),d),s),c),e,[FuncCall(b,[FuncCall(d,[FuncCall(h,[])])])])]))])
+Program([FuncDecl(abc,[],VoidType,Block([If(BinaryOp(Id(x),>,IntLiteral(10)),Block([])),If(BinaryOp(Id(x),>,IntLiteral(10)),Block([]),If(BinaryOp(Id(x),==,IntLiteral(10)),Block([VarDecl(z,Id(str))]),Block([VarDecl(z,Id(ID))])))]))])

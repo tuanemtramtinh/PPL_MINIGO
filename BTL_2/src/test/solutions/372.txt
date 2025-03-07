@@ -1,1 +1,1 @@
-Program([FuncDecl(primeCheck,[ParDecl(n,IntType)],Id(bool),Block([If(BinaryOp(Id(n),<,IntLiteral(2)),Block([Return(BooleanLiteral(false))])),For(Assign(Id(i),IntLiteral(0)),BinaryOp(Id(i),<,Id(n)),Assign(Id(i),BinaryOp(Id(i),+,IntLiteral(1))),Block([If(BinaryOp(BinaryOp(Id(n),%,Id(i)),==,IntLiteral(0)),Block([Return(BooleanLiteral(false))]))])),Return(BooleanLiteral(true))]))])
+Program([VarDecl(arr,ArrayLiteral([IntLiteral(4)],IntType,[IntLiteral(10),IntLiteral(20),IntLiteral(30),IntLiteral(40)]))])

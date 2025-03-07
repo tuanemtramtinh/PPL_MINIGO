@@ -1,1 +1,1 @@
-Program([StructType(Address,[(street,StringType),(city,StringType)],[]),StructType(Person,[(name,StringType),(age,IntType),(address,Id(Address))],[]),MethodDecl(p,Id(Person),FuncDecl(GetAddress,[],Id(Address),Block([Return(FieldAccess(Id(p),address))])))])
+Program([ConstDecl(msg,StringLiteral("Hello"))])

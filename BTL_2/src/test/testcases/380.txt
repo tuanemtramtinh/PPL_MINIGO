@@ -1,5 +1,7 @@
 
-        func foo(){
-            return foo().foo(a + b * c - d + arr[1][2][3][4]).foo(foo(foo(foo(foo(arr[1] - "a" + "d" + nil))))) * form(arr[1][1][2][3][foo()]).x
-        }
+            func compute(x int) int {
+                var y = x * 2;
+                var z int = y + 10;
+                return z;
+            };
         

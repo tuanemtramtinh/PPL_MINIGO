@@ -1,1 +1,1 @@
-Program([FuncDecl(absoluteValue,[ParDecl(x,IntType)],IntType,Block([If(BinaryOp(Id(x),<,IntLiteral(0)),Block([Return(UnaryOp(-,Id(x)))])),Return(Id(x))]))])
+Program([VarDecl(messyArr,ArrayLiteral([IntLiteral(3)],IntType,[IntLiteral(100),IntLiteral(200),IntLiteral(300)]))])

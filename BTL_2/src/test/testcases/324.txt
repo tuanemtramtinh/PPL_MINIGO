@@ -1,6 +1,10 @@
 
-        type tuananh interface {
-            Add (x int, y float, c string);
-            Sub (x, y int);
-        }
+            func abc() {                           
+                for i < 10 {break;}
+                break;
+                continue;
+                return 1;
+                return
+                foo(2 + x, 4 / y); m.goo();                        
+            }
         

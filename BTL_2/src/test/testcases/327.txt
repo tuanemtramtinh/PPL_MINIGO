@@ -1,10 +1,12 @@
 
-        func tuananh(){
-            var b int;
-            const PI = 3.14;
-            const tuananhdeptrai = tuananh.deptrai();
-            var tuananh string = call(a(b(c(d(e())))));
-            var tuananh string = a([2]int{a}).b([2]int{a}).c([2]int{a}).d([2]int{a});
-            const tuananhdeptrai = [3][2][4] tuananh {{{{{{{{{"tuananhdeptrai"}}}}}}}}};
-        }
+            func Add() {
+                for x > 0 {
+                    TrieuMan();
+                    x := x - 1;
+                    if (x == 5) {
+                        TrieuMan();
+                    }
+                    TrieuMan();
+                }
+            }
         
